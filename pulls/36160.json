@@ -52,11 +52,11 @@
       }
     ],
     "created_at": "2026-09-03T10:41:16Z",
-    "updated_at": "2026-09-04T19:03:47Z",
+    "updated_at": "2026-09-05T21:58:32Z",
     "mergeable": true,
     "mergeable_state": "blocked",
     "merged": false,
-    "merge_commit_sha": "21bba1513667712fd19670c0d27c110bcac4c355",
+    "merge_commit_sha": "762f9382b09985ab0241d7690a87ab2ffbd384a6",
     "assignees": [],
     "requested_reviewers": [
       {
@@ -209,7 +209,7 @@
         "forks_count": 0,
         "stargazers_count": 3,
         "watchers_count": 3,
-        "size": 280472,
+        "size": 280917,
         "default_branch": "master",
         "open_issues_count": 0,
         "is_template": false,
@@ -222,7 +222,7 @@
         "archived": false,
         "disabled": false,
         "visibility": "public",
-        "pushed_at": "2026-09-04T10:45:29Z",
+        "pushed_at": "2026-09-05T21:35:55Z",
         "created_at": "2024-06-11T22:00:51Z",
         "updated_at": "2026-09-03T10:33:52Z",
         "allow_forking": true,
@@ -343,10 +343,10 @@
         "svn_url": "https://github.com/bitcoin/bitcoin",
         "homepage": "https://bitcoincore.org/en/download",
         "language": "C++",
-        "forks_count": 39372,
-        "stargazers_count": 90097,
-        "watchers_count": 90097,
-        "size": 323421,
+        "forks_count": 39385,
+        "stargazers_count": 90112,
+        "watchers_count": 90112,
+        "size": 323824,
         "default_branch": "master",
         "open_issues_count": 731,
         "is_template": false,
@@ -365,9 +365,9 @@
         "archived": false,
         "disabled": false,
         "visibility": "public",
-        "pushed_at": "2026-09-03T13:50:46Z",
+        "pushed_at": "2026-09-05T15:16:34Z",
         "created_at": "2010-12-19T15:16:43Z",
-        "updated_at": "2026-09-04T18:58:43Z",
+        "updated_at": "2026-09-05T21:05:01Z",
         "allow_forking": true,
         "license": {
           "key": "mit",
@@ -397,7 +397,7 @@
     "deletions": 71,
     "changed_files": 1,
     "commits": 2,
-    "review_comments": 2,
+    "review_comments": 3,
     "comments": 1
   },
   "events": [
@@ -466,9 +466,9 @@
       "commit_id": null,
       "commit_url": null,
       "created_at": "2026-09-03T10:41:37Z",
-      "updated_at": "2026-09-04T19:03:46Z",
+      "updated_at": "2026-09-05T21:58:32Z",
       "author_association": "CONTRIBUTOR",
-      "body": "<!--e57a25ab6845829454e8d69fc972939a-->\n\nThe following sections might be updated with supplementary metadata relevant to reviewers and maintainers.\n\n<!--006a51241073e994b41acfe9ec718e94-->\n### Code Coverage & Benchmarks\nFor details see: https://corecheck.dev/bitcoin/bitcoin/pulls/36160.\n<!--021abf342d371248e50ceaed478a90ca-->\n### Reviews\nSee [the guideline](https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#code-review) and [AI policy](https://github.com/bitcoin/bitcoin/blob/master/doc/AI_POLICY.md) for information on the review process.\n| Type | Reviewers |\n| ---- | --------- |\n| ACK | [winterrdog](https://github.com/bitcoin/bitcoin/pull/36160#pullrequestreview-5116887377) |\n| Concept ACK | [janb84](https://github.com/bitcoin/bitcoin/pull/36160#pullrequestreview-5106372945) |\n\nIf your review is incorrectly listed, please copy-paste <code>&lt;!--meta-tag:bot-skip--&gt;</code> into the comment that the bot should ignore.\n<!--174a7506f384e20aa4161008e828411d-->\n### Conflicts\nReviewers, this pull request conflicts with the following ones:\n\n* [#36124](https://github.com/bitcoin/bitcoin/pull/36124) (http: Make `HTTPRequest` update state internally, etc by hodlinator)\n* [#36033](https://github.com/bitcoin/bitcoin/pull/36033) ([wip,nomerge,rfc] build: Require C++23 compiler by maflcko)\n\nIf you consider this pull request important, please also help to review the conflicting pull requests. Ideally, start with the one that should be merged first.\n<!--5faf32d7da4f0f540f40219e4f7537a3-->",
+      "body": "<!--e57a25ab6845829454e8d69fc972939a-->\n\nThe following sections might be updated with supplementary metadata relevant to reviewers and maintainers.\n\n<!--006a51241073e994b41acfe9ec718e94-->\n### Code Coverage & Benchmarks\nFor details see: https://corecheck.dev/bitcoin/bitcoin/pulls/36160.\n<!--021abf342d371248e50ceaed478a90ca-->\n### Reviews\nSee [the guideline](https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#code-review) and [AI policy](https://github.com/bitcoin/bitcoin/blob/master/doc/AI_POLICY.md) for information on the review process.\n| Type | Reviewers |\n| ---- | --------- |\n| ACK | [winterrdog](https://github.com/bitcoin/bitcoin/pull/36160#pullrequestreview-5116887377) |\n| Concept ACK | [janb84](https://github.com/bitcoin/bitcoin/pull/36160#pullrequestreview-5106372945), [jeanpablojp](https://github.com/bitcoin/bitcoin/pull/36160#pullrequestreview-5123177724) |\n\nIf your review is incorrectly listed, please copy-paste <code>&lt;!--meta-tag:bot-skip--&gt;</code> into the comment that the bot should ignore.\n<!--174a7506f384e20aa4161008e828411d-->\n### Conflicts\nReviewers, this pull request conflicts with the following ones:\n\n* [#36124](https://github.com/bitcoin/bitcoin/pull/36124) (http: Make `HTTPRequest` update state internally, etc by hodlinator)\n* [#36033](https://github.com/bitcoin/bitcoin/pull/36033) ([wip,nomerge,rfc] build: Require C++23 compiler by maflcko)\n\nIf you consider this pull request important, please also help to review the conflicting pull requests. Ideally, start with the one that should be merged first.\n<!--5faf32d7da4f0f540f40219e4f7537a3-->",
       "user": {
         "login": "DrahtBot",
         "id": 39886733,
@@ -956,6 +956,45 @@
         "name": null,
         "patch_url": null
       }
+    },
+    {
+      "event": "reviewed",
+      "id": 5123177724,
+      "node_id": "PRR_kwDOABII588AAAABMV18_A",
+      "url": null,
+      "actor": null,
+      "commit_id": "f04b0c31627adda1d54b7da4507cfe30a63f7e5e",
+      "commit_url": null,
+      "created_at": null,
+      "updated_at": "2026-09-05T21:58:29Z",
+      "author_association": "CONTRIBUTOR",
+      "body": "Concept ACK\n\nConfirmed the old checks still pass after swapping two headers in `WriteReply`, so they were blind rather than tolerant.",
+      "user": {
+        "login": "jeanpablojp",
+        "id": 8968629,
+        "node_id": "MDQ6VXNlcjg5Njg2Mjk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8968629?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/jeanpablojp",
+        "html_url": "https://github.com/jeanpablojp",
+        "followers_url": "https://api.github.com/users/jeanpablojp/followers",
+        "following_url": "https://api.github.com/users/jeanpablojp/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/jeanpablojp/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/jeanpablojp/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/jeanpablojp/subscriptions",
+        "organizations_url": "https://api.github.com/users/jeanpablojp/orgs",
+        "repos_url": "https://api.github.com/users/jeanpablojp/repos",
+        "events_url": "https://api.github.com/users/jeanpablojp/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/jeanpablojp/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "html_url": "https://github.com/bitcoin/bitcoin/pull/36160#pullrequestreview-5123177724",
+      "submitted_at": "2026-09-05T21:58:29Z",
+      "state": "COMMENTED",
+      "pull_request_url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/36160"
     }
   ],
   "comments": [
@@ -1065,6 +1104,60 @@
       "start_side": "RIGHT",
       "line": null,
       "original_line": 888,
+      "side": "RIGHT"
+    },
+    {
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments/3942187994",
+      "pull_request_review_id": 5123177724,
+      "id": 3942187994,
+      "node_id": "PRRC_kwDOABII587q-QPa",
+      "diff_hunk": "@@ -484,50 +484,51 @@ BOOST_AUTO_TEST_CASE(http_request_state_tests)\n     public:\n         DummyClient() : HTTPRemoteClient{/*id=*/0, /*addr=*/CService(), /*socket=*/CreateSock(0, 0, 0)} {}\n \n-        void receive(std::string_view s)\n+        void Receive(std::string_view s)",
+      "path": "src/test/httpserver_tests.cpp",
+      "position": 5,
+      "original_position": 5,
+      "commit_id": "f04b0c31627adda1d54b7da4507cfe30a63f7e5e",
+      "original_commit_id": "f04b0c31627adda1d54b7da4507cfe30a63f7e5e",
+      "in_reply_to_id": null,
+      "user": {
+        "login": "jeanpablojp",
+        "id": 8968629,
+        "node_id": "MDQ6VXNlcjg5Njg2Mjk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8968629?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/jeanpablojp",
+        "html_url": "https://github.com/jeanpablojp",
+        "followers_url": "https://api.github.com/users/jeanpablojp/followers",
+        "following_url": "https://api.github.com/users/jeanpablojp/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/jeanpablojp/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/jeanpablojp/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/jeanpablojp/subscriptions",
+        "organizations_url": "https://api.github.com/users/jeanpablojp/orgs",
+        "repos_url": "https://api.github.com/users/jeanpablojp/repos",
+        "events_url": "https://api.github.com/users/jeanpablojp/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/jeanpablojp/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "body": "nit: Could we call this helper `AppendToRecvBuffer`? The name `Receive` hides `HTTPRemoteClient`'s no-argument method, while this helper only appends data to the buffer.",
+      "created_at": "2026-09-05T21:58:29Z",
+      "updated_at": "2026-09-05T21:58:29Z",
+      "html_url": "https://github.com/bitcoin/bitcoin/pull/36160#discussion_r3942187994",
+      "author_association": "CONTRIBUTOR",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments/3942187994"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/36160"
+        }
+      },
+      "start_line": null,
+      "original_start_line": null,
+      "start_side": null,
+      "line": 487,
+      "original_line": 487,
       "side": "RIGHT"
     }
   ]
