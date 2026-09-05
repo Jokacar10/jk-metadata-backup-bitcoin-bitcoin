@@ -12,7 +12,7 @@
     "review_comments_url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/36159/comments",
     "review_comment_url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments%7B/number%7D",
     "comments_url": "https://api.github.com/repos/bitcoin/bitcoin/issues/36159/comments",
-    "statuses_url": "https://api.github.com/repos/bitcoin/bitcoin/statuses/332f4e48c51128f4164c56b4bfbe908b83f5b08f",
+    "statuses_url": "https://api.github.com/repos/bitcoin/bitcoin/statuses/352fdc279751694348c6b406322de5582f59ad49",
     "number": 36159,
     "state": "open",
     "locked": false,
@@ -40,7 +40,7 @@
       "name": null,
       "patch_url": null
     },
-    "body": "### Issues\r\n\r\n#35182 had 1 case where we flag a client for disconnect where we do not log the reason.\r\n\r\n#35829 introduced the somewhat poorly named non-`const` `HTTPRemoteClient::MaybeDisconnect()`. It also lacks testing.\r\n\r\nThe control-flow in `MaybeDisconnect()/ShouldDisconnect()` is somewhat complex. https://github.com/bitcoin/bitcoin/pull/35829#discussion_r3846342291\r\n\r\n### Commits solving these issues in same order\r\n\r\n* http: Add log message for remaining case where we set `HTTPRemoteClient::m_disconnect = true`\r\n* refactor: Rename `MaybeDisconnect()` to `ShouldDisconnect()` and make it `const`\r\n* test: Add test for behavior of `ShouldDisconnect()`\r\n* refactor: Flatten control flow in `ShouldDisconnect()`",
+    "body": "### Issues\r\n\r\n#35182 had 1 case where we flag a client for disconnect where we do not log the reason.\r\n\r\n#35829 introduced the somewhat poorly named non-`const` `HTTPRemoteClient::MaybeDisconnect()`. It also lacks testing.\r\n\r\nThe control-flow in `MaybeDisconnect()/ShouldDisconnect()` is somewhat complex. https://github.com/bitcoin/bitcoin/pull/35829#discussion_r3846342291\r\n\r\n### Commits solving these issues in same order\r\n\r\n* http: Add log message for remaining case where we set `HTTPRemoteClient::m_disconnect = true`\r\n* refactor: Rename `MaybeDisconnect()` to `ShouldDisconnect()` and make it `const`\r\n* refactor: Enable mocking the time around `ShouldDisconnect()`\r\n* test: Add test for behavior of `ShouldDisconnect()`\r\n* refactor: Flatten control flow in `ShouldDisconnect()`",
     "labels": [
       {
         "id": 98279177,
@@ -52,11 +52,11 @@
       }
     ],
     "created_at": "2026-09-03T10:41:02Z",
-    "updated_at": "2026-09-04T14:19:16Z",
+    "updated_at": "2026-09-05T20:39:43Z",
     "mergeable": true,
     "mergeable_state": "blocked",
     "merged": false,
-    "merge_commit_sha": "6d6c70f31750dba4e29f0ff3baf4683192310dc4",
+    "merge_commit_sha": "1f73429af234f039ba268933e4660ecf075b85c0",
     "assignees": [],
     "requested_reviewers": [],
     "requested_teams": [],
@@ -64,7 +64,7 @@
     "head": {
       "label": "hodlinator:2026/09/should_disconnect",
       "ref": "2026/09/should_disconnect",
-      "sha": "332f4e48c51128f4164c56b4bfbe908b83f5b08f",
+      "sha": "352fdc279751694348c6b406322de5582f59ad49",
       "user": {
         "login": "hodlinator",
         "id": 172445034,
@@ -164,7 +164,7 @@
         "forks_count": 0,
         "stargazers_count": 3,
         "watchers_count": 3,
-        "size": 280472,
+        "size": 280528,
         "default_branch": "master",
         "open_issues_count": 0,
         "is_template": false,
@@ -177,7 +177,7 @@
         "archived": false,
         "disabled": false,
         "visibility": "public",
-        "pushed_at": "2026-09-04T10:45:29Z",
+        "pushed_at": "2026-09-05T20:52:19Z",
         "created_at": "2024-06-11T22:00:51Z",
         "updated_at": "2026-09-03T10:33:52Z",
         "allow_forking": true,
@@ -201,7 +201,7 @@
     "base": {
       "label": "bitcoin:master",
       "ref": "master",
-      "sha": "d840adb9da54cc304b8ca95761964ab92d1ac51a",
+      "sha": "f0c839ace5a2a5e2651c580c76974c514f1500f8",
       "user": {
         "login": "bitcoin",
         "id": 528860,
@@ -298,12 +298,12 @@
         "svn_url": "https://github.com/bitcoin/bitcoin",
         "homepage": "https://bitcoincore.org/en/download",
         "language": "C++",
-        "forks_count": 39372,
-        "stargazers_count": 90096,
-        "watchers_count": 90096,
-        "size": 323421,
+        "forks_count": 39385,
+        "stargazers_count": 90111,
+        "watchers_count": 90111,
+        "size": 323824,
         "default_branch": "master",
-        "open_issues_count": 730,
+        "open_issues_count": 731,
         "is_template": false,
         "topics": [
           "bitcoin",
@@ -320,9 +320,9 @@
         "archived": false,
         "disabled": false,
         "visibility": "public",
-        "pushed_at": "2026-09-03T13:50:46Z",
+        "pushed_at": "2026-09-05T15:16:34Z",
         "created_at": "2010-12-19T15:16:43Z",
-        "updated_at": "2026-09-04T13:52:49Z",
+        "updated_at": "2026-09-05T20:52:26Z",
         "allow_forking": true,
         "license": {
           "key": "mit",
@@ -348,11 +348,11 @@
     },
     "author_association": "CONTRIBUTOR",
     "draft": false,
-    "additions": 135,
-    "deletions": 39,
+    "additions": 152,
+    "deletions": 44,
     "changed_files": 3,
-    "commits": 4,
-    "review_comments": 4,
+    "commits": 5,
+    "review_comments": 5,
     "comments": 1
   },
   "events": [
@@ -437,86 +437,6 @@
       "sha": "b0e7b0cc52ab0d1e2735f6645b7c00e1fa1effec"
     },
     {
-      "event": "committed",
-      "id": null,
-      "node_id": "C_kwDOABII59oAKDQ4NTI0OThlMDkxMTNmMmNmZDc3ZDRjMGE1MmE3NzBjNzQ1MTk5YzY",
-      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/4852498e09113f2cfd77d4c0a52a770c745199c6",
-      "actor": null,
-      "commit_id": null,
-      "commit_url": null,
-      "created_at": null,
-      "html_url": "https://github.com/bitcoin/bitcoin/commit/4852498e09113f2cfd77d4c0a52a770c745199c6",
-      "tree": {
-        "sha": "48f3c8d8fccad2135097fd29bd72dd7b0643ac02",
-        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/48f3c8d8fccad2135097fd29bd72dd7b0643ac02"
-      },
-      "verification": {
-        "verified": true,
-        "reason": "valid",
-        "payload": "tree 48f3c8d8fccad2135097fd29bd72dd7b0643ac02\nparent b0e7b0cc52ab0d1e2735f6645b7c00e1fa1effec\nauthor Hodlinator <172445034+hodlinator@users.noreply.github.com> 1788425542 +0200\ncommitter Hodlinator <172445034+hodlinator@users.noreply.github.com> 1788430570 +0200\n\ntest: Verify behavior of HTTPRemoteClient::ShouldDisconnect()\n\nBest to nail this down before the refactor in the next commit.\n\nCo-authored-by: JP <jeanpablo.jp@hotmail.com>\n",
-        "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAg39Hzirivn9mM3G8qwAOGOKsmHT\ny2f/O2iDRQI8UxEyoAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQKjY4EFnm0y0xP9xowJIo3gRi6urm3MlGPoBTilFScESSi4gKKnkxwknucAf7lrsCy\nveObwYBOtpmuT4wN64QAw=\n-----END SSH SIGNATURE-----"
-      },
-      "parents": [
-        {
-          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/b0e7b0cc52ab0d1e2735f6645b7c00e1fa1effec",
-          "sha": "b0e7b0cc52ab0d1e2735f6645b7c00e1fa1effec",
-          "html_url": "https://github.com/bitcoin/bitcoin/commit/b0e7b0cc52ab0d1e2735f6645b7c00e1fa1effec"
-        }
-      ],
-      "message": "test: Verify behavior of HTTPRemoteClient::ShouldDisconnect()\n\nBest to nail this down before the refactor in the next commit.\n\nCo-authored-by: JP <jeanpablo.jp@hotmail.com>",
-      "committer": {
-        "name": "Hodlinator",
-        "email": "172445034+hodlinator@users.noreply.github.com",
-        "date": "2026-09-03T10:16:10Z"
-      },
-      "author": {
-        "name": "Hodlinator",
-        "email": "172445034+hodlinator@users.noreply.github.com",
-        "date": "2026-09-03T08:52:22Z"
-      },
-      "sha": "4852498e09113f2cfd77d4c0a52a770c745199c6"
-    },
-    {
-      "event": "committed",
-      "id": null,
-      "node_id": "C_kwDOABII59oAKDMzMmY0ZTQ4YzUxMTI4ZjQxNjRjNTZiNGJmYmU5MDhiODNmNWIwOGY",
-      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/332f4e48c51128f4164c56b4bfbe908b83f5b08f",
-      "actor": null,
-      "commit_id": null,
-      "commit_url": null,
-      "created_at": null,
-      "html_url": "https://github.com/bitcoin/bitcoin/commit/332f4e48c51128f4164c56b4bfbe908b83f5b08f",
-      "tree": {
-        "sha": "dbd83ff2528dc24e466f1abf313113aca5769fa0",
-        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/dbd83ff2528dc24e466f1abf313113aca5769fa0"
-      },
-      "verification": {
-        "verified": true,
-        "reason": "valid",
-        "payload": "tree dbd83ff2528dc24e466f1abf313113aca5769fa0\nparent 4852498e09113f2cfd77d4c0a52a770c745199c6\nauthor Hodlinator <172445034+hodlinator@users.noreply.github.com> 1788158678 +0200\ncommitter Hodlinator <172445034+hodlinator@users.noreply.github.com> 1788430570 +0200\n\nrefactor: Flatten control flow in HTTPRemoteClient::ShouldDisconnect()\n\nCo-authored-by: winterrdog <winterrdog@protonmail.ch>\n",
-        "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAg39Hzirivn9mM3G8qwAOGOKsmHT\ny2f/O2iDRQI8UxEyoAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQBK4DPoFKoU2+00ZlfE6RfCUP1pim6Wc4CCe/khJs6Y4nr5GzHAW4NomTu8Nw/Exsm\n/mWljabsodc6NY/H5Kqg0=\n-----END SSH SIGNATURE-----"
-      },
-      "parents": [
-        {
-          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/4852498e09113f2cfd77d4c0a52a770c745199c6",
-          "sha": "4852498e09113f2cfd77d4c0a52a770c745199c6",
-          "html_url": "https://github.com/bitcoin/bitcoin/commit/4852498e09113f2cfd77d4c0a52a770c745199c6"
-        }
-      ],
-      "message": "refactor: Flatten control flow in HTTPRemoteClient::ShouldDisconnect()\n\nCo-authored-by: winterrdog <winterrdog@protonmail.ch>",
-      "committer": {
-        "name": "Hodlinator",
-        "email": "172445034+hodlinator@users.noreply.github.com",
-        "date": "2026-09-03T10:16:10Z"
-      },
-      "author": {
-        "name": "Hodlinator",
-        "email": "172445034+hodlinator@users.noreply.github.com",
-        "date": "2026-08-31T06:44:38Z"
-      },
-      "sha": "332f4e48c51128f4164c56b4bfbe908b83f5b08f"
-    },
-    {
       "event": "labeled",
       "id": 30481627120,
       "node_id": "LE_lADOABII588AAAABPgWDxs8AAAAHGNi38A",
@@ -581,9 +501,9 @@
       "commit_id": null,
       "commit_url": null,
       "created_at": "2026-09-03T10:41:09Z",
-      "updated_at": "2026-09-04T14:19:16Z",
+      "updated_at": "2026-09-05T20:32:34Z",
       "author_association": "CONTRIBUTOR",
-      "body": "<!--e57a25ab6845829454e8d69fc972939a-->\n\nThe following sections might be updated with supplementary metadata relevant to reviewers and maintainers.\n\n<!--006a51241073e994b41acfe9ec718e94-->\n### Code Coverage & Benchmarks\nFor details see: https://corecheck.dev/bitcoin/bitcoin/pulls/36159.\n<!--021abf342d371248e50ceaed478a90ca-->\n### Reviews\nSee [the guideline](https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#code-review) and [AI policy](https://github.com/bitcoin/bitcoin/blob/master/doc/AI_POLICY.md) for information on the review process.\n| Type | Reviewers |\n| ---- | --------- |\n| Concept ACK | [jeanpablojp](https://github.com/bitcoin/bitcoin/pull/36159#pullrequestreview-5114081037) |\n\nIf your review is incorrectly listed, please copy-paste <code>&lt;!--meta-tag:bot-skip--&gt;</code> into the comment that the bot should ignore.\n<!--174a7506f384e20aa4161008e828411d-->\n### Conflicts\nReviewers, this pull request conflicts with the following ones:\n\n* [#36087](https://github.com/bitcoin/bitcoin/pull/36087) (util: Add and use AssertUnreachable by maflcko)\n* [#36074](https://github.com/bitcoin/bitcoin/pull/36074) (scripted-diff: [test] Add util/check.h includes for assertions by maflcko)\n* [#35713](https://github.com/bitcoin/bitcoin/pull/35713) (Remove boost as a unit test runner by rustaceanrob)\n\nIf you consider this pull request important, please also help to review the conflicting pull requests. Ideally, start with the one that should be merged first.\n<!--5faf32d7da4f0f540f40219e4f7537a3-->\n### LLM Linter (✨ experimental)\n\n\n\nPossible places where named args for integral literals may be used (e.g. `func(x, /*named_arg=*/0)` in C++, and `func(x, named_arg=0)` in Python):\n\n- [CreateSock(0, 0, 0)] in `src/test/httpserver_tests.cpp`\n\n\n\n<sup>2026-09-03 10:41:30</sup>\n",
+      "body": "<!--e57a25ab6845829454e8d69fc972939a-->\n\nThe following sections might be updated with supplementary metadata relevant to reviewers and maintainers.\n\n<!--006a51241073e994b41acfe9ec718e94-->\n### Code Coverage & Benchmarks\nFor details see: https://corecheck.dev/bitcoin/bitcoin/pulls/36159.\n<!--021abf342d371248e50ceaed478a90ca-->\n### Reviews\nSee [the guideline](https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#code-review) and [AI policy](https://github.com/bitcoin/bitcoin/blob/master/doc/AI_POLICY.md) for information on the review process.\n| Type | Reviewers |\n| ---- | --------- |\n| Concept ACK | [jeanpablojp](https://github.com/bitcoin/bitcoin/pull/36159#pullrequestreview-5114081037) |\n\nIf your review is incorrectly listed, please copy-paste <code>&lt;!--meta-tag:bot-skip--&gt;</code> into the comment that the bot should ignore.\n<!--174a7506f384e20aa4161008e828411d-->\n### Conflicts\nReviewers, this pull request conflicts with the following ones:\n\n* [#36087](https://github.com/bitcoin/bitcoin/pull/36087) (util: Add and use AssertUnreachable by maflcko)\n* [#36074](https://github.com/bitcoin/bitcoin/pull/36074) (scripted-diff: [test] Add util/check.h includes for assertions by maflcko)\n* [#35713](https://github.com/bitcoin/bitcoin/pull/35713) (Remove boost as a unit test runner by rustaceanrob)\n\nIf you consider this pull request important, please also help to review the conflicting pull requests. Ideally, start with the one that should be merged first.\n<!--5faf32d7da4f0f540f40219e4f7537a3-->\n### LLM Linter (✨ experimental)\n\n\n\nPossible typos and grammar issues:\n\n- `ZeroSock::Send() claiming its able to send everything` -> `ZeroSock::Send() claiming it's able to send everything` [“its” should be “it’s”]\n\n\n\n<sup>2026-09-05 20:32:34</sup>\n",
       "user": {
         "login": "DrahtBot",
         "id": 39886733,
@@ -709,6 +629,196 @@
       "submitted_at": "2026-09-04T14:19:11Z",
       "state": "COMMENTED",
       "pull_request_url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/36159"
+    },
+    {
+      "event": "committed",
+      "id": null,
+      "node_id": "C_kwDOABII59oAKDlhZmUxNTg5N2U4ZGJlZTk0Mjk3MjJkMGRiNzg1OWQ4OTU5MTliZjQ",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/9afe15897e8dbee9429722d0db7859d895919bf4",
+      "actor": null,
+      "commit_id": null,
+      "commit_url": null,
+      "created_at": null,
+      "html_url": "https://github.com/bitcoin/bitcoin/commit/9afe15897e8dbee9429722d0db7859d895919bf4",
+      "tree": {
+        "sha": "6eb6a6593f05d2b88d3ce88bedb1e52c83cdd27c",
+        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/6eb6a6593f05d2b88d3ce88bedb1e52c83cdd27c"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "payload": "tree 6eb6a6593f05d2b88d3ce88bedb1e52c83cdd27c\nparent b0e7b0cc52ab0d1e2735f6645b7c00e1fa1effec\nauthor Hodlinator <172445034+hodlinator@users.noreply.github.com> 1788638726 +0200\ncommitter Hodlinator <172445034+hodlinator@users.noreply.github.com> 1788640284 +0200\n\nrefactor: Switch client idle timeout to mockable clock\n\nEnables precision in later tests.\n",
+        "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAg39Hzirivn9mM3G8qwAOGOKsmHT\ny2f/O2iDRQI8UxEyoAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQBokDnJmjXeBDAa8PrpUVEYBsZiSmskyY58yIRwicveBLZzdEwz2msrQySoAFbJR3X\nhX3uu+tc/vXUgSSEu/ZQ0=\n-----END SSH SIGNATURE-----"
+      },
+      "parents": [
+        {
+          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/b0e7b0cc52ab0d1e2735f6645b7c00e1fa1effec",
+          "sha": "b0e7b0cc52ab0d1e2735f6645b7c00e1fa1effec",
+          "html_url": "https://github.com/bitcoin/bitcoin/commit/b0e7b0cc52ab0d1e2735f6645b7c00e1fa1effec"
+        }
+      ],
+      "message": "refactor: Switch client idle timeout to mockable clock\n\nEnables precision in later tests.",
+      "committer": {
+        "name": "Hodlinator",
+        "email": "172445034+hodlinator@users.noreply.github.com",
+        "date": "2026-09-05T20:31:24Z"
+      },
+      "author": {
+        "name": "Hodlinator",
+        "email": "172445034+hodlinator@users.noreply.github.com",
+        "date": "2026-09-05T20:05:26Z"
+      },
+      "sha": "9afe15897e8dbee9429722d0db7859d895919bf4"
+    },
+    {
+      "event": "committed",
+      "id": null,
+      "node_id": "C_kwDOABII59oAKDc4NGFjNGZiOWI0YjNiOWE1NjE0ZTRlYTU0YzEwOGUxMjQ2Y2U1MGE",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/784ac4fb9b4b3b9a5614e4ea54c108e1246ce50a",
+      "actor": null,
+      "commit_id": null,
+      "commit_url": null,
+      "created_at": null,
+      "html_url": "https://github.com/bitcoin/bitcoin/commit/784ac4fb9b4b3b9a5614e4ea54c108e1246ce50a",
+      "tree": {
+        "sha": "f242afa4727f2dbc7df1e559c802d3d68be1a3f9",
+        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/f242afa4727f2dbc7df1e559c802d3d68be1a3f9"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "payload": "tree f242afa4727f2dbc7df1e559c802d3d68be1a3f9\nparent 9afe15897e8dbee9429722d0db7859d895919bf4\nauthor Hodlinator <172445034+hodlinator@users.noreply.github.com> 1788639222 +0200\ncommitter Hodlinator <172445034+hodlinator@users.noreply.github.com> 1788640284 +0200\n\ntest: Verify behavior of HTTPRemoteClient::ShouldDisconnect()\n\nBest to nail this down before the refactor in the next commit.\n\nCo-authored-by: JP <jeanpablo.jp@hotmail.com>\n",
+        "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAg39Hzirivn9mM3G8qwAOGOKsmHT\ny2f/O2iDRQI8UxEyoAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQOuxL0Fr14280HAXgDvRyayx6qga6fBYCgfcM5UuLhQqYbL2UaSEQkmK6inWnlejlA\nlgc9/kPVpncwd/7sdmfA0=\n-----END SSH SIGNATURE-----"
+      },
+      "parents": [
+        {
+          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/9afe15897e8dbee9429722d0db7859d895919bf4",
+          "sha": "9afe15897e8dbee9429722d0db7859d895919bf4",
+          "html_url": "https://github.com/bitcoin/bitcoin/commit/9afe15897e8dbee9429722d0db7859d895919bf4"
+        }
+      ],
+      "message": "test: Verify behavior of HTTPRemoteClient::ShouldDisconnect()\n\nBest to nail this down before the refactor in the next commit.\n\nCo-authored-by: JP <jeanpablo.jp@hotmail.com>",
+      "committer": {
+        "name": "Hodlinator",
+        "email": "172445034+hodlinator@users.noreply.github.com",
+        "date": "2026-09-05T20:31:24Z"
+      },
+      "author": {
+        "name": "Hodlinator",
+        "email": "172445034+hodlinator@users.noreply.github.com",
+        "date": "2026-09-05T20:13:42Z"
+      },
+      "sha": "784ac4fb9b4b3b9a5614e4ea54c108e1246ce50a"
+    },
+    {
+      "event": "committed",
+      "id": null,
+      "node_id": "C_kwDOABII59oAKDM1MmZkYzI3OTc1MTY5NDM0OGM2YjQwNjMyMmRlNTU4MmY1OWFkNDk",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/352fdc279751694348c6b406322de5582f59ad49",
+      "actor": null,
+      "commit_id": null,
+      "commit_url": null,
+      "created_at": null,
+      "html_url": "https://github.com/bitcoin/bitcoin/commit/352fdc279751694348c6b406322de5582f59ad49",
+      "tree": {
+        "sha": "d48f791f1380a4fbb36bbc442b8f8efd064a7c39",
+        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/d48f791f1380a4fbb36bbc442b8f8efd064a7c39"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "payload": "tree d48f791f1380a4fbb36bbc442b8f8efd064a7c39\nparent 784ac4fb9b4b3b9a5614e4ea54c108e1246ce50a\nauthor Hodlinator <172445034+hodlinator@users.noreply.github.com> 1788640181 +0200\ncommitter Hodlinator <172445034+hodlinator@users.noreply.github.com> 1788640284 +0200\n\nhttp: Flatten control flow in HTTPRemoteClient::ShouldDisconnect()\n\nThere's a slight behavior change in that clients already flagged with m_disconnect = true no longer also get logged as passing the idle timeout if that condition would also be met.\n\nCo-authored-by: winterrdog <winterrdog@protonmail.ch>\n",
+        "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAg39Hzirivn9mM3G8qwAOGOKsmHT\ny2f/O2iDRQI8UxEyoAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQEjDUGzJNweaX9g3J1BUbA6W1EqCRy10sD4+jhv2uN9F3m0RfgFEibbDmikecH/yuo\n6v3qlbsvp4yiJbpfszOAE=\n-----END SSH SIGNATURE-----"
+      },
+      "parents": [
+        {
+          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/784ac4fb9b4b3b9a5614e4ea54c108e1246ce50a",
+          "sha": "784ac4fb9b4b3b9a5614e4ea54c108e1246ce50a",
+          "html_url": "https://github.com/bitcoin/bitcoin/commit/784ac4fb9b4b3b9a5614e4ea54c108e1246ce50a"
+        }
+      ],
+      "message": "http: Flatten control flow in HTTPRemoteClient::ShouldDisconnect()\n\nThere's a slight behavior change in that clients already flagged with m_disconnect = true no longer also get logged as passing the idle timeout if that condition would also be met.\n\nCo-authored-by: winterrdog <winterrdog@protonmail.ch>",
+      "committer": {
+        "name": "Hodlinator",
+        "email": "172445034+hodlinator@users.noreply.github.com",
+        "date": "2026-09-05T20:31:24Z"
+      },
+      "author": {
+        "name": "Hodlinator",
+        "email": "172445034+hodlinator@users.noreply.github.com",
+        "date": "2026-09-05T20:29:41Z"
+      },
+      "sha": "352fdc279751694348c6b406322de5582f59ad49"
+    },
+    {
+      "event": "head_ref_force_pushed",
+      "id": 30619898078,
+      "node_id": "HRFPE_lADOABII588AAAABPgWDxs8AAAAHIRaQ3g",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/issues/events/30619898078",
+      "actor": {
+        "login": "hodlinator",
+        "id": 172445034,
+        "node_id": "U_kgDOCkdNag",
+        "avatar_url": "https://avatars.githubusercontent.com/u/172445034?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/hodlinator",
+        "html_url": "https://github.com/hodlinator",
+        "followers_url": "https://api.github.com/users/hodlinator/followers",
+        "following_url": "https://api.github.com/users/hodlinator/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/hodlinator/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/hodlinator/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/hodlinator/subscriptions",
+        "organizations_url": "https://api.github.com/users/hodlinator/orgs",
+        "repos_url": "https://api.github.com/users/hodlinator/repos",
+        "events_url": "https://api.github.com/users/hodlinator/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/hodlinator/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "commit_id": "352fdc279751694348c6b406322de5582f59ad49",
+      "commit_url": "https://api.github.com/repos/hodlinator/bitcoin/commits/352fdc279751694348c6b406322de5582f59ad49",
+      "created_at": "2026-09-05T20:32:16Z"
+    },
+    {
+      "event": "reviewed",
+      "id": 5122740083,
+      "node_id": "PRR_kwDOABII588AAAABMVbPcw",
+      "url": null,
+      "actor": null,
+      "commit_id": "352fdc279751694348c6b406322de5582f59ad49",
+      "commit_url": null,
+      "created_at": null,
+      "updated_at": "2026-09-05T20:39:43Z",
+      "author_association": "CONTRIBUTOR",
+      "body": "Thanks for the feedback @jeanpablojp (https://github.com/bitcoin/bitcoin/pull/36159#pullrequestreview-5114081037)!\n\nAddressed all of it to some extent in the latest push (352fdc279751694348c6b406322de5582f59ad49) + inline comment. Opted for mocking the clock and freeze it rather than trying to keep up with the current time of the actual clock as it drifts throughout the added test case.",
+      "user": {
+        "login": "hodlinator",
+        "id": 172445034,
+        "node_id": "U_kgDOCkdNag",
+        "avatar_url": "https://avatars.githubusercontent.com/u/172445034?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/hodlinator",
+        "html_url": "https://github.com/hodlinator",
+        "followers_url": "https://api.github.com/users/hodlinator/followers",
+        "following_url": "https://api.github.com/users/hodlinator/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/hodlinator/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/hodlinator/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/hodlinator/subscriptions",
+        "organizations_url": "https://api.github.com/users/hodlinator/orgs",
+        "repos_url": "https://api.github.com/users/hodlinator/repos",
+        "events_url": "https://api.github.com/users/hodlinator/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/hodlinator/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "html_url": "https://github.com/bitcoin/bitcoin/pull/36159#pullrequestreview-5122740083",
+      "submitted_at": "2026-09-05T20:39:43Z",
+      "state": "COMMENTED",
+      "pull_request_url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/36159"
     }
   ],
   "comments": [
@@ -719,7 +829,7 @@
       "node_id": "PRRC_kwDOABII587qic-9",
       "diff_hunk": "@@ -777,6 +780,100 @@ BOOST_AUTO_TEST_CASE(http_request_state_tests)\n     }\n }\n \n+BOOST_AUTO_TEST_CASE(http_should_disconnect_tests)\n+{\n+    struct Client : HTTPRemoteClient {\n+        Client(std::unique_ptr<Sock> socket = CreateSock(0, 0, 0))\n+            : HTTPRemoteClient{/*id=*/0, /*addr=*/CService(), /*socket=*/std::move(socket)} {}\n+        using HTTPRemoteClient::MutateRecvBuffer;\n+    };\n+    constexpr auto timeout{30s};\n+    const auto now{Now<SteadySeconds>()};\n+\n+    {\n+        // Nothing to disconnect for yet.\n+        auto idle{std::make_shared<Client>()};\n+        BOOST_CHECK(!idle->ShouldDisconnect(now, timeout, /*disconnect_all=*/false));\n+        // A shutdown waits for a connection that is still busy, and it starts busy.\n+        BOOST_CHECK(!idle->ShouldDisconnect(now, timeout, /*disconnect_all=*/true));\n+        // Past -rpcservertimeout, which a timeout of 0 disables.\n+        BOOST_CHECK( idle->ShouldDisconnect(now + timeout + 1s, timeout, /*disconnect_all=*/false));\n+        // Timeout was disabled by user.\n+        BOOST_CHECK(!idle->ShouldDisconnect(now + timeout + 1s, /*rpcservertimeout=*/0s, /*disconnect_all=*/false));\n+    }\n+\n+    {\n+        struct SlowSocket : ZeroSock {\n+            ssize_t Send(const void*, size_t len, int) const override {\n+                return CeilDiv(len, 2U); // Only let through half per call\n+            }\n+        private:\n+            SlowSocket& operator=(Sock&&) override {\n+                assert(false && \"Move of Sock into SlowSocket not allowed.\");\n+                return *this;\n+            }\n+        };\n+\n+        // A request handed to a worker holds the idle timeout off until the reply is sent.\n+        auto busy_slow{std::make_shared<Client>(std::make_unique<SlowSocket>())};\n+        busy_slow->MutateRecvBuffer().append(\"GET / HTTP/1.0\\n\\n\");\n+        {\n+            std::unique_ptr request{HTTPRemoteClient::TryReadRequest(busy_slow)};\n+            BOOST_REQUIRE(request);\n+            // Avoid disconnecting even if we are past the timeout, a worker is busy.\n+            BOOST_CHECK(!busy_slow->ShouldDisconnect(now + timeout + 1s, timeout, /*disconnect_all=*/false));\n+            BOOST_CHECK(!busy_slow->ShouldDisconnect(now + timeout + 1s, timeout, /*disconnect_all=*/true));\n+            // Worker becomes finished with the request.\n+            request->WriteReply(HTTP_OK);\n+        }\n+        // Don't disconnect here as WriteReply() was unable to complete the\n+        // optimistic send of the full response due to the SlowSocket.\n+        BOOST_CHECK(!busy_slow->ShouldDisconnect(now + timeout - 1s, timeout, /*disconnect_all=*/false));\n+        // Disconnect anyway if we are past the timeout.\n+        BOOST_CHECK( busy_slow->ShouldDisconnect(now + timeout + 1s, timeout, /*disconnect_all=*/false));\n+\n+        // Finish sending response.\n+        while (busy_slow->ReadyToSend()) {\n+            busy_slow->MaybeSendBytesFromBuffer();\n+        }\n+        // Now we are done sending we are ready to disconnect despite being below the timeout.\n+        BOOST_CHECK( busy_slow->ShouldDisconnect(now + timeout - 1s, timeout, /*disconnect_all=*/false));\n+    }\n+\n+    {\n+        struct FastSocket : ZeroSock {\n+            ssize_t Send(const void*, size_t len, int) const override {\n+                return len; // Always able to send complete data\n+            }\n+        private:\n+            FastSocket& operator=(Sock&&) override {\n+                assert(false && \"Move of Sock into FastSocket not allowed.\");\n+                return *this;\n+            }\n+        };\n+\n+        // Allow disconnecting directly after WriteReply() when it is able to\n+        // complete the optimistic send of the full response due to the FastSocket.\n+        auto busy_fast{std::make_shared<Client>(std::make_unique<FastSocket>())};",
       "path": "src/test/httpserver_tests.cpp",
-      "position": 93,
+      "position": 1,
       "original_position": 93,
       "commit_id": "332f4e48c51128f4164c56b4bfbe908b83f5b08f",
       "original_commit_id": "332f4e48c51128f4164c56b4bfbe908b83f5b08f",
@@ -759,10 +869,10 @@
           "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/36159"
         }
       },
-      "start_line": 844,
+      "start_line": null,
       "original_start_line": 844,
       "start_side": "RIGHT",
-      "line": 857,
+      "line": null,
       "original_line": 857,
       "side": "RIGHT"
     },
@@ -773,9 +883,9 @@
       "node_id": "PRRC_kwDOABII587qic_W",
       "diff_hunk": "@@ -1097,57 +1097,48 @@ std::unique_ptr<HTTPRequest> HTTPRemoteClient::TryReadRequest(const std::shared_\n void HTTPServer::DisconnectClients()\n {\n     const auto now{Now<SteadySeconds>()};\n-    size_t erased = std::erase_if(m_connected,\n-                                  [&](auto& client) {\n-                                      return client->MaybeDisconnect(now,\n-                                                                     m_rpcservertimeout,\n-                                                                     /*disconnect_all=*/m_disconnect_all_clients);\n-                                  });\n+    size_t erased = std::erase_if(m_connected, [&](auto& client) {\n+        return client->ShouldDisconnect(now,\n+                                        m_rpcservertimeout,\n+                                        /*disconnect_all=*/m_disconnect_all_clients);\n+    });\n     if (erased > 0) {\n         // Report back to the main thread\n         m_connected_size.fetch_sub(erased, std::memory_order_relaxed);\n     }\n }\n \n-bool HTTPRemoteClient::MaybeDisconnect(std::chrono::time_point<SteadyClock> now, std::chrono::seconds rpcservertimeout, bool disconnect_all)\n+bool HTTPRemoteClient::ShouldDisconnect(std::chrono::time_point<SteadyClock> now, std::chrono::seconds rpcservertimeout, bool disconnect_all) const\n {\n-    // First check for idle timeout. We reset the timer when we send and receive data,\n+    // Disconnect this client due to error or end of communication\n+    // May drop unsent data if we are closing due to error.\n+    if (m_disconnect) {",
       "path": "src/httpserver.cpp",
-      "position": 27,
+      "position": 60,
       "original_position": 27,
-      "commit_id": "332f4e48c51128f4164c56b4bfbe908b83f5b08f",
+      "commit_id": "352fdc279751694348c6b406322de5582f59ad49",
       "original_commit_id": "332f4e48c51128f4164c56b4bfbe908b83f5b08f",
       "in_reply_to_id": null,
       "user": {
@@ -827,9 +937,9 @@
       "node_id": "PRRC_kwDOABII587qic_h",
       "diff_hunk": "@@ -777,6 +780,100 @@ BOOST_AUTO_TEST_CASE(http_request_state_tests)\n     }\n }\n \n+BOOST_AUTO_TEST_CASE(http_should_disconnect_tests)\n+{\n+    struct Client : HTTPRemoteClient {\n+        Client(std::unique_ptr<Sock> socket = CreateSock(0, 0, 0))\n+            : HTTPRemoteClient{/*id=*/0, /*addr=*/CService(), /*socket=*/std::move(socket)} {}\n+        using HTTPRemoteClient::MutateRecvBuffer;\n+    };\n+    constexpr auto timeout{30s};\n+    const auto now{Now<SteadySeconds>()};\n+\n+    {\n+        // Nothing to disconnect for yet.\n+        auto idle{std::make_shared<Client>()};\n+        BOOST_CHECK(!idle->ShouldDisconnect(now, timeout, /*disconnect_all=*/false));\n+        // A shutdown waits for a connection that is still busy, and it starts busy.\n+        BOOST_CHECK(!idle->ShouldDisconnect(now, timeout, /*disconnect_all=*/true));",
       "path": "src/test/httpserver_tests.cpp",
-      "position": 34,
+      "position": 36,
       "original_position": 34,
-      "commit_id": "332f4e48c51128f4164c56b4bfbe908b83f5b08f",
+      "commit_id": "352fdc279751694348c6b406322de5582f59ad49",
       "original_commit_id": "332f4e48c51128f4164c56b4bfbe908b83f5b08f",
       "in_reply_to_id": null,
       "user": {
@@ -870,7 +980,7 @@
       "start_line": null,
       "original_start_line": null,
       "start_side": null,
-      "line": 798,
+      "line": 800,
       "original_line": 798,
       "side": "RIGHT"
     },
@@ -881,9 +991,9 @@
       "node_id": "PRRC_kwDOABII587qic_o",
       "diff_hunk": "@@ -777,6 +780,100 @@ BOOST_AUTO_TEST_CASE(http_request_state_tests)\n     }\n }\n \n+BOOST_AUTO_TEST_CASE(http_should_disconnect_tests)\n+{\n+    struct Client : HTTPRemoteClient {\n+        Client(std::unique_ptr<Sock> socket = CreateSock(0, 0, 0))\n+            : HTTPRemoteClient{/*id=*/0, /*addr=*/CService(), /*socket=*/std::move(socket)} {}\n+        using HTTPRemoteClient::MutateRecvBuffer;\n+    };\n+    constexpr auto timeout{30s};\n+    const auto now{Now<SteadySeconds>()};\n+\n+    {\n+        // Nothing to disconnect for yet.\n+        auto idle{std::make_shared<Client>()};\n+        BOOST_CHECK(!idle->ShouldDisconnect(now, timeout, /*disconnect_all=*/false));\n+        // A shutdown waits for a connection that is still busy, and it starts busy.\n+        BOOST_CHECK(!idle->ShouldDisconnect(now, timeout, /*disconnect_all=*/true));\n+        // Past -rpcservertimeout, which a timeout of 0 disables.\n+        BOOST_CHECK( idle->ShouldDisconnect(now + timeout + 1s, timeout, /*disconnect_all=*/false));\n+        // Timeout was disabled by user.\n+        BOOST_CHECK(!idle->ShouldDisconnect(now + timeout + 1s, /*rpcservertimeout=*/0s, /*disconnect_all=*/false));\n+    }\n+\n+    {\n+        struct SlowSocket : ZeroSock {\n+            ssize_t Send(const void*, size_t len, int) const override {\n+                return CeilDiv(len, 2U); // Only let through half per call\n+            }\n+        private:\n+            SlowSocket& operator=(Sock&&) override {\n+                assert(false && \"Move of Sock into SlowSocket not allowed.\");\n+                return *this;\n+            }\n+        };\n+\n+        // A request handed to a worker holds the idle timeout off until the reply is sent.\n+        auto busy_slow{std::make_shared<Client>(std::make_unique<SlowSocket>())};\n+        busy_slow->MutateRecvBuffer().append(\"GET / HTTP/1.0\\n\\n\");\n+        {\n+            std::unique_ptr request{HTTPRemoteClient::TryReadRequest(busy_slow)};\n+            BOOST_REQUIRE(request);\n+            // Avoid disconnecting even if we are past the timeout, a worker is busy.\n+            BOOST_CHECK(!busy_slow->ShouldDisconnect(now + timeout + 1s, timeout, /*disconnect_all=*/false));\n+            BOOST_CHECK(!busy_slow->ShouldDisconnect(now + timeout + 1s, timeout, /*disconnect_all=*/true));\n+            // Worker becomes finished with the request.\n+            request->WriteReply(HTTP_OK);\n+        }\n+        // Don't disconnect here as WriteReply() was unable to complete the\n+        // optimistic send of the full response due to the SlowSocket.\n+        BOOST_CHECK(!busy_slow->ShouldDisconnect(now + timeout - 1s, timeout, /*disconnect_all=*/false));\n+        // Disconnect anyway if we are past the timeout.\n+        BOOST_CHECK( busy_slow->ShouldDisconnect(now + timeout + 1s, timeout, /*disconnect_all=*/false));\n+\n+        // Finish sending response.\n+        while (busy_slow->ReadyToSend()) {\n+            busy_slow->MaybeSendBytesFromBuffer();\n+        }\n+        // Now we are done sending we are ready to disconnect despite being below the timeout.\n+        BOOST_CHECK( busy_slow->ShouldDisconnect(now + timeout - 1s, timeout, /*disconnect_all=*/false));\n+    }\n+\n+    {\n+        struct FastSocket : ZeroSock {\n+            ssize_t Send(const void*, size_t len, int) const override {\n+                return len; // Always able to send complete data\n+            }\n+        private:\n+            FastSocket& operator=(Sock&&) override {\n+                assert(false && \"Move of Sock into FastSocket not allowed.\");\n+                return *this;\n+            }\n+        };\n+\n+        // Allow disconnecting directly after WriteReply() when it is able to\n+        // complete the optimistic send of the full response due to the FastSocket.\n+        auto busy_fast{std::make_shared<Client>(std::make_unique<FastSocket>())};\n+        busy_fast->MutateRecvBuffer().append(\"GET / HTTP/1.0\\n\\n\");\n+        {\n+            std::unique_ptr request{HTTPRemoteClient::TryReadRequest(busy_fast)};\n+            BOOST_REQUIRE(request);\n+            // Worker becomes finished with the request.\n+            request->WriteReply(HTTP_OK);\n+        }\n+        BOOST_CHECK( busy_fast->ShouldDisconnect(now + timeout - 1s, timeout, /*disconnect_all=*/false));\n+    }\n+\n+    {\n+        // A malformed request flags the client, and that outranks the rest.",
       "path": "src/test/httpserver_tests.cpp",
-      "position": 105,
+      "position": 117,
       "original_position": 105,
-      "commit_id": "332f4e48c51128f4164c56b4bfbe908b83f5b08f",
+      "commit_id": "352fdc279751694348c6b406322de5582f59ad49",
       "original_commit_id": "332f4e48c51128f4164c56b4bfbe908b83f5b08f",
       "in_reply_to_id": null,
       "user": {
@@ -921,11 +1031,65 @@
           "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/36159"
         }
       },
-      "start_line": 868,
+      "start_line": 880,
       "original_start_line": 868,
       "start_side": "RIGHT",
-      "line": 869,
+      "line": 881,
       "original_line": 869,
+      "side": "RIGHT"
+    },
+    {
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments/3941825335",
+      "pull_request_review_id": 5122740083,
+      "id": 3941825335,
+      "node_id": "PRRC_kwDOABII587q83s3",
+      "diff_hunk": "@@ -777,6 +780,100 @@ BOOST_AUTO_TEST_CASE(http_request_state_tests)\n     }\n }\n \n+BOOST_AUTO_TEST_CASE(http_should_disconnect_tests)\n+{\n+    struct Client : HTTPRemoteClient {\n+        Client(std::unique_ptr<Sock> socket = CreateSock(0, 0, 0))\n+            : HTTPRemoteClient{/*id=*/0, /*addr=*/CService(), /*socket=*/std::move(socket)} {}\n+        using HTTPRemoteClient::MutateRecvBuffer;\n+    };\n+    constexpr auto timeout{30s};\n+    const auto now{Now<SteadySeconds>()};\n+\n+    {\n+        // Nothing to disconnect for yet.\n+        auto idle{std::make_shared<Client>()};\n+        BOOST_CHECK(!idle->ShouldDisconnect(now, timeout, /*disconnect_all=*/false));\n+        // A shutdown waits for a connection that is still busy, and it starts busy.\n+        BOOST_CHECK(!idle->ShouldDisconnect(now, timeout, /*disconnect_all=*/true));",
+      "path": "src/test/httpserver_tests.cpp",
+      "position": 36,
+      "original_position": 34,
+      "commit_id": "352fdc279751694348c6b406322de5582f59ad49",
+      "original_commit_id": "332f4e48c51128f4164c56b4bfbe908b83f5b08f",
+      "in_reply_to_id": 3934900193,
+      "user": {
+        "login": "hodlinator",
+        "id": 172445034,
+        "node_id": "U_kgDOCkdNag",
+        "avatar_url": "https://avatars.githubusercontent.com/u/172445034?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/hodlinator",
+        "html_url": "https://github.com/hodlinator",
+        "followers_url": "https://api.github.com/users/hodlinator/followers",
+        "following_url": "https://api.github.com/users/hodlinator/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/hodlinator/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/hodlinator/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/hodlinator/subscriptions",
+        "organizations_url": "https://api.github.com/users/hodlinator/orgs",
+        "repos_url": "https://api.github.com/users/hodlinator/repos",
+        "events_url": "https://api.github.com/users/hodlinator/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/hodlinator/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "body": "re https://github.com/bitcoin/bitcoin/pull/36159#discussion_r3934900182:\r\nYou are pointing out behavior on master, right?\r\nMaybe we could disconnect clients quicker if they just open the connection and don't send anything, within 5 seconds or so? Not sure I want to increase the complexity of this PR though. That would probably introduce another timeout-setting.",
+      "created_at": "2026-09-05T19:34:28Z",
+      "updated_at": "2026-09-05T20:39:43Z",
+      "html_url": "https://github.com/bitcoin/bitcoin/pull/36159#discussion_r3941825335",
+      "author_association": "CONTRIBUTOR",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments/3941825335"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/36159"
+        }
+      },
+      "start_line": null,
+      "original_start_line": null,
+      "start_side": null,
+      "line": 800,
+      "original_line": 798,
       "side": "RIGHT"
     }
   ]

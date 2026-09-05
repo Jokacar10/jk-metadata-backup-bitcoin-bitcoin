@@ -12,12 +12,12 @@
     "review_comments_url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/36124/comments",
     "review_comment_url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments%7B/number%7D",
     "comments_url": "https://api.github.com/repos/bitcoin/bitcoin/issues/36124/comments",
-    "statuses_url": "https://api.github.com/repos/bitcoin/bitcoin/statuses/c43d544b16b61e3182467dba7355cdaa372204c6",
+    "statuses_url": "https://api.github.com/repos/bitcoin/bitcoin/statuses/62796e659fb79a0c6f1749677ec480a80ec26e6d",
     "number": 36124,
     "state": "open",
     "locked": false,
     "maintainer_can_modify": true,
-    "title": "http: Make `HTTPRequest` update state internally, etc",
+    "title": "http: Make `HTTPRequest` update state internally",
     "user": {
       "login": "hodlinator",
       "id": 172445034,
@@ -52,11 +52,11 @@
       }
     ],
     "created_at": "2026-08-31T07:58:53Z",
-    "updated_at": "2026-09-04T12:58:07Z",
+    "updated_at": "2026-09-05T21:00:03Z",
     "mergeable": true,
     "mergeable_state": "blocked",
     "merged": false,
-    "merge_commit_sha": "90d349f8061aa702c16dab025ad973014e2ac1f8",
+    "merge_commit_sha": "e547770bb74be6d7cafba987733c49de7cd2161b",
     "assignees": [],
     "requested_reviewers": [
       {
@@ -109,7 +109,7 @@
     "head": {
       "label": "hodlinator:2026/08/http_refactors",
       "ref": "2026/08/http_refactors",
-      "sha": "c43d544b16b61e3182467dba7355cdaa372204c6",
+      "sha": "62796e659fb79a0c6f1749677ec480a80ec26e6d",
       "user": {
         "login": "hodlinator",
         "id": 172445034,
@@ -209,7 +209,7 @@
         "forks_count": 0,
         "stargazers_count": 3,
         "watchers_count": 3,
-        "size": 280472,
+        "size": 280528,
         "default_branch": "master",
         "open_issues_count": 0,
         "is_template": false,
@@ -222,7 +222,7 @@
         "archived": false,
         "disabled": false,
         "visibility": "public",
-        "pushed_at": "2026-09-04T10:45:29Z",
+        "pushed_at": "2026-09-05T20:52:19Z",
         "created_at": "2024-06-11T22:00:51Z",
         "updated_at": "2026-09-03T10:33:52Z",
         "allow_forking": true,
@@ -246,7 +246,7 @@
     "base": {
       "label": "bitcoin:master",
       "ref": "master",
-      "sha": "d840adb9da54cc304b8ca95761964ab92d1ac51a",
+      "sha": "f0c839ace5a2a5e2651c580c76974c514f1500f8",
       "user": {
         "login": "bitcoin",
         "id": 528860,
@@ -343,12 +343,12 @@
         "svn_url": "https://github.com/bitcoin/bitcoin",
         "homepage": "https://bitcoincore.org/en/download",
         "language": "C++",
-        "forks_count": 39372,
-        "stargazers_count": 90097,
-        "watchers_count": 90097,
-        "size": 323421,
+        "forks_count": 39385,
+        "stargazers_count": 90111,
+        "watchers_count": 90111,
+        "size": 323824,
         "default_branch": "master",
-        "open_issues_count": 729,
+        "open_issues_count": 731,
         "is_template": false,
         "topics": [
           "bitcoin",
@@ -365,9 +365,9 @@
         "archived": false,
         "disabled": false,
         "visibility": "public",
-        "pushed_at": "2026-09-03T13:50:46Z",
+        "pushed_at": "2026-09-05T15:16:34Z",
         "created_at": "2010-12-19T15:16:43Z",
-        "updated_at": "2026-09-04T12:03:39Z",
+        "updated_at": "2026-09-05T20:52:26Z",
         "allow_forking": true,
         "license": {
           "key": "mit",
@@ -393,12 +393,12 @@
     },
     "author_association": "CONTRIBUTOR",
     "draft": false,
-    "additions": 114,
+    "additions": 115,
     "deletions": 143,
     "changed_files": 4,
     "commits": 3,
     "review_comments": 9,
-    "comments": 1
+    "comments": 3
   },
   "events": [
     {
@@ -466,9 +466,9 @@
       "commit_id": null,
       "commit_url": null,
       "created_at": "2026-08-31T07:59:01Z",
-      "updated_at": "2026-09-04T12:58:07Z",
+      "updated_at": "2026-09-05T20:52:33Z",
       "author_association": "CONTRIBUTOR",
-      "body": "<!--e57a25ab6845829454e8d69fc972939a-->\n\nThe following sections might be updated with supplementary metadata relevant to reviewers and maintainers.\n\n<!--006a51241073e994b41acfe9ec718e94-->\n### Code Coverage & Benchmarks\nFor details see: https://corecheck.dev/bitcoin/bitcoin/pulls/36124.\n<!--021abf342d371248e50ceaed478a90ca-->\n### Reviews\nSee [the guideline](https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#code-review) and [AI policy](https://github.com/bitcoin/bitcoin/blob/master/doc/AI_POLICY.md) for information on the review process.\n| Type | Reviewers |\n| ---- | --------- |\n| ACK | [janb84](https://github.com/bitcoin/bitcoin/pull/36124#pullrequestreview-5102409506) |\n| Concept ACK | [jeanpablojp](https://github.com/bitcoin/bitcoin/pull/36124#pullrequestreview-5070443277), [winterrdog](https://github.com/bitcoin/bitcoin/pull/36124#pullrequestreview-5076288783) |\n\nIf your review is incorrectly listed, please copy-paste <code>&lt;!--meta-tag:bot-skip--&gt;</code> into the comment that the bot should ignore.\n<!--174a7506f384e20aa4161008e828411d-->\n### Conflicts\nReviewers, this pull request conflicts with the following ones:\n\n* [#36160](https://github.com/bitcoin/bitcoin/pull/36160) (refactor: Minor improvements to HTTP unit tests by hodlinator)\n* [#36135](https://github.com/bitcoin/bitcoin/pull/36135) (fuzz: test HTTPRequest state machine in http_request by frankomosh)\n\nIf you consider this pull request important, please also help to review the conflicting pull requests. Ideally, start with the one that should be merged first.\n<!--5faf32d7da4f0f540f40219e4f7537a3-->",
+      "body": "<!--e57a25ab6845829454e8d69fc972939a-->\n\nThe following sections might be updated with supplementary metadata relevant to reviewers and maintainers.\n\n<!--006a51241073e994b41acfe9ec718e94-->\n### Code Coverage & Benchmarks\nFor details see: https://corecheck.dev/bitcoin/bitcoin/pulls/36124.\n<!--021abf342d371248e50ceaed478a90ca-->\n### Reviews\nSee [the guideline](https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#code-review) and [AI policy](https://github.com/bitcoin/bitcoin/blob/master/doc/AI_POLICY.md) for information on the review process.\n| Type | Reviewers |\n| ---- | --------- |\n| Concept ACK | [jeanpablojp](https://github.com/bitcoin/bitcoin/pull/36124#pullrequestreview-5070443277), [winterrdog](https://github.com/bitcoin/bitcoin/pull/36124#pullrequestreview-5076288783) |\n| Stale ACK | [janb84](https://github.com/bitcoin/bitcoin/pull/36124#pullrequestreview-5102409506) |\n\nIf your review is incorrectly listed, please copy-paste <code>&lt;!--meta-tag:bot-skip--&gt;</code> into the comment that the bot should ignore.\n<!--174a7506f384e20aa4161008e828411d-->\n### Conflicts\nReviewers, this pull request conflicts with the following ones:\n\n* [#36160](https://github.com/bitcoin/bitcoin/pull/36160) (refactor: Minor improvements to HTTP unit tests by hodlinator)\n* [#36135](https://github.com/bitcoin/bitcoin/pull/36135) (fuzz: test HTTPRequest state machine in http_request by frankomosh)\n\nIf you consider this pull request important, please also help to review the conflicting pull requests. Ideally, start with the one that should be merged first.\n<!--5faf32d7da4f0f540f40219e4f7537a3-->",
       "user": {
         "login": "DrahtBot",
         "id": 39886733,
@@ -779,126 +779,6 @@
       "commit_id": "0ac3f045e4bca1c6552f50827e9f7e52a9ea47ed",
       "commit_url": "https://api.github.com/repos/hodlinator/bitcoin/commits/0ac3f045e4bca1c6552f50827e9f7e52a9ea47ed",
       "created_at": "2026-09-03T09:02:39Z"
-    },
-    {
-      "event": "committed",
-      "id": null,
-      "node_id": "C_kwDOABII59oAKDRkMjRhYTJhMGU5NTYwZTMyOWVkMzA3MjFkZjdjMGNkMzllOGY2MWU",
-      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/4d24aa2a0e9560e329ed30721df7c0cd39e8f61e",
-      "actor": null,
-      "commit_id": null,
-      "commit_url": null,
-      "created_at": null,
-      "html_url": "https://github.com/bitcoin/bitcoin/commit/4d24aa2a0e9560e329ed30721df7c0cd39e8f61e",
-      "tree": {
-        "sha": "aadcae2ac827ac219f682b6a2087742faad802aa",
-        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/aadcae2ac827ac219f682b6a2087742faad802aa"
-      },
-      "verification": {
-        "verified": true,
-        "reason": "valid",
-        "payload": "tree aadcae2ac827ac219f682b6a2087742faad802aa\nparent ca7162cde58e69214a3309c17fac6d666b5f055a\nauthor Hodlinator <172445034+hodlinator@users.noreply.github.com> 1788426272 +0200\ncommitter Hodlinator <172445034+hodlinator@users.noreply.github.com> 1788426272 +0200\n\nhttp: Extract HTTPRequest::Load() to remove SetState()\n\nRemoves the ability for other classes to directly modify the request state.\n\nRefactor with slight behavior change as pre-existing Load*-methods are made private, which mainly affects unit tests.\n",
-        "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAg39Hzirivn9mM3G8qwAOGOKsmHT\ny2f/O2iDRQI8UxEyoAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQOnBgsy3yzxhzq5HSXQmyid/QDGg09rgdR5a7HfckzmIduKauwZWAjR1SKaTXsnzzq\n8IdPLomKYUQRRlAribsAE=\n-----END SSH SIGNATURE-----"
-      },
-      "parents": [
-        {
-          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/ca7162cde58e69214a3309c17fac6d666b5f055a",
-          "sha": "ca7162cde58e69214a3309c17fac6d666b5f055a",
-          "html_url": "https://github.com/bitcoin/bitcoin/commit/ca7162cde58e69214a3309c17fac6d666b5f055a"
-        }
-      ],
-      "message": "http: Extract HTTPRequest::Load() to remove SetState()\n\nRemoves the ability for other classes to directly modify the request state.\n\nRefactor with slight behavior change as pre-existing Load*-methods are made private, which mainly affects unit tests.",
-      "committer": {
-        "name": "Hodlinator",
-        "email": "172445034+hodlinator@users.noreply.github.com",
-        "date": "2026-09-03T09:04:32Z"
-      },
-      "author": {
-        "name": "Hodlinator",
-        "email": "172445034+hodlinator@users.noreply.github.com",
-        "date": "2026-09-03T09:04:32Z"
-      },
-      "sha": "4d24aa2a0e9560e329ed30721df7c0cd39e8f61e"
-    },
-    {
-      "event": "committed",
-      "id": null,
-      "node_id": "C_kwDOABII59oAKDgyMTQxZTkxOGU5NzdjOWQzNWU4ZWI0ZTNhODc0ZmMwZDk0NTM5NDk",
-      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/82141e918e977c9d35e8eb4e3a874fc0d9453949",
-      "actor": null,
-      "commit_id": null,
-      "commit_url": null,
-      "created_at": null,
-      "html_url": "https://github.com/bitcoin/bitcoin/commit/82141e918e977c9d35e8eb4e3a874fc0d9453949",
-      "tree": {
-        "sha": "95254c9a53199204286f302bb0784ee1e78d9ba5",
-        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/95254c9a53199204286f302bb0784ee1e78d9ba5"
-      },
-      "verification": {
-        "verified": true,
-        "reason": "valid",
-        "payload": "tree 95254c9a53199204286f302bb0784ee1e78d9ba5\nparent 4d24aa2a0e9560e329ed30721df7c0cd39e8f61e\nauthor Hodlinator <172445034+hodlinator@users.noreply.github.com> 1788161455 +0200\ncommitter Hodlinator <172445034+hodlinator@users.noreply.github.com> 1788426273 +0200\n\nrefactor: Extract HTTPRemoteClient::TryReadRequestInternal() from static HTTPRemoteClient::TryReadRequest()\n\nTryReadRequest() now only remains as an outer method for the sake of passing the client shared_ptr to the new request.\n",
-        "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAg39Hzirivn9mM3G8qwAOGOKsmHT\ny2f/O2iDRQI8UxEyoAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQFp/A0CowMgH+2WBQHnbzFnkBJOhO7HdkhYyYYbkkxb2xfK3i80PY/Nv66BiERvzFC\n4/dGM4qi1u4zpBNVv5EAU=\n-----END SSH SIGNATURE-----"
-      },
-      "parents": [
-        {
-          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/4d24aa2a0e9560e329ed30721df7c0cd39e8f61e",
-          "sha": "4d24aa2a0e9560e329ed30721df7c0cd39e8f61e",
-          "html_url": "https://github.com/bitcoin/bitcoin/commit/4d24aa2a0e9560e329ed30721df7c0cd39e8f61e"
-        }
-      ],
-      "message": "refactor: Extract HTTPRemoteClient::TryReadRequestInternal() from static HTTPRemoteClient::TryReadRequest()\n\nTryReadRequest() now only remains as an outer method for the sake of passing the client shared_ptr to the new request.",
-      "committer": {
-        "name": "Hodlinator",
-        "email": "172445034+hodlinator@users.noreply.github.com",
-        "date": "2026-09-03T09:04:33Z"
-      },
-      "author": {
-        "name": "Hodlinator",
-        "email": "172445034+hodlinator@users.noreply.github.com",
-        "date": "2026-08-31T07:30:55Z"
-      },
-      "sha": "82141e918e977c9d35e8eb4e3a874fc0d9453949"
-    },
-    {
-      "event": "committed",
-      "id": null,
-      "node_id": "C_kwDOABII59oAKGM0M2Q1NDRiMTZiNjFlMzE4MjQ2N2RiYTczNTVjZGFhMzcyMjA0YzY",
-      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/c43d544b16b61e3182467dba7355cdaa372204c6",
-      "actor": null,
-      "commit_id": null,
-      "commit_url": null,
-      "created_at": null,
-      "html_url": "https://github.com/bitcoin/bitcoin/commit/c43d544b16b61e3182467dba7355cdaa372204c6",
-      "tree": {
-        "sha": "405150bbdef46d6875d15d1bfa881328a8242dd1",
-        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/405150bbdef46d6875d15d1bfa881328a8242dd1"
-      },
-      "verification": {
-        "verified": true,
-        "reason": "valid",
-        "payload": "tree 405150bbdef46d6875d15d1bfa881328a8242dd1\nparent 82141e918e977c9d35e8eb4e3a874fc0d9453949\nauthor Hodlinator <172445034+hodlinator@users.noreply.github.com> 1788421959 +0200\ncommitter Hodlinator <172445034+hodlinator@users.noreply.github.com> 1788426273 +0200\n\nrefactor: Flatten HTTPRemoteClient::ReadRequest() into HTTPRemoteClient::TryReadRequestInternal()\n",
-        "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAg39Hzirivn9mM3G8qwAOGOKsmHT\ny2f/O2iDRQI8UxEyoAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQBmPlSM/0fJRhnzrzuk9viqu63ZnasMn+H/ko4hZIYK/Nd23f9O7e4Gk7u81Fxmj7U\nyUymTXSX8dgCmD5fYpYQg=\n-----END SSH SIGNATURE-----"
-      },
-      "parents": [
-        {
-          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/82141e918e977c9d35e8eb4e3a874fc0d9453949",
-          "sha": "82141e918e977c9d35e8eb4e3a874fc0d9453949",
-          "html_url": "https://github.com/bitcoin/bitcoin/commit/82141e918e977c9d35e8eb4e3a874fc0d9453949"
-        }
-      ],
-      "message": "refactor: Flatten HTTPRemoteClient::ReadRequest() into HTTPRemoteClient::TryReadRequestInternal()",
-      "committer": {
-        "name": "Hodlinator",
-        "email": "172445034+hodlinator@users.noreply.github.com",
-        "date": "2026-09-03T09:04:33Z"
-      },
-      "author": {
-        "name": "Hodlinator",
-        "email": "172445034+hodlinator@users.noreply.github.com",
-        "date": "2026-09-03T07:52:39Z"
-      },
-      "sha": "c43d544b16b61e3182467dba7355cdaa372204c6"
     },
     {
       "event": "head_ref_force_pushed",
@@ -1360,6 +1240,308 @@
         "name": null,
         "patch_url": null
       }
+    },
+    {
+      "event": "commented",
+      "id": 5554537521,
+      "node_id": "IC_kwDOABII588AAAABSxOEMQ",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/issues/comments/5554537521",
+      "actor": {
+        "login": "winterrdog",
+        "id": 87463258,
+        "node_id": "MDQ6VXNlcjg3NDYzMjU4",
+        "avatar_url": "https://avatars.githubusercontent.com/u/87463258?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/winterrdog",
+        "html_url": "https://github.com/winterrdog",
+        "followers_url": "https://api.github.com/users/winterrdog/followers",
+        "following_url": "https://api.github.com/users/winterrdog/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/winterrdog/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/winterrdog/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/winterrdog/subscriptions",
+        "organizations_url": "https://api.github.com/users/winterrdog/orgs",
+        "repos_url": "https://api.github.com/users/winterrdog/repos",
+        "events_url": "https://api.github.com/users/winterrdog/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/winterrdog/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "commit_id": null,
+      "commit_url": null,
+      "created_at": "2026-09-05T20:21:56Z",
+      "updated_at": "2026-09-05T20:26:54Z",
+      "author_association": "CONTRIBUTOR",
+      "body": "> is state super clear to everyone ?\r\n\r\nhad not noticed this. i think we can add the `@return` with some _light_\r\ndocumentation. \r\n\r\n`State` is self-explanatory as a type, but it does not tell a caller that\r\n`Load()` never returns `Error` (it throws instead), or that the other values\r\nmean \"_keep calling with more data_\" vs \"_done_\", sth that is specific to\r\n`Load()`'s contract. secondly, it keeps consistency with the `@throws` below\r\nand the Doxygen style used elsewhere",
+      "user": {
+        "login": "winterrdog",
+        "id": 87463258,
+        "node_id": "MDQ6VXNlcjg3NDYzMjU4",
+        "avatar_url": "https://avatars.githubusercontent.com/u/87463258?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/winterrdog",
+        "html_url": "https://github.com/winterrdog",
+        "followers_url": "https://api.github.com/users/winterrdog/followers",
+        "following_url": "https://api.github.com/users/winterrdog/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/winterrdog/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/winterrdog/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/winterrdog/subscriptions",
+        "organizations_url": "https://api.github.com/users/winterrdog/orgs",
+        "repos_url": "https://api.github.com/users/winterrdog/repos",
+        "events_url": "https://api.github.com/users/winterrdog/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/winterrdog/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "html_url": "https://github.com/bitcoin/bitcoin/pull/36124#issuecomment-5554537521",
+      "issue_url": "https://api.github.com/repos/bitcoin/bitcoin/issues/36124"
+    },
+    {
+      "event": "committed",
+      "id": null,
+      "node_id": "C_kwDOABII59oAKDAxNGMyMzA2Y2NjNTYxOGMyYmY5N2I3OWUwOTM0MWY2MjI5YWE4OTc",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/014c2306ccc5618c2bf97b79e09341f6229aa897",
+      "actor": null,
+      "commit_id": null,
+      "commit_url": null,
+      "created_at": null,
+      "html_url": "https://github.com/bitcoin/bitcoin/commit/014c2306ccc5618c2bf97b79e09341f6229aa897",
+      "tree": {
+        "sha": "056e508273f37ca96d27eb3003ffd4cde5de8a4c",
+        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/056e508273f37ca96d27eb3003ffd4cde5de8a4c"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "payload": "tree 056e508273f37ca96d27eb3003ffd4cde5de8a4c\nparent ca7162cde58e69214a3309c17fac6d666b5f055a\nauthor Hodlinator <172445034+hodlinator@users.noreply.github.com> 1788641301 +0200\ncommitter Hodlinator <172445034+hodlinator@users.noreply.github.com> 1788641301 +0200\n\nhttp: Extract HTTPRequest::Load() to remove SetState()\n\nRemoves the ability for other classes to directly modify the request state.\n\nRefactor with slight API change as pre-existing Load*-methods are made private, which mainly affects unit tests.\n",
+        "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAg39Hzirivn9mM3G8qwAOGOKsmHT\ny2f/O2iDRQI8UxEyoAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQGBuLzWihL+7Qd8YaMTzVQQ59DXH4RlQT2DsaTpIgzxuuIlbEuB3zbMZpsfR8PB3dq\nNOjqAjVC4VjH4sziNtUwU=\n-----END SSH SIGNATURE-----"
+      },
+      "parents": [
+        {
+          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/ca7162cde58e69214a3309c17fac6d666b5f055a",
+          "sha": "ca7162cde58e69214a3309c17fac6d666b5f055a",
+          "html_url": "https://github.com/bitcoin/bitcoin/commit/ca7162cde58e69214a3309c17fac6d666b5f055a"
+        }
+      ],
+      "message": "http: Extract HTTPRequest::Load() to remove SetState()\n\nRemoves the ability for other classes to directly modify the request state.\n\nRefactor with slight API change as pre-existing Load*-methods are made private, which mainly affects unit tests.",
+      "committer": {
+        "name": "Hodlinator",
+        "email": "172445034+hodlinator@users.noreply.github.com",
+        "date": "2026-09-05T20:48:21Z"
+      },
+      "author": {
+        "name": "Hodlinator",
+        "email": "172445034+hodlinator@users.noreply.github.com",
+        "date": "2026-09-05T20:48:21Z"
+      },
+      "sha": "014c2306ccc5618c2bf97b79e09341f6229aa897"
+    },
+    {
+      "event": "committed",
+      "id": null,
+      "node_id": "C_kwDOABII59oAKGU4MzJiN2RjNWZhZWU4NTY4NGJkZmE4ZmRiYmFhODIwZmEzMTk4YTM",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/e832b7dc5faee85684bdfa8fdbbaa820fa3198a3",
+      "actor": null,
+      "commit_id": null,
+      "commit_url": null,
+      "created_at": null,
+      "html_url": "https://github.com/bitcoin/bitcoin/commit/e832b7dc5faee85684bdfa8fdbbaa820fa3198a3",
+      "tree": {
+        "sha": "543cc26fca43f0af5303f9ee8270ad157c28fbfc",
+        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/543cc26fca43f0af5303f9ee8270ad157c28fbfc"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "payload": "tree 543cc26fca43f0af5303f9ee8270ad157c28fbfc\nparent 014c2306ccc5618c2bf97b79e09341f6229aa897\nauthor Hodlinator <172445034+hodlinator@users.noreply.github.com> 1788161455 +0200\ncommitter Hodlinator <172445034+hodlinator@users.noreply.github.com> 1788641303 +0200\n\nrefactor: Extract HTTPRemoteClient::TryReadRequestInternal() from static HTTPRemoteClient::TryReadRequest()\n\nTryReadRequest() now only remains as an outer method for the sake of passing the client shared_ptr to the new request.\n",
+        "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAg39Hzirivn9mM3G8qwAOGOKsmHT\ny2f/O2iDRQI8UxEyoAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQByaYxStIMYk6xNVHT4iYTGy1c27I/CA9kkVT7vjsLIS4rCP0cpNjR7o0PERuz7rdU\nHjPwOAgLBWmEszGSOBowE=\n-----END SSH SIGNATURE-----"
+      },
+      "parents": [
+        {
+          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/014c2306ccc5618c2bf97b79e09341f6229aa897",
+          "sha": "014c2306ccc5618c2bf97b79e09341f6229aa897",
+          "html_url": "https://github.com/bitcoin/bitcoin/commit/014c2306ccc5618c2bf97b79e09341f6229aa897"
+        }
+      ],
+      "message": "refactor: Extract HTTPRemoteClient::TryReadRequestInternal() from static HTTPRemoteClient::TryReadRequest()\n\nTryReadRequest() now only remains as an outer method for the sake of passing the client shared_ptr to the new request.",
+      "committer": {
+        "name": "Hodlinator",
+        "email": "172445034+hodlinator@users.noreply.github.com",
+        "date": "2026-09-05T20:48:23Z"
+      },
+      "author": {
+        "name": "Hodlinator",
+        "email": "172445034+hodlinator@users.noreply.github.com",
+        "date": "2026-08-31T07:30:55Z"
+      },
+      "sha": "e832b7dc5faee85684bdfa8fdbbaa820fa3198a3"
+    },
+    {
+      "event": "committed",
+      "id": null,
+      "node_id": "C_kwDOABII59oAKDYyNzk2ZTY1OWZiNzlhMGM2ZjE3NDk2NzdlYzQ4MGE4MGVjMjZlNmQ",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/62796e659fb79a0c6f1749677ec480a80ec26e6d",
+      "actor": null,
+      "commit_id": null,
+      "commit_url": null,
+      "created_at": null,
+      "html_url": "https://github.com/bitcoin/bitcoin/commit/62796e659fb79a0c6f1749677ec480a80ec26e6d",
+      "tree": {
+        "sha": "107dd810e63117ee89238ed9e57c8c9118b53aa4",
+        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/107dd810e63117ee89238ed9e57c8c9118b53aa4"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "payload": "tree 107dd810e63117ee89238ed9e57c8c9118b53aa4\nparent e832b7dc5faee85684bdfa8fdbbaa820fa3198a3\nauthor Hodlinator <172445034+hodlinator@users.noreply.github.com> 1788421959 +0200\ncommitter Hodlinator <172445034+hodlinator@users.noreply.github.com> 1788641303 +0200\n\nrefactor: Flatten HTTPRemoteClient::ReadRequest() into HTTPRemoteClient::TryReadRequestInternal()\n",
+        "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAg39Hzirivn9mM3G8qwAOGOKsmHT\ny2f/O2iDRQI8UxEyoAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQJAb37cBBTL238qq6+CWmvcGWbpqxxEv4McmZFHcL/kPd7sCUF7zcGiTPg7d3Lt3Zr\niNqCme+pblrLHfDD1jZgA=\n-----END SSH SIGNATURE-----"
+      },
+      "parents": [
+        {
+          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/e832b7dc5faee85684bdfa8fdbbaa820fa3198a3",
+          "sha": "e832b7dc5faee85684bdfa8fdbbaa820fa3198a3",
+          "html_url": "https://github.com/bitcoin/bitcoin/commit/e832b7dc5faee85684bdfa8fdbbaa820fa3198a3"
+        }
+      ],
+      "message": "refactor: Flatten HTTPRemoteClient::ReadRequest() into HTTPRemoteClient::TryReadRequestInternal()",
+      "committer": {
+        "name": "Hodlinator",
+        "email": "172445034+hodlinator@users.noreply.github.com",
+        "date": "2026-09-05T20:48:23Z"
+      },
+      "author": {
+        "name": "Hodlinator",
+        "email": "172445034+hodlinator@users.noreply.github.com",
+        "date": "2026-09-03T07:52:39Z"
+      },
+      "sha": "62796e659fb79a0c6f1749677ec480a80ec26e6d"
+    },
+    {
+      "event": "renamed",
+      "id": 30620396112,
+      "node_id": "RTE_lADOABII588AAAABO8bVac8AAAAHIR4qUA",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/issues/events/30620396112",
+      "actor": {
+        "login": "hodlinator",
+        "id": 172445034,
+        "node_id": "U_kgDOCkdNag",
+        "avatar_url": "https://avatars.githubusercontent.com/u/172445034?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/hodlinator",
+        "html_url": "https://github.com/hodlinator",
+        "followers_url": "https://api.github.com/users/hodlinator/followers",
+        "following_url": "https://api.github.com/users/hodlinator/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/hodlinator/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/hodlinator/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/hodlinator/subscriptions",
+        "organizations_url": "https://api.github.com/users/hodlinator/orgs",
+        "repos_url": "https://api.github.com/users/hodlinator/repos",
+        "events_url": "https://api.github.com/users/hodlinator/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/hodlinator/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "commit_id": null,
+      "commit_url": null,
+      "created_at": "2026-09-05T20:51:47Z",
+      "rename": {
+        "from": "http: Make `HTTPRequest` update state internally, etc",
+        "to": "http: Make `HTTPRequest` update state internally"
+      }
+    },
+    {
+      "event": "head_ref_force_pushed",
+      "id": 30620410611,
+      "node_id": "HRFPE_lADOABII588AAAABO8bVac8AAAAHIR5i8w",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/issues/events/30620410611",
+      "actor": {
+        "login": "hodlinator",
+        "id": 172445034,
+        "node_id": "U_kgDOCkdNag",
+        "avatar_url": "https://avatars.githubusercontent.com/u/172445034?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/hodlinator",
+        "html_url": "https://github.com/hodlinator",
+        "followers_url": "https://api.github.com/users/hodlinator/followers",
+        "following_url": "https://api.github.com/users/hodlinator/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/hodlinator/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/hodlinator/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/hodlinator/subscriptions",
+        "organizations_url": "https://api.github.com/users/hodlinator/orgs",
+        "repos_url": "https://api.github.com/users/hodlinator/repos",
+        "events_url": "https://api.github.com/users/hodlinator/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/hodlinator/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "commit_id": "62796e659fb79a0c6f1749677ec480a80ec26e6d",
+      "commit_url": "https://api.github.com/repos/hodlinator/bitcoin/commits/62796e659fb79a0c6f1749677ec480a80ec26e6d",
+      "created_at": "2026-09-05T20:52:20Z"
+    },
+    {
+      "event": "commented",
+      "id": 5554748150,
+      "node_id": "IC_kwDOABII588AAAABSxa69g",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/issues/comments/5554748150",
+      "actor": {
+        "login": "hodlinator",
+        "id": 172445034,
+        "node_id": "U_kgDOCkdNag",
+        "avatar_url": "https://avatars.githubusercontent.com/u/172445034?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/hodlinator",
+        "html_url": "https://github.com/hodlinator",
+        "followers_url": "https://api.github.com/users/hodlinator/followers",
+        "following_url": "https://api.github.com/users/hodlinator/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/hodlinator/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/hodlinator/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/hodlinator/subscriptions",
+        "organizations_url": "https://api.github.com/users/hodlinator/orgs",
+        "repos_url": "https://api.github.com/users/hodlinator/repos",
+        "events_url": "https://api.github.com/users/hodlinator/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/hodlinator/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "commit_id": null,
+      "commit_url": null,
+      "created_at": "2026-09-05T21:00:03Z",
+      "updated_at": "2026-09-05T21:00:03Z",
+      "author_association": "CONTRIBUTOR",
+      "body": "Latest push modifies the initial `Load()` commit only.\r\n\r\nre https://github.com/bitcoin/bitcoin/pull/36124#pullrequestreview-5102409506:\r\n> In the commit message, is an API change a behaviour change?\r\n\r\nGood point, fixed.\r\n\r\nre https://github.com/bitcoin/bitcoin/pull/36124#pullrequestreview-5102409506 + https://github.com/bitcoin/bitcoin/pull/36124#issuecomment-5554537521:\r\n> > is state super clear to everyone ?\r\n> \r\n> had not noticed this. i think we can add the `@return` with some _light_ documentation.\r\n> \r\n> `State` is self-explanatory as a type, but it does not tell a caller that `Load()` never returns `Error` (it throws instead), or that the other values mean \"_keep calling with more data_\" vs \"_done_\", sth that is specific to `Load()`'s contract. secondly, it keeps consistency with the `@throws` below and the Doxygen style used elsewhere\r\n\r\nAdded back `@returns`. It is try that `Load()` (re-)throws the first time it sets `Error`, but subsequent calls will return `Error`. The return value is only read in unit tests, so not sure if it's worth elaborating further in the doc-string.\r\n",
+      "user": {
+        "login": "hodlinator",
+        "id": 172445034,
+        "node_id": "U_kgDOCkdNag",
+        "avatar_url": "https://avatars.githubusercontent.com/u/172445034?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/hodlinator",
+        "html_url": "https://github.com/hodlinator",
+        "followers_url": "https://api.github.com/users/hodlinator/followers",
+        "following_url": "https://api.github.com/users/hodlinator/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/hodlinator/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/hodlinator/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/hodlinator/subscriptions",
+        "organizations_url": "https://api.github.com/users/hodlinator/orgs",
+        "repos_url": "https://api.github.com/users/hodlinator/repos",
+        "events_url": "https://api.github.com/users/hodlinator/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/hodlinator/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "html_url": "https://github.com/bitcoin/bitcoin/pull/36124#issuecomment-5554748150",
+      "issue_url": "https://api.github.com/repos/bitcoin/bitcoin/issues/36124"
     }
   ],
   "comments": [
@@ -1424,9 +1606,9 @@
       "node_id": "PRRC_kwDOABII587oz99j",
       "diff_hunk": "@@ -1171,42 +1171,49 @@ void HTTPRemoteClient::ReadRequest(HTTPRequest& req)\n     if (m_recv_buffer.empty()) return;\n \n     LineReader reader(m_recv_buffer, MAX_HEADERS_SIZE);\n+    try {\n+        req.Load(reader);\n+    } catch (...) {\n+        // Clear the memory allocated to this client, caller must disconnect\n+        m_recv_buffer.clear();\n+        throw;\n+    }\n \n+    // Remove the bytes read out of the buffer.\n+    m_recv_buffer.erase(\n+        m_recv_buffer.begin(),\n+        m_recv_buffer.begin() + reader.Consumed());\n+}\n+\n+bool HTTPRequest::Load(util::LineReader& reader)\n+{\n     try {\n-        switch (req.GetState()) {\n+        switch (m_state) {\n         case HTTPRequest::State::Init:\n-            if (!req.LoadControlData(reader)) break;\n-            req.SetState(HTTPRequest::State::NeedsHeaders);\n+            if (!LoadControlData(reader)) return false;\n+            m_state = HTTPRequest::State::NeedsHeaders;\n             [[fallthrough]];\n \n         case HTTPRequest::State::NeedsHeaders:\n-            if (!req.LoadHeaders(reader)) break;\n-            req.SetState(HTTPRequest::State::NeedsBody);\n+            if (!LoadHeaders(reader)) return false;\n+            m_state = HTTPRequest::State::NeedsBody;\n             [[fallthrough]];\n \n         case HTTPRequest::State::NeedsBody:\n-            if (!req.LoadBody(reader)) break;\n-            req.SetState(HTTPRequest::State::Complete);\n+            if (!LoadBody(reader)) return false;\n+            m_state = HTTPRequest::State::Complete;\n             [[fallthrough]];\n \n         case HTTPRequest::State::Complete:\n-            break;\n-\n         case HTTPRequest::State::Error:\n-            break;\n-        }\n+            return true;\n+        } // no default case, so the compiler can warn about missing cases\n     } catch (...) {",
       "path": "src/httpserver.cpp",
-      "position": 121,
+      "position": 143,
       "original_position": 52,
-      "commit_id": "c43d544b16b61e3182467dba7355cdaa372204c6",
+      "commit_id": "62796e659fb79a0c6f1749677ec480a80ec26e6d",
       "original_commit_id": "27b5a5cdef11580a8d74e3691171263798fbd99b",
       "in_reply_to_id": null,
       "user": {
