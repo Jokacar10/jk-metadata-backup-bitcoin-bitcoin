@@ -61,7 +61,7 @@
       }
     ],
     "created_at": "2026-09-03T10:41:02Z",
-    "updated_at": "2026-09-05T21:31:27Z",
+    "updated_at": "2026-09-05T22:27:13Z",
     "mergeable": true,
     "mergeable_state": "blocked",
     "merged": false,
@@ -312,7 +312,7 @@
         "watchers_count": 90112,
         "size": 323824,
         "default_branch": "master",
-        "open_issues_count": 731,
+        "open_issues_count": 732,
         "is_template": false,
         "topics": [
           "bitcoin",
@@ -361,7 +361,7 @@
     "deletions": 44,
     "changed_files": 3,
     "commits": 5,
-    "review_comments": 5,
+    "review_comments": 6,
     "comments": 2
   },
   "events": [
@@ -1182,6 +1182,60 @@
       "_links": {
         "self": {
           "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments/3941825335"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/36159"
+        }
+      },
+      "start_line": null,
+      "original_start_line": null,
+      "start_side": null,
+      "line": 800,
+      "original_line": 798,
+      "side": "RIGHT"
+    },
+    {
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments/3942255601",
+      "pull_request_review_id": 5123251258,
+      "id": 3942255601,
+      "node_id": "PRRC_kwDOABII587q-gvx",
+      "diff_hunk": "@@ -777,6 +780,100 @@ BOOST_AUTO_TEST_CASE(http_request_state_tests)\n     }\n }\n \n+BOOST_AUTO_TEST_CASE(http_should_disconnect_tests)\n+{\n+    struct Client : HTTPRemoteClient {\n+        Client(std::unique_ptr<Sock> socket = CreateSock(0, 0, 0))\n+            : HTTPRemoteClient{/*id=*/0, /*addr=*/CService(), /*socket=*/std::move(socket)} {}\n+        using HTTPRemoteClient::MutateRecvBuffer;\n+    };\n+    constexpr auto timeout{30s};\n+    const auto now{Now<SteadySeconds>()};\n+\n+    {\n+        // Nothing to disconnect for yet.\n+        auto idle{std::make_shared<Client>()};\n+        BOOST_CHECK(!idle->ShouldDisconnect(now, timeout, /*disconnect_all=*/false));\n+        // A shutdown waits for a connection that is still busy, and it starts busy.\n+        BOOST_CHECK(!idle->ShouldDisconnect(now, timeout, /*disconnect_all=*/true));",
+      "path": "src/test/httpserver_tests.cpp",
+      "position": 36,
+      "original_position": 34,
+      "commit_id": "352fdc279751694348c6b406322de5582f59ad49",
+      "original_commit_id": "332f4e48c51128f4164c56b4bfbe908b83f5b08f",
+      "in_reply_to_id": 3934900193,
+      "user": {
+        "login": "jeanpablojp",
+        "id": 8968629,
+        "node_id": "MDQ6VXNlcjg5Njg2Mjk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8968629?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/jeanpablojp",
+        "html_url": "https://github.com/jeanpablojp",
+        "followers_url": "https://api.github.com/users/jeanpablojp/followers",
+        "following_url": "https://api.github.com/users/jeanpablojp/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/jeanpablojp/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/jeanpablojp/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/jeanpablojp/subscriptions",
+        "organizations_url": "https://api.github.com/users/jeanpablojp/orgs",
+        "repos_url": "https://api.github.com/users/jeanpablojp/repos",
+        "events_url": "https://api.github.com/users/jeanpablojp/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/jeanpablojp/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "body": "Yes, master, but also measured at the merge-base and on today's master, the same both times, under a second to shut down with no such connection open and 30.7s with one at `-rpcservertimeout=0`.\n\nThe slots are the sharper half. With `-rpcmaxconnections=4` and four sockets that connect and send nothing, a normal call has to wait for the idle timeout to free one, and `-rpcservertimeout=0` means nothing frees them. Agreed it does not belong here though, and your five seconds sounds like the right direction. Happy to open a follow-up.",
+      "created_at": "2026-09-05T22:27:13Z",
+      "updated_at": "2026-09-05T22:27:13Z",
+      "html_url": "https://github.com/bitcoin/bitcoin/pull/36159#discussion_r3942255601",
+      "author_association": "CONTRIBUTOR",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments/3942255601"
         },
         "pull_request": {
           "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/36159"
