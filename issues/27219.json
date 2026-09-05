@@ -33,6 +33,7 @@
       "received_events_url": "https://api.github.com/users/ghost/received_events",
       "type": "User",
       "site_admin": false,
+      "name": null,
       "patch_url": null
     },
     "labels": [
@@ -56,7 +57,7 @@
     ],
     "assignees": [],
     "author_association": "NONE",
-    "locked": false,
+    "locked": true,
     "comments": 6,
     "closed_at": "2025-09-05T19:03:00Z",
     "closed_by": {
@@ -78,10 +79,11 @@
       "received_events_url": "https://api.github.com/users/achow101/received_events",
       "type": "User",
       "site_admin": false,
+      "name": null,
       "patch_url": null
     },
     "created_at": "2023-03-07T11:14:10Z",
-    "updated_at": "2025-09-05T19:03:00Z"
+    "updated_at": "2026-09-05T19:07:14Z"
   },
   "events": [
     {
@@ -122,6 +124,7 @@
         "received_events_url": "https://api.github.com/users/achow101/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "commit_id": null,
@@ -149,6 +152,7 @@
         "received_events_url": "https://api.github.com/users/achow101/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "html_url": "https://github.com/bitcoin/bitcoin/issues/27219#issuecomment-1458416545",
@@ -178,6 +182,7 @@
         "received_events_url": "https://api.github.com/users/ghost/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "commit_id": null,
@@ -205,6 +210,7 @@
         "received_events_url": "https://api.github.com/users/ghost/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "html_url": "https://github.com/bitcoin/bitcoin/issues/27219#issuecomment-1458450836",
@@ -234,6 +240,7 @@
         "received_events_url": "https://api.github.com/users/achow101/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "commit_id": null,
@@ -261,6 +268,7 @@
         "received_events_url": "https://api.github.com/users/achow101/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "html_url": "https://github.com/bitcoin/bitcoin/issues/27219#issuecomment-1458453570",
@@ -290,6 +298,7 @@
         "received_events_url": "https://api.github.com/users/fanquake/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "commit_id": null,
@@ -317,6 +326,7 @@
         "received_events_url": "https://api.github.com/users/fanquake/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "html_url": "https://github.com/bitcoin/bitcoin/issues/27219#issuecomment-1459766555",
@@ -346,6 +356,7 @@
         "received_events_url": "https://api.github.com/users/maflcko/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "commit_id": null,
@@ -380,13 +391,14 @@
         "received_events_url": "https://api.github.com/users/b-l-u-e/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "commit_id": null,
       "commit_url": null,
       "created_at": "2025-07-24T18:44:30Z",
       "updated_at": "2025-07-26T22:32:08Z",
-      "author_association": "NONE",
+      "author_association": "CONTRIBUTOR",
       "body": "I've tested this issue with the current Bitcoin Core version 29 and can confirm that **the `combinepsbt` RPC now works correctly with P2TR inputs**.\n\n## Test Results:\n\nI created a test scenario with:\n1. A Taproot address (`bcrt1ph7wt8kmwvp87hp0re43vvme8c3y8tyg49ghstkaufxs8qjf6j4hskqejs7`)\n2. A PSBT spending a Taproot UTXO\n3. Signed the PSBT using `walletprocesspsbt`\n4. Combined the signed PSBT using `combinepsbt`\n5. Finalized the combined PSBT using `finalizepsbt`\n\n## Key Findings:\n\n✅ **PSBT signing works**: `walletprocesspsbt` returns `\"complete\": true` and properly converts Taproot signatures to `final_scriptwitness`\n\n✅ **PSBT combining works**: `combinepsbt` successfully combines PSBTs with Taproot inputs\n\n✅ **PSBT finalization works**: `finalizepsbt` returns `\"complete\": true` and generates valid hex transactions\n\n## Analysis:\n\nThe issue appears to be **resolved** because the signing process now properly converts Taproot signatures to the `final_scriptwitness` format, which the `PSBTInputSigned` function can detect. The decoded PSBT shows:\n\n```json\n\"final_scriptwitness\": [\n  \"261ec36113f5c3217aaa174d30b84ba6d56bbb9df025831ad8394bfe28a38c06552ec883cb9f0a85d923c512659aaf5252472ab30882c5708a59b715551eaee0\"\n]\n```\n\n## Conclusion:\n\n**Ithink this issue can be closed** - the `combinepsbt` RPC functionality with P2TR inputs is working correctly in the current version. The fix appears to have been implemented as part of the Taproot signing improvements.",
       "user": {
         "login": "b-l-u-e",
@@ -407,6 +419,7 @@
         "received_events_url": "https://api.github.com/users/b-l-u-e/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "html_url": "https://github.com/bitcoin/bitcoin/issues/27219#issuecomment-3114487702",
@@ -436,6 +449,7 @@
         "received_events_url": "https://api.github.com/users/Sjors/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "commit_id": null,
@@ -463,6 +477,7 @@
         "received_events_url": "https://api.github.com/users/Sjors/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "html_url": "https://github.com/bitcoin/bitcoin/issues/27219#issuecomment-3258138039",
@@ -492,6 +507,7 @@
         "received_events_url": "https://api.github.com/users/achow101/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "commit_id": null,
@@ -522,6 +538,7 @@
         "received_events_url": "https://api.github.com/users/achow101/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "commit_id": null,
@@ -552,11 +569,43 @@
         "received_events_url": "https://api.github.com/users/achow101/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "commit_id": null,
       "commit_url": null,
       "created_at": "2025-09-05T19:03:00Z"
+    },
+    {
+      "event": "locked",
+      "id": 30617663372,
+      "node_id": "LOE_lADOABII585gJ_lTzwAAAAcg9HeM",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/issues/events/30617663372",
+      "actor": {
+        "login": "bitcoin",
+        "id": 528860,
+        "node_id": "MDEyOk9yZ2FuaXphdGlvbjUyODg2MA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/528860?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/bitcoin",
+        "html_url": "https://github.com/bitcoin",
+        "followers_url": "https://api.github.com/users/bitcoin/followers",
+        "following_url": "https://api.github.com/users/bitcoin/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/bitcoin/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/bitcoin/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/bitcoin/subscriptions",
+        "organizations_url": "https://api.github.com/users/bitcoin/orgs",
+        "repos_url": "https://api.github.com/users/bitcoin/repos",
+        "events_url": "https://api.github.com/users/bitcoin/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/bitcoin/received_events",
+        "type": "Organization",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "commit_id": null,
+      "commit_url": null,
+      "created_at": "2026-09-05T19:07:14Z"
     }
   ]
 }

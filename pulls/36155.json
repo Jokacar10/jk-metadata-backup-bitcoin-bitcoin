@@ -40,7 +40,7 @@
       "name": null,
       "patch_url": null
     },
-    "body": "This is a followup change based on https://github.com/bitcoin/bitcoin/pull/33230#issuecomment-3216227775 because https://github.com/bitcoin/bitcoin/pull/33230 enabled handling cli arguments with either json or a string but the examples (i.e. `bitcoin-cli help gettxoutsetinfo` and `bitcoin-cli help getblockstats`) left the quotes. I considered adding a new example but felt that change might seem confusing.\r\n\r\n## Steps used for building and verifying\r\n\r\n```bash\r\ncmake -B build --fresh -DBUILD_KERNEL_LIB=ON -DBUILD_KERNEL_TEST=ON -DENABLE_IPC=OFF\r\n\r\n./build/bin/bitcoind -regtest -daemon -coinstatsindex\r\n\r\n# after \"synced\" is true via ./build/bin/bitcoin-cli -regtest -rpcwait getindexinfo\r\n\r\n./build/bin/bitcoin-cli -regtest help gettxoutsetinfo\r\n\r\n# example now reads: bitcoin-cli gettxoutsetinfo \"none\" 00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09\r\n\r\n./build/bin/bitcoin-cli -regtest help getblockstats\r\n\r\n# example now reads: bitcoin-cli getblockstats 00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09 '[\"minfeerate\",\"avgfeerate\"]'\r\n```",
+    "body": "This is a followup change based on https://github.com/bitcoin/bitcoin/pull/33230#issuecomment-3216227775 because https://github.com/bitcoin/bitcoin/pull/33230 enabled handling cli arguments with either json or a string but the examples (i.e. `bitcoin-cli help gettxoutsetinfo` and `bitcoin-cli help getblockstats`) left the quotes. I considered adding a new example but felt that change might seem confusing.",
     "labels": [
       {
         "id": 148216,
@@ -52,7 +52,7 @@
       }
     ],
     "created_at": "2026-09-02T22:54:40Z",
-    "updated_at": "2026-09-05T11:54:52Z",
+    "updated_at": "2026-09-05T19:59:51Z",
     "mergeable": true,
     "mergeable_state": "blocked",
     "merged": false,
@@ -298,12 +298,12 @@
         "svn_url": "https://github.com/bitcoin/bitcoin",
         "homepage": "https://bitcoincore.org/en/download",
         "language": "C++",
-        "forks_count": 39379,
-        "stargazers_count": 90107,
-        "watchers_count": 90107,
-        "size": 323421,
+        "forks_count": 39385,
+        "stargazers_count": 90110,
+        "watchers_count": 90110,
+        "size": 323824,
         "default_branch": "master",
-        "open_issues_count": 733,
+        "open_issues_count": 730,
         "is_template": false,
         "topics": [
           "bitcoin",
@@ -320,9 +320,9 @@
         "archived": false,
         "disabled": false,
         "visibility": "public",
-        "pushed_at": "2026-09-05T11:52:00Z",
+        "pushed_at": "2026-09-05T15:16:34Z",
         "created_at": "2010-12-19T15:16:43Z",
-        "updated_at": "2026-09-05T11:52:13Z",
+        "updated_at": "2026-09-05T18:58:55Z",
         "allow_forking": true,
         "license": {
           "key": "mit",
@@ -353,7 +353,7 @@
     "changed_files": 1,
     "commits": 1,
     "review_comments": 0,
-    "comments": 3
+    "comments": 4
   },
   "events": [
     {
@@ -634,6 +634,64 @@
         "patch_url": null
       },
       "html_url": "https://github.com/bitcoin/bitcoin/pull/36155#issuecomment-5551604256",
+      "issue_url": "https://api.github.com/repos/bitcoin/bitcoin/issues/36155"
+    },
+    {
+      "event": "commented",
+      "id": 5554414899,
+      "node_id": "IC_kwDOABII588AAAABSxGlMw",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/issues/comments/5554414899",
+      "actor": {
+        "login": "csjones",
+        "id": 637026,
+        "node_id": "MDQ6VXNlcjYzNzAyNg==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/637026?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/csjones",
+        "html_url": "https://github.com/csjones",
+        "followers_url": "https://api.github.com/users/csjones/followers",
+        "following_url": "https://api.github.com/users/csjones/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/csjones/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/csjones/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/csjones/subscriptions",
+        "organizations_url": "https://api.github.com/users/csjones/orgs",
+        "repos_url": "https://api.github.com/users/csjones/repos",
+        "events_url": "https://api.github.com/users/csjones/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/csjones/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "commit_id": null,
+      "commit_url": null,
+      "created_at": "2026-09-05T19:59:51Z",
+      "updated_at": "2026-09-05T19:59:51Z",
+      "author_association": "CONTRIBUTOR",
+      "body": "> Your test instructions in the pull request description are confused. Can you remove them? Should be self-evident for reviewers what to check anyway.\r\n\r\nI updated the description.",
+      "user": {
+        "login": "csjones",
+        "id": 637026,
+        "node_id": "MDQ6VXNlcjYzNzAyNg==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/637026?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/csjones",
+        "html_url": "https://github.com/csjones",
+        "followers_url": "https://api.github.com/users/csjones/followers",
+        "following_url": "https://api.github.com/users/csjones/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/csjones/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/csjones/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/csjones/subscriptions",
+        "organizations_url": "https://api.github.com/users/csjones/orgs",
+        "repos_url": "https://api.github.com/users/csjones/repos",
+        "events_url": "https://api.github.com/users/csjones/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/csjones/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "html_url": "https://github.com/bitcoin/bitcoin/pull/36155#issuecomment-5554414899",
       "issue_url": "https://api.github.com/repos/bitcoin/bitcoin/issues/36155"
     }
   ],

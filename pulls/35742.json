@@ -12,7 +12,7 @@
     "review_comments_url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/35742/comments",
     "review_comment_url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments%7B/number%7D",
     "comments_url": "https://api.github.com/repos/bitcoin/bitcoin/issues/35742/comments",
-    "statuses_url": "https://api.github.com/repos/bitcoin/bitcoin/statuses/560cfa24a82369bf22622315a9e6db6872dd7045",
+    "statuses_url": "https://api.github.com/repos/bitcoin/bitcoin/statuses/5ced9e7cfd69b2f7f19e16908c4069560f0975fc",
     "number": 35742,
     "state": "open",
     "locked": false,
@@ -62,18 +62,19 @@
       }
     ],
     "created_at": "2026-07-17T20:36:49Z",
-    "updated_at": "2026-09-04T21:51:14Z",
-    "mergeable": false,
-    "mergeable_state": "dirty",
+    "updated_at": "2026-09-05T19:07:42Z",
+    "mergeable": true,
+    "mergeable_state": "blocked",
     "merged": false,
+    "merge_commit_sha": "f8777df242ce5aa6cb8de8e264d87623cd62a35c",
     "assignees": [],
     "requested_reviewers": [],
     "requested_teams": [],
-    "rebaseable": false,
+    "rebaseable": true,
     "head": {
       "label": "yashbhutwala:fix/multipath-miniscript-sanity",
       "ref": "fix/multipath-miniscript-sanity",
-      "sha": "560cfa24a82369bf22622315a9e6db6872dd7045",
+      "sha": "5ced9e7cfd69b2f7f19e16908c4069560f0975fc",
       "user": {
         "login": "yashbhutwala",
         "id": 5788514,
@@ -186,7 +187,7 @@
         "archived": false,
         "disabled": false,
         "visibility": "public",
-        "pushed_at": "2026-07-17T20:35:50Z",
+        "pushed_at": "2026-09-05T19:07:40Z",
         "created_at": "2018-01-18T21:43:38Z",
         "updated_at": "2026-07-17T20:04:44Z",
         "allow_forking": true,
@@ -210,7 +211,7 @@
     "base": {
       "label": "bitcoin:master",
       "ref": "master",
-      "sha": "9d6ba4b3b572c978392ec030567aa9e689a259ba",
+      "sha": "f0c839ace5a2a5e2651c580c76974c514f1500f8",
       "user": {
         "login": "bitcoin",
         "id": 528860,
@@ -307,12 +308,12 @@
         "svn_url": "https://github.com/bitcoin/bitcoin",
         "homepage": "https://bitcoincore.org/en/download",
         "language": "C++",
-        "forks_count": 39373,
-        "stargazers_count": 90097,
-        "watchers_count": 90097,
-        "size": 323421,
+        "forks_count": 39385,
+        "stargazers_count": 90110,
+        "watchers_count": 90110,
+        "size": 323824,
         "default_branch": "master",
-        "open_issues_count": 733,
+        "open_issues_count": 730,
         "is_template": false,
         "topics": [
           "bitcoin",
@@ -329,9 +330,9 @@
         "archived": false,
         "disabled": false,
         "visibility": "public",
-        "pushed_at": "2026-09-03T13:50:46Z",
+        "pushed_at": "2026-09-05T15:16:34Z",
         "created_at": "2010-12-19T15:16:43Z",
-        "updated_at": "2026-09-04T21:34:02Z",
+        "updated_at": "2026-09-05T18:58:55Z",
         "allow_forking": true,
         "license": {
           "key": "mit",
@@ -357,54 +358,14 @@
     },
     "author_association": "CONTRIBUTOR",
     "draft": false,
-    "additions": 38,
-    "deletions": 2,
+    "additions": 39,
+    "deletions": 3,
     "changed_files": 2,
     "commits": 1,
     "review_comments": 0,
     "comments": 4
   },
   "events": [
-    {
-      "event": "committed",
-      "id": null,
-      "node_id": "C_kwDOABII59oAKDU2MGNmYTI0YTgyMzY5YmYyMjYyMjMxNWE5ZTZkYjY4NzJkZDcwNDU",
-      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/560cfa24a82369bf22622315a9e6db6872dd7045",
-      "actor": null,
-      "commit_id": null,
-      "commit_url": null,
-      "created_at": null,
-      "html_url": "https://github.com/bitcoin/bitcoin/commit/560cfa24a82369bf22622315a9e6db6872dd7045",
-      "tree": {
-        "sha": "c096db65d46ec2eab7a25f7f7278c719ccb7befe",
-        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/c096db65d46ec2eab7a25f7f7278c719ccb7befe"
-      },
-      "verification": {
-        "verified": true,
-        "reason": "valid",
-        "payload": "tree c096db65d46ec2eab7a25f7f7278c719ccb7befe\nparent 9d6ba4b3b572c978392ec030567aa9e689a259ba\nauthor Yash Bhutwala <yash.bhutwala@gmail.com> 1784320496 -0400\ncommitter Yash Bhutwala <yash.bhutwala@gmail.com> 1784320496 -0400\n\ndescriptor: check duplicate keys in all multipath branches\n",
-        "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgvFiv1vrfISAy4yLEWurhEoGNyk\nMHBqV4hfcbQv2DL/0AAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQDLpDpBP/V/e+xw2vNviDo/QuvzP2isB+6MhXbfxBR27uCIt2Tw1iRpc/7KRr4Wki9\nAt1JeT/2cvxP06w9Ia3wg=\n-----END SSH SIGNATURE-----"
-      },
-      "parents": [
-        {
-          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/9d6ba4b3b572c978392ec030567aa9e689a259ba",
-          "sha": "9d6ba4b3b572c978392ec030567aa9e689a259ba",
-          "html_url": "https://github.com/bitcoin/bitcoin/commit/9d6ba4b3b572c978392ec030567aa9e689a259ba"
-        }
-      ],
-      "message": "descriptor: check duplicate keys in all multipath branches",
-      "committer": {
-        "name": "Yash Bhutwala",
-        "email": "yash.bhutwala@gmail.com",
-        "date": "2026-07-17T20:34:56Z"
-      },
-      "author": {
-        "name": "Yash Bhutwala",
-        "email": "yash.bhutwala@gmail.com",
-        "date": "2026-07-17T20:34:56Z"
-      },
-      "sha": "560cfa24a82369bf22622315a9e6db6872dd7045"
-    },
     {
       "event": "labeled",
       "id": 28140602725,
@@ -737,6 +698,77 @@
       },
       "html_url": "https://github.com/bitcoin/bitcoin/pull/35742#issuecomment-5546853919",
       "issue_url": "https://api.github.com/repos/bitcoin/bitcoin/issues/35742"
+    },
+    {
+      "event": "committed",
+      "id": null,
+      "node_id": "C_kwDOABII59oAKDVjZWQ5ZTdjZmQ2OWIyZjdmMTllMTY5MDhjNDA2OTU2MGYwOTc1ZmM",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/5ced9e7cfd69b2f7f19e16908c4069560f0975fc",
+      "actor": null,
+      "commit_id": null,
+      "commit_url": null,
+      "created_at": null,
+      "html_url": "https://github.com/bitcoin/bitcoin/commit/5ced9e7cfd69b2f7f19e16908c4069560f0975fc",
+      "tree": {
+        "sha": "d386d1b76c6dd6df55adb1f0fea23efd6fae9309",
+        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/d386d1b76c6dd6df55adb1f0fea23efd6fae9309"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "payload": "tree d386d1b76c6dd6df55adb1f0fea23efd6fae9309\nparent f0c839ace5a2a5e2651c580c76974c514f1500f8\nauthor Yash Bhutwala <yash.bhutwala@gmail.com> 1784320496 -0400\ncommitter Yash Bhutwala <yash.bhutwala@gmail.com> 1788634934 -0400\n\ndescriptor: check duplicate keys in all multipath branches\n",
+        "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgvFiv1vrfISAy4yLEWurhEoGNyk\nMHBqV4hfcbQv2DL/0AAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQGio1C3TpHKOjp8Wza1wjpr5gDVCFfUdN6qSJZDyOhHVuz4KMTClWq5LCdLnmGjQII\n4uPrZrXHQqBFeedixQ0gk=\n-----END SSH SIGNATURE-----"
+      },
+      "parents": [
+        {
+          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/f0c839ace5a2a5e2651c580c76974c514f1500f8",
+          "sha": "f0c839ace5a2a5e2651c580c76974c514f1500f8",
+          "html_url": "https://github.com/bitcoin/bitcoin/commit/f0c839ace5a2a5e2651c580c76974c514f1500f8"
+        }
+      ],
+      "message": "descriptor: check duplicate keys in all multipath branches",
+      "committer": {
+        "name": "Yash Bhutwala",
+        "email": "yash.bhutwala@gmail.com",
+        "date": "2026-09-05T19:02:14Z"
+      },
+      "author": {
+        "name": "Yash Bhutwala",
+        "email": "yash.bhutwala@gmail.com",
+        "date": "2026-07-17T20:34:56Z"
+      },
+      "sha": "5ced9e7cfd69b2f7f19e16908c4069560f0975fc"
+    },
+    {
+      "event": "head_ref_force_pushed",
+      "id": 30617676459,
+      "node_id": "HRFPE_lADOABII588AAAABJO814c8AAAAHIPSqqw",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/issues/events/30617676459",
+      "actor": {
+        "login": "yashbhutwala",
+        "id": 5788514,
+        "node_id": "MDQ6VXNlcjU3ODg1MTQ=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/5788514?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/yashbhutwala",
+        "html_url": "https://github.com/yashbhutwala",
+        "followers_url": "https://api.github.com/users/yashbhutwala/followers",
+        "following_url": "https://api.github.com/users/yashbhutwala/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/yashbhutwala/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/yashbhutwala/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/yashbhutwala/subscriptions",
+        "organizations_url": "https://api.github.com/users/yashbhutwala/orgs",
+        "repos_url": "https://api.github.com/users/yashbhutwala/repos",
+        "events_url": "https://api.github.com/users/yashbhutwala/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/yashbhutwala/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "commit_id": "5ced9e7cfd69b2f7f19e16908c4069560f0975fc",
+      "commit_url": "https://api.github.com/repos/yashbhutwala/bitcoin/commits/5ced9e7cfd69b2f7f19e16908c4069560f0975fc",
+      "created_at": "2026-09-05T19:07:42Z"
     }
   ],
   "comments": []
