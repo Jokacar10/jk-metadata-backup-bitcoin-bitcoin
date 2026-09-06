@@ -15,7 +15,7 @@
     "statuses_url": "https://api.github.com/repos/bitcoin/bitcoin/statuses/cfafc99a475c89b889a23d67dcb1ef8fd0eab3a6",
     "number": 33130,
     "state": "closed",
-    "locked": false,
+    "locked": true,
     "maintainer_can_modify": false,
     "title": "validation: Keep chain tip in candidate set",
     "user": {
@@ -37,6 +37,7 @@
       "received_events_url": "https://api.github.com/users/nervana21/received_events",
       "type": "User",
       "site_admin": false,
+      "name": null,
       "patch_url": null
     },
     "body": "After `PruneBlockIndexCandidates()` is called, the candidate set must include the current chain tip or a successor of it.\r\n\r\n`PruneBlockIndexCandidates()` removes candidates with less work than the active tip. However, because the tip itself is never added to `setBlockIndexCandidates` via `TryAddBlockIndexCandidate()`, it may be absent from the set. Prior to this patch, if all lower-work candidates were pruned and the tip was not present, `setBlockIndexCandidates` could become empty—violating an invariant relied upon by `FindMostWorkChain()`.\r\n\r\nThis patch ensures that `PruneBlockIndexCandidates()` explicitly reinserts the current tip after pruning, preserving that invariant.\r\n\r\nFixes #33129",
@@ -51,7 +52,7 @@
       }
     ],
     "created_at": "2025-08-03T14:15:35Z",
-    "updated_at": "2025-09-06T10:50:42Z",
+    "updated_at": "2026-09-06T19:07:20Z",
     "closed_at": "2025-08-04T00:36:26Z",
     "mergeable_state": "unknown",
     "merged": false,
@@ -82,6 +83,7 @@
         "received_events_url": "https://api.github.com/users/nervana21/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "repo": {
@@ -108,6 +110,7 @@
           "received_events_url": "https://api.github.com/users/nervana21/received_events",
           "type": "User",
           "site_admin": false,
+          "name": null,
           "patch_url": null
         },
         "private": false,
@@ -158,9 +161,9 @@
         "homepage": "https://bitcoincore.org/en/download",
         "language": "C++",
         "forks_count": 0,
-        "stargazers_count": 1,
-        "watchers_count": 1,
-        "size": 291090,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "size": 321021,
         "default_branch": "master",
         "open_issues_count": 0,
         "is_template": false,
@@ -169,13 +172,13 @@
         "has_projects": true,
         "has_wiki": false,
         "has_pages": false,
-        "has_downloads": true,
+        "has_downloads": false,
         "archived": false,
         "disabled": false,
         "visibility": "public",
-        "pushed_at": "2025-09-06T10:54:36Z",
+        "pushed_at": "2026-09-05T14:12:17Z",
         "created_at": "2025-04-23T13:19:03Z",
-        "updated_at": "2025-09-05T20:32:48Z",
+        "updated_at": "2026-08-24T23:48:18Z",
         "allow_forking": true,
         "license": {
           "key": "mit",
@@ -217,6 +220,7 @@
         "received_events_url": "https://api.github.com/users/bitcoin/received_events",
         "type": "Organization",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "repo": {
@@ -243,6 +247,7 @@
           "received_events_url": "https://api.github.com/users/bitcoin/received_events",
           "type": "Organization",
           "site_admin": false,
+          "name": null,
           "patch_url": null
         },
         "private": false,
@@ -292,12 +297,12 @@
         "svn_url": "https://github.com/bitcoin/bitcoin",
         "homepage": "https://bitcoincore.org/en/download",
         "language": "C++",
-        "forks_count": 37727,
-        "stargazers_count": 85363,
-        "watchers_count": 85363,
-        "size": 291997,
+        "forks_count": 39385,
+        "stargazers_count": 90121,
+        "watchers_count": 90121,
+        "size": 323838,
         "default_branch": "master",
-        "open_issues_count": 772,
+        "open_issues_count": 729,
         "is_template": false,
         "topics": [
           "bitcoin",
@@ -314,9 +319,9 @@
         "archived": false,
         "disabled": false,
         "visibility": "public",
-        "pushed_at": "2025-09-05T23:23:23Z",
+        "pushed_at": "2026-09-06T13:24:53Z",
         "created_at": "2010-12-19T15:16:43Z",
-        "updated_at": "2025-09-06T09:51:19Z",
+        "updated_at": "2026-09-06T18:47:48Z",
         "allow_forking": true,
         "license": {
           "key": "mit",
@@ -374,6 +379,7 @@
         "received_events_url": "https://api.github.com/users/DrahtBot/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "commit_id": null,
@@ -408,6 +414,7 @@
         "received_events_url": "https://api.github.com/users/DrahtBot/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "commit_id": null,
@@ -435,6 +442,7 @@
         "received_events_url": "https://api.github.com/users/DrahtBot/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "html_url": "https://github.com/bitcoin/bitcoin/pull/33130#issuecomment-3148452399",
@@ -504,6 +512,7 @@
         "received_events_url": "https://api.github.com/users/nervana21/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "commit_id": "cfafc99a475c89b889a23d67dcb1ef8fd0eab3a6",
@@ -534,6 +543,7 @@
         "received_events_url": "https://api.github.com/users/DrahtBot/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "commit_id": null,
@@ -568,6 +578,7 @@
         "received_events_url": "https://api.github.com/users/DrahtBot/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "commit_id": null,
@@ -595,6 +606,7 @@
         "received_events_url": "https://api.github.com/users/DrahtBot/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "html_url": "https://github.com/bitcoin/bitcoin/pull/33130#issuecomment-3148455732",
@@ -624,6 +636,7 @@
         "received_events_url": "https://api.github.com/users/nervana21/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "commit_id": null,
@@ -651,6 +664,7 @@
         "received_events_url": "https://api.github.com/users/nervana21/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "html_url": "https://github.com/bitcoin/bitcoin/pull/33130#issuecomment-3148457986",
@@ -680,6 +694,7 @@
         "received_events_url": "https://api.github.com/users/Ataraxia009/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "commit_id": null,
@@ -710,6 +725,7 @@
         "received_events_url": "https://api.github.com/users/Ataraxia009/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "commit_id": null,
@@ -740,6 +756,7 @@
         "received_events_url": "https://api.github.com/users/DrahtBot/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "commit_id": null,
@@ -781,6 +798,7 @@
         "received_events_url": "https://api.github.com/users/mzumsande/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "html_url": "https://github.com/bitcoin/bitcoin/pull/33130#pullrequestreview-3082372722",
@@ -812,6 +830,7 @@
         "received_events_url": "https://api.github.com/users/nervana21/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "commit_id": null,
@@ -839,6 +858,7 @@
         "received_events_url": "https://api.github.com/users/nervana21/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "html_url": "https://github.com/bitcoin/bitcoin/pull/33130#issuecomment-3148820941",
@@ -868,6 +888,7 @@
         "received_events_url": "https://api.github.com/users/nervana21/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "commit_id": null,
@@ -898,11 +919,43 @@
         "received_events_url": "https://api.github.com/users/nervana21/received_events",
         "type": "User",
         "site_admin": false,
+        "name": null,
         "patch_url": null
       },
       "commit_id": null,
       "commit_url": null,
       "created_at": "2025-09-06T10:50:42Z"
+    },
+    {
+      "event": "locked",
+      "id": 30650445705,
+      "node_id": "LOE_lADOABII587D7vTRzwAAAAci6K-J",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/issues/events/30650445705",
+      "actor": {
+        "login": "bitcoin",
+        "id": 528860,
+        "node_id": "MDEyOk9yZ2FuaXphdGlvbjUyODg2MA==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/528860?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/bitcoin",
+        "html_url": "https://github.com/bitcoin",
+        "followers_url": "https://api.github.com/users/bitcoin/followers",
+        "following_url": "https://api.github.com/users/bitcoin/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/bitcoin/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/bitcoin/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/bitcoin/subscriptions",
+        "organizations_url": "https://api.github.com/users/bitcoin/orgs",
+        "repos_url": "https://api.github.com/users/bitcoin/repos",
+        "events_url": "https://api.github.com/users/bitcoin/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/bitcoin/received_events",
+        "type": "Organization",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "commit_id": null,
+      "commit_url": null,
+      "created_at": "2026-09-06T19:07:20Z"
     }
   ],
   "comments": []
