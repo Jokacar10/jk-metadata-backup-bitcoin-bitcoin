@@ -52,7 +52,7 @@
       }
     ],
     "created_at": "2026-09-04T23:41:32Z",
-    "updated_at": "2026-09-05T20:33:14Z",
+    "updated_at": "2026-09-06T02:21:16Z",
     "mergeable": true,
     "mergeable_state": "blocked",
     "merged": false,
@@ -164,7 +164,7 @@
         "forks_count": 2,
         "stargazers_count": 7,
         "watchers_count": 7,
-        "size": 315653,
+        "size": 315957,
         "default_branch": "master",
         "open_issues_count": 0,
         "is_template": false,
@@ -299,11 +299,11 @@
         "homepage": "https://bitcoincore.org/en/download",
         "language": "C++",
         "forks_count": 39385,
-        "stargazers_count": 90111,
-        "watchers_count": 90111,
+        "stargazers_count": 90115,
+        "watchers_count": 90115,
         "size": 323824,
         "default_branch": "master",
-        "open_issues_count": 731,
+        "open_issues_count": 732,
         "is_template": false,
         "topics": [
           "bitcoin",
@@ -322,7 +322,7 @@
         "visibility": "public",
         "pushed_at": "2026-09-05T15:16:34Z",
         "created_at": "2010-12-19T15:16:43Z",
-        "updated_at": "2026-09-05T20:52:26Z",
+        "updated_at": "2026-09-06T02:20:19Z",
         "allow_forking": true,
         "license": {
           "key": "mit",
@@ -352,7 +352,7 @@
     "deletions": 93,
     "changed_files": 10,
     "commits": 3,
-    "review_comments": 0,
+    "review_comments": 4,
     "comments": 2
   },
   "events": [
@@ -421,9 +421,9 @@
       "commit_id": null,
       "commit_url": null,
       "created_at": "2026-09-04T23:41:40Z",
-      "updated_at": "2026-09-05T20:33:14Z",
+      "updated_at": "2026-09-06T02:21:16Z",
       "author_association": "CONTRIBUTOR",
-      "body": "<!--e57a25ab6845829454e8d69fc972939a-->\n\nThe following sections might be updated with supplementary metadata relevant to reviewers and maintainers.\n\n<!--006a51241073e994b41acfe9ec718e94-->\n### Code Coverage & Benchmarks\nFor details see: https://corecheck.dev/bitcoin/bitcoin/pulls/36171.\n<!--021abf342d371248e50ceaed478a90ca-->\n### Reviews\nSee [the guideline](https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#code-review) and [AI policy](https://github.com/bitcoin/bitcoin/blob/master/doc/AI_POLICY.md) for information on the review process.\nA summary of reviews will appear here.\n<!--174a7506f384e20aa4161008e828411d-->\n### Conflicts\nReviewers, this pull request conflicts with the following ones:\n\n* [#36066](https://github.com/bitcoin/bitcoin/pull/36066) (validation: Separate check-only version of ConnectBlock by optout21)\n* [#35731](https://github.com/bitcoin/bitcoin/pull/35731) (Indexes: Harden the flush-error notification invariant by arejula27)\n* [#35714](https://github.com/bitcoin/bitcoin/pull/35714) (validation: stop writes after flush failure by l0rinc)\n* [#35646](https://github.com/bitcoin/bitcoin/pull/35646) (RFC: Separate out runtime errors from BlockValidationState using `util::Expected` by yuvicc)\n* [#35570](https://github.com/bitcoin/bitcoin/pull/35570) (refactor: Change some validation.cpp methods to return BlockValidationState by optout21)\n* [#35307](https://github.com/bitcoin/bitcoin/pull/35307) (blockstorage: keep snapshot base in normal blockfile range by shuv-amp)\n* [#35003](https://github.com/bitcoin/bitcoin/pull/35003) (validation: improve block data I/O error handling in P2P paths by furszy)\n* [#32554](https://github.com/bitcoin/bitcoin/pull/32554) (bench: replace embedded raw block with configurable block generator by l0rinc)\n* [#30342](https://github.com/bitcoin/bitcoin/pull/30342) (kernel, logging: Pass Logger instances to kernel objects by ryanofsky)\n\nIf you consider this pull request important, please also help to review the conflicting pull requests. Ideally, start with the one that should be merged first.\n<!--5faf32d7da4f0f540f40219e4f7537a3-->",
+      "body": "<!--e57a25ab6845829454e8d69fc972939a-->\n\nThe following sections might be updated with supplementary metadata relevant to reviewers and maintainers.\n\n<!--006a51241073e994b41acfe9ec718e94-->\n### Code Coverage & Benchmarks\nFor details see: https://corecheck.dev/bitcoin/bitcoin/pulls/36171.\n<!--021abf342d371248e50ceaed478a90ca-->\n### Reviews\nSee [the guideline](https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#code-review) and [AI policy](https://github.com/bitcoin/bitcoin/blob/master/doc/AI_POLICY.md) for information on the review process.\n| Type | Reviewers |\n| ---- | --------- |\n| Concept ACK | [jeanpablojp](https://github.com/bitcoin/bitcoin/pull/36171#pullrequestreview-5123824251) |\n\nIf your review is incorrectly listed, please copy-paste <code>&lt;!--meta-tag:bot-skip--&gt;</code> into the comment that the bot should ignore.\n<!--174a7506f384e20aa4161008e828411d-->\n### Conflicts\nReviewers, this pull request conflicts with the following ones:\n\n* [#36066](https://github.com/bitcoin/bitcoin/pull/36066) (validation: Separate check-only version of ConnectBlock by optout21)\n* [#35731](https://github.com/bitcoin/bitcoin/pull/35731) (Indexes: Harden the flush-error notification invariant by arejula27)\n* [#35714](https://github.com/bitcoin/bitcoin/pull/35714) (validation: stop writes after flush failure by l0rinc)\n* [#35646](https://github.com/bitcoin/bitcoin/pull/35646) (RFC: Separate out runtime errors from BlockValidationState using `util::Expected` by yuvicc)\n* [#35570](https://github.com/bitcoin/bitcoin/pull/35570) (refactor: Change some validation.cpp methods to return BlockValidationState by optout21)\n* [#35307](https://github.com/bitcoin/bitcoin/pull/35307) (blockstorage: keep snapshot base in normal blockfile range by shuv-amp)\n* [#35003](https://github.com/bitcoin/bitcoin/pull/35003) (validation: improve block data I/O error handling in P2P paths by furszy)\n* [#32554](https://github.com/bitcoin/bitcoin/pull/32554) (bench: replace embedded raw block with configurable block generator by l0rinc)\n* [#30342](https://github.com/bitcoin/bitcoin/pull/30342) (kernel, logging: Pass Logger instances to kernel objects by ryanofsky)\n\nIf you consider this pull request important, please also help to review the conflicting pull requests. Ideally, start with the one that should be merged first.\n<!--5faf32d7da4f0f540f40219e4f7537a3-->",
       "user": {
         "login": "DrahtBot",
         "id": 39886733,
@@ -727,7 +727,263 @@
         "name": "CI failed",
         "color": "cccccc"
       }
+    },
+    {
+      "event": "reviewed",
+      "id": 5123824251,
+      "node_id": "PRR_kwDOABII588AAAABMWdaew",
+      "url": null,
+      "actor": null,
+      "commit_id": "8543c51d0dd9632b5853534a10556fbf563d75d5",
+      "commit_url": null,
+      "created_at": null,
+      "updated_at": "2026-09-06T02:21:12Z",
+      "author_association": "CONTRIBUTOR",
+      "body": "Concept ACK\n\nRan the full unit suite and the block functional tests on the head, and a forced block write failure in regtest matches the merge-base line for line.\n",
+      "user": {
+        "login": "jeanpablojp",
+        "id": 8968629,
+        "node_id": "MDQ6VXNlcjg5Njg2Mjk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8968629?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/jeanpablojp",
+        "html_url": "https://github.com/jeanpablojp",
+        "followers_url": "https://api.github.com/users/jeanpablojp/followers",
+        "following_url": "https://api.github.com/users/jeanpablojp/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/jeanpablojp/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/jeanpablojp/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/jeanpablojp/subscriptions",
+        "organizations_url": "https://api.github.com/users/jeanpablojp/orgs",
+        "repos_url": "https://api.github.com/users/jeanpablojp/repos",
+        "events_url": "https://api.github.com/users/jeanpablojp/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/jeanpablojp/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "html_url": "https://github.com/bitcoin/bitcoin/pull/36171#pullrequestreview-5123824251",
+      "submitted_at": "2026-09-06T02:21:11Z",
+      "state": "COMMENTED",
+      "pull_request_url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/36171"
     }
   ],
-  "comments": []
+  "comments": [
+    {
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments/3942701178",
+      "pull_request_review_id": 5123824251,
+      "id": 3942701178,
+      "node_id": "PRRC_kwDOABII587rANh6",
+      "diff_hunk": "@@ -185,6 +186,29 @@ enum class ReadRawError {\n     BadPartRange,\n };\n \n+/** Errors produced by block storage instead of invoking application callbacks. */\n+enum class BlockStorageErrorType {\n+    FLUSH,\n+    FATAL,\n+};\n+\n+struct BlockStorageError {\n+    BlockStorageErrorType type;\n+    bilingual_str message;\n+};\n+\n+using BlockStorageErrors = std::vector<BlockStorageError>;\n+\n+/**",
+      "path": "src/node/blockstorage.h",
+      "position": 25,
+      "original_position": 25,
+      "commit_id": "8543c51d0dd9632b5853534a10556fbf563d75d5",
+      "original_commit_id": "8543c51d0dd9632b5853534a10556fbf563d75d5",
+      "in_reply_to_id": null,
+      "user": {
+        "login": "jeanpablojp",
+        "id": 8968629,
+        "node_id": "MDQ6VXNlcjg5Njg2Mjk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8968629?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/jeanpablojp",
+        "html_url": "https://github.com/jeanpablojp",
+        "followers_url": "https://api.github.com/users/jeanpablojp/followers",
+        "following_url": "https://api.github.com/users/jeanpablojp/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/jeanpablojp/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/jeanpablojp/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/jeanpablojp/subscriptions",
+        "organizations_url": "https://api.github.com/users/jeanpablojp/orgs",
+        "repos_url": "https://api.github.com/users/jeanpablojp/repos",
+        "events_url": "https://api.github.com/users/jeanpablojp/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/jeanpablojp/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "body": "The comment does not say the caller has to deliver the notifications, which is what this moves out of `BlockManager`. Worth adding a line here? And `[[nodiscard]]` on the struct itself might be worth it, it builds clean on `bitcoind`, `test_bitcoin` and `bench_bitcoin` and would catch `WriteBlock`, `WriteBlockUndo` and `LoadBlockIndexDB`, the three public ones without it. `WriteBlock`'s `@returns` and the two `Return false if` comments still describe the old return type.\n",
+      "created_at": "2026-09-06T02:21:12Z",
+      "updated_at": "2026-09-06T02:21:12Z",
+      "html_url": "https://github.com/bitcoin/bitcoin/pull/36171#discussion_r3942701178",
+      "author_association": "CONTRIBUTOR",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments/3942701178"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/36171"
+        }
+      },
+      "start_line": null,
+      "original_start_line": null,
+      "start_side": null,
+      "line": 202,
+      "original_line": 202,
+      "side": "RIGHT"
+    },
+    {
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments/3942701182",
+      "pull_request_review_id": 5123824251,
+      "id": 3942701182,
+      "node_id": "PRRC_kwDOABII587rANh-",
+      "diff_hunk": "@@ -925,15 +941,16 @@ FlatFilePos BlockManager::FindNextBlockPos(unsigned int nAddSize, unsigned int n\n     bool out_of_space;\n     size_t bytes_allocated = m_block_file_seq.Allocate(pos, nAddSize, out_of_space);",
+      "path": "src/node/blockstorage.cpp",
+      "position": 222,
+      "original_position": 222,
+      "commit_id": "8543c51d0dd9632b5853534a10556fbf563d75d5",
+      "original_commit_id": "8543c51d0dd9632b5853534a10556fbf563d75d5",
+      "in_reply_to_id": null,
+      "user": {
+        "login": "jeanpablojp",
+        "id": 8968629,
+        "node_id": "MDQ6VXNlcjg5Njg2Mjk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8968629?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/jeanpablojp",
+        "html_url": "https://github.com/jeanpablojp",
+        "followers_url": "https://api.github.com/users/jeanpablojp/followers",
+        "following_url": "https://api.github.com/users/jeanpablojp/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/jeanpablojp/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/jeanpablojp/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/jeanpablojp/subscriptions",
+        "organizations_url": "https://api.github.com/users/jeanpablojp/orgs",
+        "repos_url": "https://api.github.com/users/jeanpablojp/repos",
+        "events_url": "https://api.github.com/users/jeanpablojp/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/jeanpablojp/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "body": "Whatever notifications the rollover flush produced sit in `outcome` until `AcceptBlock` delivers them, and in between `Allocate` calls `CheckDiskSpace`, which uses the throwing `fs::space` overload. If it throws, `outcome` is gone before `AcceptBlock` gets it, and the catch there reports only the generic error. The log lines stay, but the flush callbacks never fire, only `fatal_error` does. Is discarding the notifications here intended?\n",
+      "created_at": "2026-09-06T02:21:12Z",
+      "updated_at": "2026-09-06T02:21:12Z",
+      "html_url": "https://github.com/bitcoin/bitcoin/pull/36171#discussion_r3942701182",
+      "author_association": "CONTRIBUTOR",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments/3942701182"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/36171"
+        }
+      },
+      "start_line": null,
+      "original_start_line": null,
+      "start_side": null,
+      "line": 942,
+      "original_line": 942,
+      "side": "RIGHT"
+    },
+    {
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments/3942701186",
+      "pull_request_review_id": 5123824251,
+      "id": 3942701186,
+      "node_id": "PRRC_kwDOABII587rANiC",
+      "diff_hunk": "@@ -56,8 +56,71 @@ BOOST_AUTO_TEST_CASE(blockmanager_find_block_pos)\n     // this is a check to make sure that https://github.com/bitcoin/bitcoin/issues/21379 does not recur\n     // 8 bytes (for serialization header) + 285 (for serialized genesis block) = 293\n     // add another 8 bytes for the second block's serialization header and we get 293 + 8 = 301\n-    FlatFilePos actual{blockman.WriteBlock(params->GenesisBlock(), 1)};\n-    BOOST_CHECK_EQUAL(actual.nPos, STORAGE_HEADER_BYTES + ::GetSerializeSize(TX_WITH_WITNESS(params->GenesisBlock())) + STORAGE_HEADER_BYTES);\n+    const auto second_outcome{blockman.WriteBlock(params->GenesisBlock(), 1)};\n+    BOOST_CHECK(second_outcome.notifications.empty());\n+    BOOST_CHECK_EQUAL(second_outcome.value.nPos, STORAGE_HEADER_BYTES + ::GetSerializeSize(TX_WITH_WITNESS(params->GenesisBlock())) + STORAGE_HEADER_BYTES);\n+}\n+\n+BOOST_AUTO_TEST_CASE(blockmanager_returns_flush_errors)\n+{\n+    const auto params{CreateChainParams(ArgsManager{}, ChainType::MAIN)};\n+    const BlockManager::Options blockman_opts{\n+        .chainparams = *params,\n+        .blocks_dir = m_args.GetBlocksDirPath(),\n+        .block_tree_db_params = DBParams{\n+            .path = m_args.GetDataDirNet() / \"blocks\" / \"index\",\n+            .cache_bytes = 0,\n+        },\n+    };\n+    BlockManager blockman{*Assert(m_node.shutdown_signal), blockman_opts};\n+\n+    CBlock block;\n+    LOCK(::cs_main);\n+    const auto first_outcome{blockman.WriteBlock(block, /*nHeight=*/0)};\n+    const FlatFilePos first_pos{first_outcome.value};\n+    BOOST_REQUIRE(!first_pos.IsNull());\n+    BOOST_REQUIRE_EQUAL(first_pos.nFile, 0);\n+    BOOST_REQUIRE(first_outcome.notifications.empty());\n+\n+    // Force a rollover, and make both files from the previous sequence entry\n+    // impossible to open. The new block write itself can still succeed.\n+    blockman.GetBlockFileInfo(first_pos.nFile)->nSize = MAX_BLOCKFILE_SIZE;\n+    const fs::path block_path{blockman.GetBlockPosFilename(FlatFilePos{first_pos.nFile, 0})};\n+    BOOST_REQUIRE(fs::remove(block_path));\n+    BOOST_REQUIRE(fs::create_directory(block_path));\n+    BOOST_REQUIRE(fs::create_directory(m_args.GetBlocksDirPath() / \"rev00000.dat\"));\n+\n+    const auto second_outcome{blockman.WriteBlock(block, /*nHeight=*/1)};\n+    const FlatFilePos second_pos{second_outcome.value};\n+    BOOST_REQUIRE(!second_pos.IsNull());\n+    BOOST_CHECK_NE(second_pos.nFile, first_pos.nFile);\n+    BOOST_REQUIRE_EQUAL(second_outcome.notifications.size(), 2);\n+    BOOST_CHECK(second_outcome.notifications[0].type == node::BlockStorageErrorType::FLUSH);\n+    BOOST_CHECK_EQUAL(second_outcome.notifications[0].message.original, \"Flushing block file to disk failed. This is likely the result of an I/O error.\");\n+    BOOST_CHECK(second_outcome.notifications[1].type == node::BlockStorageErrorType::FLUSH);\n+    BOOST_CHECK_EQUAL(second_outcome.notifications[1].message.original, \"Flushing undo file to disk failed. This is likely the result of an I/O error.\");\n+}\n+\n+BOOST_AUTO_TEST_CASE(blockmanager_returns_fatal_error)\n+{\n+    const auto params{CreateChainParams(ArgsManager{}, ChainType::MAIN)};\n+    const BlockManager::Options blockman_opts{\n+        .chainparams = *params,\n+        .blocks_dir = m_args.GetBlocksDirPath(),\n+        .block_tree_db_params = DBParams{\n+            .path = m_args.GetDataDirNet() / \"blocks\" / \"index\",\n+            .cache_bytes = 0,\n+            .memory_only = true,\n+        },\n+    };\n+    BlockManager blockman{*Assert(m_node.shutdown_signal), blockman_opts};\n+\n+    LOCK(::cs_main);\n+    const auto outcome{blockman.LoadBlockIndexDB(uint256::ONE)};\n+    BOOST_CHECK(!outcome.value);\n+    BOOST_REQUIRE_EQUAL(outcome.notifications.size(), 1);\n+    BOOST_CHECK(outcome.notifications[0].type == node::BlockStorageErrorType::FATAL);\n+    BOOST_CHECK_NE(outcome.notifications[0].message.original.find(\"Assumeutxo data not found for the given blockhash\"), std::string::npos);\n }",
+      "path": "src/test/blockmanager_tests.cpp",
+      "position": 116,
+      "original_position": 116,
+      "commit_id": "8543c51d0dd9632b5853534a10556fbf563d75d5",
+      "original_commit_id": "8543c51d0dd9632b5853534a10556fbf563d75d5",
+      "in_reply_to_id": null,
+      "user": {
+        "login": "jeanpablojp",
+        "id": 8968629,
+        "node_id": "MDQ6VXNlcjg5Njg2Mjk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8968629?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/jeanpablojp",
+        "html_url": "https://github.com/jeanpablojp",
+        "followers_url": "https://api.github.com/users/jeanpablojp/followers",
+        "following_url": "https://api.github.com/users/jeanpablojp/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/jeanpablojp/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/jeanpablojp/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/jeanpablojp/subscriptions",
+        "organizations_url": "https://api.github.com/users/jeanpablojp/orgs",
+        "repos_url": "https://api.github.com/users/jeanpablojp/repos",
+        "events_url": "https://api.github.com/users/jeanpablojp/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/jeanpablojp/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "body": "The two new tests cover the `FLUSH` pair and `LoadBlockIndexDB`'s `FATAL`. Nothing covers the `FATAL` that `WriteBlock` returns when it cannot open the block file, and deleting the `push_back` for `Failed to write block.` leaves the whole suite green. The same directory trick from the flush test works here. I ran this one on the head, it passes, and it fails with that `push_back` removed. Worth adding?\n\n```suggestion\n}\n\nBOOST_AUTO_TEST_CASE(blockmanager_returns_write_fatal_error)\n{\n    const auto params{CreateChainParams(ArgsManager{}, ChainType::MAIN)};\n    const BlockManager::Options blockman_opts{\n        .chainparams = *params,\n        .blocks_dir = m_args.GetBlocksDirPath(),\n        .block_tree_db_params = DBParams{\n            .path = m_args.GetDataDirNet() / \"blocks\" / \"index\",\n            .cache_bytes = 0,\n        },\n    };\n    BlockManager blockman{*Assert(m_node.shutdown_signal), blockman_opts};\n\n    // Make the block file the next write would open impossible to open.\n    BOOST_REQUIRE(fs::create_directory(m_args.GetBlocksDirPath() / \"blk00000.dat\"));\n\n    CBlock block;\n    LOCK(::cs_main);\n    const auto outcome{blockman.WriteBlock(block, /*nHeight=*/0)};\n    BOOST_CHECK(outcome.value.IsNull());\n    BOOST_REQUIRE_EQUAL(outcome.notifications.size(), 1U);\n    BOOST_CHECK(outcome.notifications[0].type == node::BlockStorageErrorType::FATAL);\n    BOOST_CHECK_EQUAL(outcome.notifications[0].message.original, \"Failed to write block.\");\n}\n```\n",
+      "created_at": "2026-09-06T02:21:12Z",
+      "updated_at": "2026-09-06T02:21:12Z",
+      "html_url": "https://github.com/bitcoin/bitcoin/pull/36171#discussion_r3942701186",
+      "author_association": "CONTRIBUTOR",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments/3942701186"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/36171"
+        }
+      },
+      "start_line": null,
+      "original_start_line": null,
+      "start_side": null,
+      "line": 124,
+      "original_line": 124,
+      "side": "RIGHT"
+    },
+    {
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments/3942701193",
+      "pull_request_review_id": 5123824251,
+      "id": 3942701193,
+      "node_id": "PRRC_kwDOABII587rANiJ",
+      "diff_hunk": "@@ -2138,6 +2138,20 @@ bool FatalError(Notifications& notifications, BlockValidationState& state, const\n     return state.Error(message.original);\n }\n \n+static void NotifyBlockStorageErrors(Notifications& notifications, node::BlockStorageErrors errors)",
+      "path": "src/validation.cpp",
+      "position": 4,
+      "original_position": 4,
+      "commit_id": "8543c51d0dd9632b5853534a10556fbf563d75d5",
+      "original_commit_id": "8543c51d0dd9632b5853534a10556fbf563d75d5",
+      "in_reply_to_id": null,
+      "user": {
+        "login": "jeanpablojp",
+        "id": 8968629,
+        "node_id": "MDQ6VXNlcjg5Njg2Mjk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8968629?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/jeanpablojp",
+        "html_url": "https://github.com/jeanpablojp",
+        "followers_url": "https://api.github.com/users/jeanpablojp/followers",
+        "following_url": "https://api.github.com/users/jeanpablojp/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/jeanpablojp/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/jeanpablojp/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/jeanpablojp/subscriptions",
+        "organizations_url": "https://api.github.com/users/jeanpablojp/orgs",
+        "repos_url": "https://api.github.com/users/jeanpablojp/repos",
+        "events_url": "https://api.github.com/users/jeanpablojp/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/jeanpablojp/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "body": "This one is new and has five callers. In the tests it runs constantly with an empty list, and only one caller ever delivers an actual notification, the assumeutxo path `feature_assumeutxo.py` covers end to end. I forced the other four by hand in regtest and they all deliver, but nothing here observes them. Worth a test for one of them?\n",
+      "created_at": "2026-09-06T02:21:12Z",
+      "updated_at": "2026-09-06T02:21:12Z",
+      "html_url": "https://github.com/bitcoin/bitcoin/pull/36171#discussion_r3942701193",
+      "author_association": "CONTRIBUTOR",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments/3942701193"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/36171"
+        }
+      },
+      "start_line": null,
+      "original_start_line": null,
+      "start_side": null,
+      "line": 2141,
+      "original_line": 2141,
+      "side": "RIGHT"
+    }
+  ]
 }
