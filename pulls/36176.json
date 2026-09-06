@@ -12,7 +12,7 @@
     "review_comments_url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/36176/comments",
     "review_comment_url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments%7B/number%7D",
     "comments_url": "https://api.github.com/repos/bitcoin/bitcoin/issues/36176/comments",
-    "statuses_url": "https://api.github.com/repos/bitcoin/bitcoin/statuses/d0c84768dacbfc9ac18dcbc1fa9b1d40f696038e",
+    "statuses_url": "https://api.github.com/repos/bitcoin/bitcoin/statuses/a34fc8b11a420c1ed9877a5dd73aab57aba17cd0",
     "number": 36176,
     "state": "open",
     "locked": false,
@@ -40,7 +40,7 @@
       "name": null,
       "patch_url": null
     },
-    "body": "I hit a crash while creating a new wallet in Bitcoin-Qt 31.1 on an Apple silicon Mac with `nosettings=1`. After looking through the crash report and code, I traced it to saving the wallet's load-on-startup setting: the settings writer throws when dynamic settings are disabled.\r\n\r\nThis checks whether settings are enabled before writing, so the wallet operation can finish with the existing warning instead of throwing.\r\n\r\nThe first commit adds unit and functional tests for the current behavior. The second adds the fix and updates those assertions.\r\n\r\nTested the focused wallet/settings unit tests, `wallet_startup.py`, `feature_settings.py`, and the Qt test suite on macOS ARM64.",
+    "body": "I hit a crash while creating a new wallet in Bitcoin-Qt 31.1 on an Apple silicon Mac with `nosettings=1`. After looking through the crash report and code, I traced it to saving the wallet's load-on-startup setting: the settings writer throws when dynamic settings are disabled.\n\nWallet RPCs report errors with `-nosettings` after changing wallet state. In Qt, the same settings write causes an uncaught exception.\n\nReturn a persistence failure when dynamic settings are disabled so wallet operations finish with their existing startup-setting warning. This avoids an uncaught exception in Qt and RPC errors after the wallet state has already changed. Keep in-memory and no-op updates unchanged.\n\nThe first commit adds functional coverage for the current behavior. The second adds the fix, updates the assertions to expect success with warnings, and documents that failed settings writes keep the in-memory changes.\n\n### Manual Reproduction\n\nRun on the parent commit and the fixed commit, using a fresh temporary regtest data directory each time:\n\n```sh\n{ cmake -B build-wallet-review -DBUILD_GUI=ON && cmake --build build-wallet-review -j --target bitcoin-qt; } >/dev/null 2>&1\nbuild-wallet-review/bin/bitcoin-qt -regtest -datadir=\"$(mktemp -d)\" -nosettings -noconnect\n```\n\nChoose `File` > `Create Wallet...`, enter `repro`, leave the defaults unchanged, and click `Create`.\n\nBefore the fix, the application terminates with:\n\n```text\nlibc++abi: terminating due to uncaught exception of type std::logic_error: Attempt to write settings file when dynamic settings are disabled.\n```\n\nAfter the fix, the wallet is created and the application displays:\n\n```text\nWallet load on startup setting could not be updated, so wallet may not be loaded next node startup.\n```\n",
     "labels": [
       {
         "id": 149424,
@@ -61,11 +61,11 @@
       }
     ],
     "created_at": "2026-09-05T20:07:50Z",
-    "updated_at": "2026-09-05T22:57:48Z",
+    "updated_at": "2026-09-06T00:59:30Z",
     "mergeable": true,
     "mergeable_state": "blocked",
     "merged": false,
-    "merge_commit_sha": "2c131d509eec19645750647c8379e95a2f3f1629",
+    "merge_commit_sha": "863503cbf6e66631a5fae050fe84efa44e79f004",
     "assignees": [],
     "requested_reviewers": [],
     "requested_teams": [],
@@ -73,7 +73,7 @@
     "head": {
       "label": "Rob1Ham:fix/wallet-disabled-settings-upstream",
       "ref": "fix/wallet-disabled-settings-upstream",
-      "sha": "d0c84768dacbfc9ac18dcbc1fa9b1d40f696038e",
+      "sha": "a34fc8b11a420c1ed9877a5dd73aab57aba17cd0",
       "user": {
         "login": "Rob1Ham",
         "id": 6456095,
@@ -173,7 +173,7 @@
         "forks_count": 0,
         "stargazers_count": 0,
         "watchers_count": 0,
-        "size": 288679,
+        "size": 288667,
         "default_branch": "master",
         "open_issues_count": 2,
         "is_template": false,
@@ -186,7 +186,7 @@
         "archived": false,
         "disabled": false,
         "visibility": "public",
-        "pushed_at": "2026-09-05T22:34:45Z",
+        "pushed_at": "2026-09-06T00:59:29Z",
         "created_at": "2026-08-13T06:30:06Z",
         "updated_at": "2026-09-05T20:06:22Z",
         "allow_forking": true,
@@ -308,8 +308,8 @@
         "homepage": "https://bitcoincore.org/en/download",
         "language": "C++",
         "forks_count": 39385,
-        "stargazers_count": 90112,
-        "watchers_count": 90112,
+        "stargazers_count": 90114,
+        "watchers_count": 90114,
         "size": 323824,
         "default_branch": "master",
         "open_issues_count": 732,
@@ -331,7 +331,7 @@
         "visibility": "public",
         "pushed_at": "2026-09-05T15:16:34Z",
         "created_at": "2010-12-19T15:16:43Z",
-        "updated_at": "2026-09-05T21:05:01Z",
+        "updated_at": "2026-09-06T00:32:15Z",
         "allow_forking": true,
         "license": {
           "key": "mit",
@@ -357,9 +357,9 @@
     },
     "author_association": "CONTRIBUTOR",
     "draft": false,
-    "additions": 39,
+    "additions": 34,
     "deletions": 1,
-    "changed_files": 2,
+    "changed_files": 3,
     "commits": 2,
     "review_comments": 2,
     "comments": 5
@@ -613,86 +613,6 @@
       "issue_url": "https://api.github.com/repos/bitcoin/bitcoin/issues/36176"
     },
     {
-      "event": "committed",
-      "id": null,
-      "node_id": "C_kwDOABII59oAKDMwYTI5ODhjMWIxZDk4ZDQzNDNkOWJlOTE0MDgwOGY0ZDdjMTU4MjY",
-      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/30a2988c1b1d98d4343d9be9140808f4d7c15826",
-      "actor": null,
-      "commit_id": null,
-      "commit_url": null,
-      "created_at": null,
-      "html_url": "https://github.com/bitcoin/bitcoin/commit/30a2988c1b1d98d4343d9be9140808f4d7c15826",
-      "tree": {
-        "sha": "335d9581fab513e6ef8aee9138758256757a57d5",
-        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/335d9581fab513e6ef8aee9138758256757a57d5"
-      },
-      "verification": {
-        "verified": true,
-        "reason": "valid",
-        "payload": "tree 335d9581fab513e6ef8aee9138758256757a57d5\nparent f0c839ace5a2a5e2651c580c76974c514f1500f8\nauthor Robert Hamilton <rob@anchorwatch.com> 1788647615 -0500\ncommitter Robert Hamilton <rob@anchorwatch.com> 1788647615 -0500\n\ntest: characterize disabled wallet settings\n\nWallet startup-setting writes throw when dynamic settings are disabled.\nThe RPC calls report an error even though the wallet state has changed.\n\nCover the RPC results before changing this behavior. Also check wallet\nusability, unchanged settings, and restart behavior.\n",
-        "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgCbkkxNx8CXxEyhg3heEezmCguE\nbLES0FHhGInfwSCEAAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQJAK/YAnqROl3CIolbsU2Vjz//XlN6wjx8D7RdEikVyXbu2e4SbYeYlxEZXcLOhsjL\ntbeprBQCG2V8eZ/K0YLQk=\n-----END SSH SIGNATURE-----"
-      },
-      "parents": [
-        {
-          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/f0c839ace5a2a5e2651c580c76974c514f1500f8",
-          "sha": "f0c839ace5a2a5e2651c580c76974c514f1500f8",
-          "html_url": "https://github.com/bitcoin/bitcoin/commit/f0c839ace5a2a5e2651c580c76974c514f1500f8"
-        }
-      ],
-      "message": "test: characterize disabled wallet settings\n\nWallet startup-setting writes throw when dynamic settings are disabled.\nThe RPC calls report an error even though the wallet state has changed.\n\nCover the RPC results before changing this behavior. Also check wallet\nusability, unchanged settings, and restart behavior.",
-      "committer": {
-        "name": "Robert Hamilton",
-        "email": "rob@anchorwatch.com",
-        "date": "2026-09-05T22:33:35Z"
-      },
-      "author": {
-        "name": "Robert Hamilton",
-        "email": "rob@anchorwatch.com",
-        "date": "2026-09-05T22:33:35Z"
-      },
-      "sha": "30a2988c1b1d98d4343d9be9140808f4d7c15826"
-    },
-    {
-      "event": "committed",
-      "id": null,
-      "node_id": "C_kwDOABII59oAKGQwYzg0NzY4ZGFjYmZjOWFjMThkY2JjMWZhOWIxZDQwZjY5NjAzOGU",
-      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/d0c84768dacbfc9ac18dcbc1fa9b1d40f696038e",
-      "actor": null,
-      "commit_id": null,
-      "commit_url": null,
-      "created_at": null,
-      "html_url": "https://github.com/bitcoin/bitcoin/commit/d0c84768dacbfc9ac18dcbc1fa9b1d40f696038e",
-      "tree": {
-        "sha": "40fdbfa9eb7db09af9ef7ea30d42ba9ea27a9f8f",
-        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/40fdbfa9eb7db09af9ef7ea30d42ba9ea27a9f8f"
-      },
-      "verification": {
-        "verified": true,
-        "reason": "valid",
-        "payload": "tree 40fdbfa9eb7db09af9ef7ea30d42ba9ea27a9f8f\nparent 30a2988c1b1d98d4343d9be9140808f4d7c15826\nauthor Robert Hamilton <rob@anchorwatch.com> 1788647641 -0500\ncommitter Robert Hamilton <rob@anchorwatch.com> 1788647641 -0500\n\nwallet: handle disabled startup settings\n\nReturn a persistence failure when dynamic settings are disabled instead\nof calling the settings writer, which throws. Wallet operations can then\nfinish with their existing startup-setting warning.\n\nKeep in-memory and no-op updates unchanged, and update the functional\nassertions to expect success with warnings rather than RPC errors.\n",
-        "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgCbkkxNx8CXxEyhg3heEezmCguE\nbLES0FHhGInfwSCEAAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQIOnn4guNOkZNVeKip0PpgFk0D9Lw7uZSD4DxCcYbokflnnZe+l/0IEe30pndJiYVP\n5pSP+hUkUTG3URpCZYEAs=\n-----END SSH SIGNATURE-----"
-      },
-      "parents": [
-        {
-          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/30a2988c1b1d98d4343d9be9140808f4d7c15826",
-          "sha": "30a2988c1b1d98d4343d9be9140808f4d7c15826",
-          "html_url": "https://github.com/bitcoin/bitcoin/commit/30a2988c1b1d98d4343d9be9140808f4d7c15826"
-        }
-      ],
-      "message": "wallet: handle disabled startup settings\n\nReturn a persistence failure when dynamic settings are disabled instead\nof calling the settings writer, which throws. Wallet operations can then\nfinish with their existing startup-setting warning.\n\nKeep in-memory and no-op updates unchanged, and update the functional\nassertions to expect success with warnings rather than RPC errors.",
-      "committer": {
-        "name": "Robert Hamilton",
-        "email": "rob@anchorwatch.com",
-        "date": "2026-09-05T22:34:01Z"
-      },
-      "author": {
-        "name": "Robert Hamilton",
-        "email": "rob@anchorwatch.com",
-        "date": "2026-09-05T22:34:01Z"
-      },
-      "sha": "d0c84768dacbfc9ac18dcbc1fa9b1d40f696038e"
-    },
-    {
       "event": "head_ref_force_pushed",
       "id": 30622919619,
       "node_id": "HRFPE_lADOABII588AAAABP4SDic8AAAAHIUSrww",
@@ -873,6 +793,148 @@
       },
       "html_url": "https://github.com/bitcoin/bitcoin/pull/36176#issuecomment-5555355655",
       "issue_url": "https://api.github.com/repos/bitcoin/bitcoin/issues/36176"
+    },
+    {
+      "event": "head_ref_force_pushed",
+      "id": 30625739364,
+      "node_id": "HRFPE_lADOABII588AAAABP4SDic8AAAAHIW-yZA",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/issues/events/30625739364",
+      "actor": {
+        "login": "Rob1Ham",
+        "id": 6456095,
+        "node_id": "MDQ6VXNlcjY0NTYwOTU=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/6456095?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Rob1Ham",
+        "html_url": "https://github.com/Rob1Ham",
+        "followers_url": "https://api.github.com/users/Rob1Ham/followers",
+        "following_url": "https://api.github.com/users/Rob1Ham/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/Rob1Ham/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/Rob1Ham/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/Rob1Ham/subscriptions",
+        "organizations_url": "https://api.github.com/users/Rob1Ham/orgs",
+        "repos_url": "https://api.github.com/users/Rob1Ham/repos",
+        "events_url": "https://api.github.com/users/Rob1Ham/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/Rob1Ham/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "commit_id": "ccc50c434d6fa458f42623d72558e9be195b5918",
+      "commit_url": "https://api.github.com/repos/Rob1Ham/bitcoin/commits/ccc50c434d6fa458f42623d72558e9be195b5918",
+      "created_at": "2026-09-06T00:50:50Z"
+    },
+    {
+      "event": "committed",
+      "id": null,
+      "node_id": "C_kwDOABII59oAKGI3MTEzZTZmNDJjMjIwNzkyYzJhOTgwODk0M2I3MTRlYjcyYzRmM2U",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/b7113e6f42c220792c2a9808943b714eb72c4f3e",
+      "actor": null,
+      "commit_id": null,
+      "commit_url": null,
+      "created_at": null,
+      "html_url": "https://github.com/bitcoin/bitcoin/commit/b7113e6f42c220792c2a9808943b714eb72c4f3e",
+      "tree": {
+        "sha": "a8b574607c2f1c8c7e5a7948da571d9411e69861",
+        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/a8b574607c2f1c8c7e5a7948da571d9411e69861"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "payload": "tree a8b574607c2f1c8c7e5a7948da571d9411e69861\nparent f0c839ace5a2a5e2651c580c76974c514f1500f8\nauthor Robert Hamilton <rob@anchorwatch.com> 1788656320 -0500\ncommitter Robert Hamilton <rob@anchorwatch.com> 1788656320 -0500\n\ntest: characterize disabled wallet settings\n\nWallet RPCs report errors with -nosettings after changing wallet state.\nCheck these results alongside wallet usability, unchanged settings.json,\nand restored startup preferences when settings are enabled again.\n\nReuse an existing wallet for loading and check explicit unloading last,\nso the sequence does not depend on the skipped unload completion wait.\n",
+        "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgCbkkxNx8CXxEyhg3heEezmCguE\nbLES0FHhGInfwSCEAAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQEFFoVGCGmL4bOu7w7nPZG1to1AM6DG2C7kJT1ygux/FQypYvonSLJjaK9+rYdnUfe\nJN/3AmWIpOTzFoNXRy6A0=\n-----END SSH SIGNATURE-----"
+      },
+      "parents": [
+        {
+          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/f0c839ace5a2a5e2651c580c76974c514f1500f8",
+          "sha": "f0c839ace5a2a5e2651c580c76974c514f1500f8",
+          "html_url": "https://github.com/bitcoin/bitcoin/commit/f0c839ace5a2a5e2651c580c76974c514f1500f8"
+        }
+      ],
+      "message": "test: characterize disabled wallet settings\n\nWallet RPCs report errors with -nosettings after changing wallet state.\nCheck these results alongside wallet usability, unchanged settings.json,\nand restored startup preferences when settings are enabled again.\n\nReuse an existing wallet for loading and check explicit unloading last,\nso the sequence does not depend on the skipped unload completion wait.",
+      "committer": {
+        "name": "Robert Hamilton",
+        "email": "rob@anchorwatch.com",
+        "date": "2026-09-06T00:58:40Z"
+      },
+      "author": {
+        "name": "Robert Hamilton",
+        "email": "rob@anchorwatch.com",
+        "date": "2026-09-06T00:58:40Z"
+      },
+      "sha": "b7113e6f42c220792c2a9808943b714eb72c4f3e"
+    },
+    {
+      "event": "committed",
+      "id": null,
+      "node_id": "C_kwDOABII59oAKGEzNGZjOGIxMWE0MjBjMWVkOTg3N2E1ZGQ3M2FhYjU3YWJhMTdjZDA",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/a34fc8b11a420c1ed9877a5dd73aab57aba17cd0",
+      "actor": null,
+      "commit_id": null,
+      "commit_url": null,
+      "created_at": null,
+      "html_url": "https://github.com/bitcoin/bitcoin/commit/a34fc8b11a420c1ed9877a5dd73aab57aba17cd0",
+      "tree": {
+        "sha": "3588e37ce800c75706bf536a9437415fe666bc2f",
+        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/3588e37ce800c75706bf536a9437415fe666bc2f"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "payload": "tree 3588e37ce800c75706bf536a9437415fe666bc2f\nparent b7113e6f42c220792c2a9808943b714eb72c4f3e\nauthor Robert Hamilton <rob@anchorwatch.com> 1788656320 -0500\ncommitter Robert Hamilton <rob@anchorwatch.com> 1788656320 -0500\n\nwallet: handle disabled startup settings\n\nReturn a persistence failure when dynamic settings are disabled so\nwallet operations finish with their existing startup-setting warning.\nThis avoids an uncaught exception in Qt and RPC errors after the wallet\nstate has already changed. Keep in-memory and no-op updates unchanged.\n",
+        "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgCbkkxNx8CXxEyhg3heEezmCguE\nbLES0FHhGInfwSCEAAAAADZ2l0AAAAAAAAAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5\nAAAAQK5BryMbXnJQFYWf+EkW0dd7sIyr+snxuS4/2rzWY9Vo5bcPqlTzx1iWQf0x6lU0Ra\nmbnAPVFs0wtDOrU1rbwAw=\n-----END SSH SIGNATURE-----"
+      },
+      "parents": [
+        {
+          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/b7113e6f42c220792c2a9808943b714eb72c4f3e",
+          "sha": "b7113e6f42c220792c2a9808943b714eb72c4f3e",
+          "html_url": "https://github.com/bitcoin/bitcoin/commit/b7113e6f42c220792c2a9808943b714eb72c4f3e"
+        }
+      ],
+      "message": "wallet: handle disabled startup settings\n\nReturn a persistence failure when dynamic settings are disabled so\nwallet operations finish with their existing startup-setting warning.\nThis avoids an uncaught exception in Qt and RPC errors after the wallet\nstate has already changed. Keep in-memory and no-op updates unchanged.",
+      "committer": {
+        "name": "Robert Hamilton",
+        "email": "rob@anchorwatch.com",
+        "date": "2026-09-06T00:58:40Z"
+      },
+      "author": {
+        "name": "Robert Hamilton",
+        "email": "rob@anchorwatch.com",
+        "date": "2026-09-06T00:58:40Z"
+      },
+      "sha": "a34fc8b11a420c1ed9877a5dd73aab57aba17cd0"
+    },
+    {
+      "event": "head_ref_force_pushed",
+      "id": 30625901284,
+      "node_id": "HRFPE_lADOABII588AAAABP4SDic8AAAAHIXIq5A",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/issues/events/30625901284",
+      "actor": {
+        "login": "Rob1Ham",
+        "id": 6456095,
+        "node_id": "MDQ6VXNlcjY0NTYwOTU=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/6456095?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Rob1Ham",
+        "html_url": "https://github.com/Rob1Ham",
+        "followers_url": "https://api.github.com/users/Rob1Ham/followers",
+        "following_url": "https://api.github.com/users/Rob1Ham/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/Rob1Ham/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/Rob1Ham/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/Rob1Ham/subscriptions",
+        "organizations_url": "https://api.github.com/users/Rob1Ham/orgs",
+        "repos_url": "https://api.github.com/users/Rob1Ham/repos",
+        "events_url": "https://api.github.com/users/Rob1Ham/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/Rob1Ham/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "commit_id": "a34fc8b11a420c1ed9877a5dd73aab57aba17cd0",
+      "commit_url": "https://api.github.com/repos/Rob1Ham/bitcoin/commits/a34fc8b11a420c1ed9877a5dd73aab57aba17cd0",
+      "created_at": "2026-09-06T00:59:30Z"
     }
   ],
   "comments": [

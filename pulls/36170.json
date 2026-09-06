@@ -52,7 +52,7 @@
       }
     ],
     "created_at": "2026-09-04T21:25:39Z",
-    "updated_at": "2026-09-05T20:37:35Z",
+    "updated_at": "2026-09-06T00:55:31Z",
     "mergeable": true,
     "mergeable_state": "blocked",
     "merged": false,
@@ -164,7 +164,7 @@
         "forks_count": 2,
         "stargazers_count": 6,
         "watchers_count": 6,
-        "size": 381993,
+        "size": 382120,
         "default_branch": "master",
         "open_issues_count": 121,
         "is_template": false,
@@ -177,7 +177,7 @@
         "archived": false,
         "disabled": false,
         "visibility": "public",
-        "pushed_at": "2026-09-05T18:54:04Z",
+        "pushed_at": "2026-09-05T22:53:13Z",
         "created_at": "2023-08-03T09:49:12Z",
         "updated_at": "2026-09-03T22:31:09Z",
         "allow_forking": true,
@@ -299,11 +299,11 @@
         "homepage": "https://bitcoincore.org/en/download",
         "language": "C++",
         "forks_count": 39385,
-        "stargazers_count": 90111,
-        "watchers_count": 90111,
+        "stargazers_count": 90114,
+        "watchers_count": 90114,
         "size": 323824,
         "default_branch": "master",
-        "open_issues_count": 731,
+        "open_issues_count": 732,
         "is_template": false,
         "topics": [
           "bitcoin",
@@ -322,7 +322,7 @@
         "visibility": "public",
         "pushed_at": "2026-09-05T15:16:34Z",
         "created_at": "2010-12-19T15:16:43Z",
-        "updated_at": "2026-09-05T20:52:26Z",
+        "updated_at": "2026-09-06T00:32:15Z",
         "allow_forking": true,
         "license": {
           "key": "mit",
@@ -352,7 +352,7 @@
     "deletions": 11,
     "changed_files": 6,
     "commits": 4,
-    "review_comments": 0,
+    "review_comments": 2,
     "comments": 1
   },
   "events": [
@@ -581,9 +581,9 @@
       "commit_id": null,
       "commit_url": null,
       "created_at": "2026-09-04T21:25:46Z",
-      "updated_at": "2026-09-05T20:37:35Z",
+      "updated_at": "2026-09-06T00:55:31Z",
       "author_association": "CONTRIBUTOR",
-      "body": "<!--e57a25ab6845829454e8d69fc972939a-->\n\nThe following sections might be updated with supplementary metadata relevant to reviewers and maintainers.\n\n<!--006a51241073e994b41acfe9ec718e94-->\n### Code Coverage & Benchmarks\nFor details see: https://corecheck.dev/bitcoin/bitcoin/pulls/36170.\n<!--021abf342d371248e50ceaed478a90ca-->\n### Reviews\nSee [the guideline](https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#code-review) and [AI policy](https://github.com/bitcoin/bitcoin/blob/master/doc/AI_POLICY.md) for information on the review process.\nA summary of reviews will appear here.\n<!--174a7506f384e20aa4161008e828411d-->\n### Conflicts\nReviewers, this pull request conflicts with the following ones:\n\n* [#34892](https://github.com/bitcoin/bitcoin/pull/34892) (net: Warn when Tor onion service lacks a dedicated onion bind by HouseOfHufflepuff)\n* [#34486](https://github.com/bitcoin/bitcoin/pull/34486) (net: Reduce local network activity when networkactive=0 by willcl-ark)\n\nIf you consider this pull request important, please also help to review the conflicting pull requests. Ideally, start with the one that should be merged first.\n<!--5faf32d7da4f0f540f40219e4f7537a3-->\n### LLM Linter (✨ experimental)\n\n\n\nPossible places where named args for integral literals may be used (e.g. `func(x, /*named_arg=*/0)` in C++, and `func(x, named_arg=0)` in Python):\n\n- `assert_raises(FailedToStartError, self.start_node, 2, extra_args=...)` in `test/functional/feature_bind_extra.py`\n\n\n\n<sup>2026-09-04 21:25:56</sup>\n",
+      "body": "<!--e57a25ab6845829454e8d69fc972939a-->\n\nThe following sections might be updated with supplementary metadata relevant to reviewers and maintainers.\n\n<!--006a51241073e994b41acfe9ec718e94-->\n### Code Coverage & Benchmarks\nFor details see: https://corecheck.dev/bitcoin/bitcoin/pulls/36170.\n<!--021abf342d371248e50ceaed478a90ca-->\n### Reviews\nSee [the guideline](https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#code-review) and [AI policy](https://github.com/bitcoin/bitcoin/blob/master/doc/AI_POLICY.md) for information on the review process.\n| Type | Reviewers |\n| ---- | --------- |\n| Concept ACK | [jeanpablojp](https://github.com/bitcoin/bitcoin/pull/36170#pullrequestreview-5123605952) |\n\nIf your review is incorrectly listed, please copy-paste <code>&lt;!--meta-tag:bot-skip--&gt;</code> into the comment that the bot should ignore.\n<!--174a7506f384e20aa4161008e828411d-->\n### Conflicts\nReviewers, this pull request conflicts with the following ones:\n\n* [#34892](https://github.com/bitcoin/bitcoin/pull/34892) (net: Warn when Tor onion service lacks a dedicated onion bind by HouseOfHufflepuff)\n* [#34486](https://github.com/bitcoin/bitcoin/pull/34486) (net: Reduce local network activity when networkactive=0 by willcl-ark)\n\nIf you consider this pull request important, please also help to review the conflicting pull requests. Ideally, start with the one that should be merged first.\n<!--5faf32d7da4f0f540f40219e4f7537a3-->\n### LLM Linter (✨ experimental)\n\n\n\nPossible places where named args for integral literals may be used (e.g. `func(x, /*named_arg=*/0)` in C++, and `func(x, named_arg=0)` in Python):\n\n- `assert_raises(FailedToStartError, self.start_node, 2, extra_args=...)` in `test/functional/feature_bind_extra.py`\n\n\n\n<sup>2026-09-04 21:25:56</sup>\n",
       "user": {
         "login": "DrahtBot",
         "id": 39886733,
@@ -639,7 +639,155 @@
       "commit_id": null,
       "commit_url": null,
       "created_at": "2026-09-04T21:28:50Z"
+    },
+    {
+      "event": "reviewed",
+      "id": 5123605952,
+      "node_id": "PRR_kwDOABII588AAAABMWQFwA",
+      "url": null,
+      "actor": null,
+      "commit_id": "7fb68e39271a6b5d4c306e7532ef22beb9ea669a",
+      "commit_url": null,
+      "created_at": null,
+      "updated_at": "2026-09-06T00:55:27Z",
+      "author_association": "CONTRIBUTOR",
+      "body": "Concept ACK\n\n`0.0.0.0` is the default for `-bind` itself, and `-bind=0.0.0.0:8334=onion` passes the new check while tagging nothing. `addr_bind` comes from `GetBindAddress` on the accepted socket, so what `CreateNodeFromAcceptedSocket` compares against `m_onion_binds` is the concrete address the peer reached.\n\nSame node, same arriving address, same `-whitelist`. With `-bind=0.0.0.0:P=onion` the inbound peer is classified by its IP network in `getpeerinfo` and keeps its `noban`. Spelling that same address out instead of the wildcard gives `onion` with no permissions. `[::]` is classified the same way, and either wildcard is what reaches Tor as the `ADD_ONION` target.\n\nRejecting a wildcard onion bind would close that. Naming `127.0.0.1:8334=onion` in the message would only make it less likely. Is the first one in scope here?",
+      "user": {
+        "login": "jeanpablojp",
+        "id": 8968629,
+        "node_id": "MDQ6VXNlcjg5Njg2Mjk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8968629?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/jeanpablojp",
+        "html_url": "https://github.com/jeanpablojp",
+        "followers_url": "https://api.github.com/users/jeanpablojp/followers",
+        "following_url": "https://api.github.com/users/jeanpablojp/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/jeanpablojp/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/jeanpablojp/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/jeanpablojp/subscriptions",
+        "organizations_url": "https://api.github.com/users/jeanpablojp/orgs",
+        "repos_url": "https://api.github.com/users/jeanpablojp/repos",
+        "events_url": "https://api.github.com/users/jeanpablojp/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/jeanpablojp/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "html_url": "https://github.com/bitcoin/bitcoin/pull/36170#pullrequestreview-5123605952",
+      "submitted_at": "2026-09-06T00:55:26Z",
+      "state": "COMMENTED",
+      "pull_request_url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/36170"
     }
   ],
-  "comments": []
+  "comments": [
+    {
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments/3942549044",
+      "pull_request_review_id": 5123605952,
+      "id": 3942549044,
+      "node_id": "PRRC_kwDOABII587q_oY0",
+      "diff_hunk": "@@ -0,0 +1,9 @@\n+P2P and network changes\n+-----------------------\n+\n+Nodes configured with `-bind` but no dedicated `-bind=<addr>=onion` now refuse\n+to start when `-listenonion` is enabled, which is the default when listening.\n+A shared bind cannot distinguish Tor-forwarded connections from direct connections,\n+which can grant Tor peers unintended IP-based whitelist permissions.\n+Users should add a dedicated onion bind to accept incoming Tor connections, or set\n+`-listenonion=0` to disable automatic onion service creation.",
+      "path": "doc/release-notes-36170.md",
+      "position": 9,
+      "original_position": 9,
+      "commit_id": "7fb68e39271a6b5d4c306e7532ef22beb9ea669a",
+      "original_commit_id": "7fb68e39271a6b5d4c306e7532ef22beb9ea669a",
+      "in_reply_to_id": null,
+      "user": {
+        "login": "jeanpablojp",
+        "id": 8968629,
+        "node_id": "MDQ6VXNlcjg5Njg2Mjk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8968629?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/jeanpablojp",
+        "html_url": "https://github.com/jeanpablojp",
+        "followers_url": "https://api.github.com/users/jeanpablojp/followers",
+        "following_url": "https://api.github.com/users/jeanpablojp/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/jeanpablojp/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/jeanpablojp/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/jeanpablojp/subscriptions",
+        "organizations_url": "https://api.github.com/users/jeanpablojp/orgs",
+        "repos_url": "https://api.github.com/users/jeanpablojp/repos",
+        "events_url": "https://api.github.com/users/jeanpablojp/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/jeanpablojp/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "body": "The release note covers upgraders. For someone setting Tor up from scratch, the `-bind` help advertises `default: 127.0.0.1:8334=onion`, which still holds with no explicit `-bind` but not once one is given, and section 2 of `doc/tor.md` does not mention the dedicated bind. Would a line in one of the two be worth it?",
+      "created_at": "2026-09-06T00:55:27Z",
+      "updated_at": "2026-09-06T00:55:27Z",
+      "html_url": "https://github.com/bitcoin/bitcoin/pull/36170#discussion_r3942549044",
+      "author_association": "CONTRIBUTOR",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments/3942549044"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/36170"
+        }
+      },
+      "start_line": null,
+      "original_start_line": null,
+      "start_side": null,
+      "line": 9,
+      "original_line": 9,
+      "side": "RIGHT"
+    },
+    {
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments/3942549046",
+      "pull_request_review_id": 5123605952,
+      "id": 3942549046,
+      "node_id": "PRRC_kwDOABII587q_oY2",
+      "diff_hunk": "@@ -95,6 +97,14 @@ def run_test(self):\n \n         self.stop_node(0)\n \n+        self.log.info(\"Test -listenonion with a normal bind and no dedicated onion bind\")\n+        self.stop_node(2)\n+        assert_raises(FailedToStartError, self.start_node, 2, extra_args=self.expected[2][0] + [\"-listenonion=1\"])\n+        self.nodes[2].wait_until_stopped(expected_ret_code=1, expected_stderr=re.compile(\"Tor onion service cannot share\"))",
+      "path": "test/functional/feature_bind_extra.py",
+      "position": 27,
+      "original_position": 27,
+      "commit_id": "7fb68e39271a6b5d4c306e7532ef22beb9ea669a",
+      "original_commit_id": "7fb68e39271a6b5d4c306e7532ef22beb9ea669a",
+      "in_reply_to_id": null,
+      "user": {
+        "login": "jeanpablojp",
+        "id": 8968629,
+        "node_id": "MDQ6VXNlcjg5Njg2Mjk=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8968629?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/jeanpablojp",
+        "html_url": "https://github.com/jeanpablojp",
+        "followers_url": "https://api.github.com/users/jeanpablojp/followers",
+        "following_url": "https://api.github.com/users/jeanpablojp/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/jeanpablojp/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/jeanpablojp/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/jeanpablojp/subscriptions",
+        "organizations_url": "https://api.github.com/users/jeanpablojp/orgs",
+        "repos_url": "https://api.github.com/users/jeanpablojp/repos",
+        "events_url": "https://api.github.com/users/jeanpablojp/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/jeanpablojp/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "body": "nit: this could use the helper the file already uses further down, and then `re`, `assert_raises` and `FailedToStartError` drop out of the imports. It does loosen the exit status from exactly 1 to any non-zero. Ran it that way and it passes.\n\n```suggestion\n        self.nodes[2].assert_start_raises_init_error(\n                    self.expected[2][0] + [\"-listenonion=1\"],\n                    \"Error: The Tor onion service cannot share a -bind address\",\n                    match=ErrorMatch.PARTIAL_REGEX)\n```",
+      "created_at": "2026-09-06T00:55:27Z",
+      "updated_at": "2026-09-06T00:55:27Z",
+      "html_url": "https://github.com/bitcoin/bitcoin/pull/36170#discussion_r3942549046",
+      "author_association": "CONTRIBUTOR",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments/3942549046"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/36170"
+        }
+      },
+      "start_line": 102,
+      "original_start_line": 102,
+      "start_side": "RIGHT",
+      "line": 103,
+      "original_line": 103,
+      "side": "RIGHT"
+    }
+  ]
 }
