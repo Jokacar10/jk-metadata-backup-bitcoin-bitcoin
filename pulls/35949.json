@@ -88,7 +88,7 @@
       "updated_at": "2026-09-06T09:47:58Z"
     },
     "created_at": "2026-08-11T13:36:14Z",
-    "updated_at": "2026-09-06T09:47:58Z",
+    "updated_at": "2026-09-06T13:16:09Z",
     "mergeable": true,
     "mergeable_state": "blocked",
     "merged": false,
@@ -379,12 +379,12 @@
         "svn_url": "https://github.com/bitcoin/bitcoin",
         "homepage": "https://bitcoincore.org/en/download",
         "language": "C++",
-        "forks_count": 39385,
-        "stargazers_count": 90117,
-        "watchers_count": 90117,
-        "size": 323832,
+        "forks_count": 39384,
+        "stargazers_count": 90118,
+        "watchers_count": 90118,
+        "size": 323835,
         "default_branch": "master",
-        "open_issues_count": 731,
+        "open_issues_count": 729,
         "is_template": false,
         "topics": [
           "bitcoin",
@@ -401,9 +401,9 @@
         "archived": false,
         "disabled": false,
         "visibility": "public",
-        "pushed_at": "2026-09-06T08:36:03Z",
+        "pushed_at": "2026-09-06T13:24:53Z",
         "created_at": "2010-12-19T15:16:43Z",
-        "updated_at": "2026-09-06T09:08:55Z",
+        "updated_at": "2026-09-06T13:26:47Z",
         "allow_forking": true,
         "license": {
           "key": "mit",
@@ -433,7 +433,7 @@
     "deletions": 0,
     "changed_files": 2,
     "commits": 1,
-    "review_comments": 2,
+    "review_comments": 3,
     "comments": 6
   },
   "events": [
@@ -502,9 +502,9 @@
       "commit_id": null,
       "commit_url": null,
       "created_at": "2026-08-11T13:36:22Z",
-      "updated_at": "2026-09-02T14:40:11Z",
+      "updated_at": "2026-09-06T13:16:09Z",
       "author_association": "CONTRIBUTOR",
-      "body": "<!--e57a25ab6845829454e8d69fc972939a-->\n\nThe following sections might be updated with supplementary metadata relevant to reviewers and maintainers.\n\n<!--006a51241073e994b41acfe9ec718e94-->\n### Code Coverage & Benchmarks\nFor details see: https://corecheck.dev/bitcoin/bitcoin/pulls/35949.\n<!--021abf342d371248e50ceaed478a90ca-->\n### Reviews\nSee [the guideline](https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#code-review) and [AI policy](https://github.com/bitcoin/bitcoin/blob/master/doc/AI_POLICY.md) for information on the review process.\n| Type | Reviewers |\n| ---- | --------- |\n| ACK | [kevkevinpal](https://github.com/bitcoin/bitcoin/pull/35949#issuecomment-5310549821), [darosior](https://github.com/bitcoin/bitcoin/pull/35949#pullrequestreview-5091129343) |\n| Concept ACK | [l0rinc](https://github.com/bitcoin/bitcoin/pull/35949#issuecomment-5257010288), [Sjors](https://github.com/bitcoin/bitcoin/pull/35949#issuecomment-5345187314) |\n\nIf your review is incorrectly listed, please copy-paste <code>&lt;!--meta-tag:bot-skip--&gt;</code> into the comment that the bot should ignore.\n<!--5faf32d7da4f0f540f40219e4f7537a3-->",
+      "body": "<!--e57a25ab6845829454e8d69fc972939a-->\n\nThe following sections might be updated with supplementary metadata relevant to reviewers and maintainers.\n\n<!--006a51241073e994b41acfe9ec718e94-->\n### Code Coverage & Benchmarks\nFor details see: https://corecheck.dev/bitcoin/bitcoin/pulls/35949.\n<!--021abf342d371248e50ceaed478a90ca-->\n### Reviews\nSee [the guideline](https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md#code-review) and [AI policy](https://github.com/bitcoin/bitcoin/blob/master/doc/AI_POLICY.md) for information on the review process.\n| Type | Reviewers |\n| ---- | --------- |\n| ACK | [kevkevinpal](https://github.com/bitcoin/bitcoin/pull/35949#issuecomment-5310549821), [darosior](https://github.com/bitcoin/bitcoin/pull/35949#pullrequestreview-5091129343), [sedited](https://github.com/bitcoin/bitcoin/pull/35949#pullrequestreview-5125381374) |\n| Concept ACK | [l0rinc](https://github.com/bitcoin/bitcoin/pull/35949#issuecomment-5257010288), [Sjors](https://github.com/bitcoin/bitcoin/pull/35949#issuecomment-5345187314) |\n\nIf your review is incorrectly listed, please copy-paste <code>&lt;!--meta-tag:bot-skip--&gt;</code> into the comment that the bot should ignore.\n<!--5faf32d7da4f0f540f40219e4f7537a3-->",
       "user": {
         "login": "DrahtBot",
         "id": 39886733,
@@ -1314,6 +1314,45 @@
       "milestone": {
         "title": "32.0"
       }
+    },
+    {
+      "event": "reviewed",
+      "id": 5125381374,
+      "node_id": "PRR_kwDOABII588AAAABMX8c_g",
+      "url": null,
+      "actor": null,
+      "commit_id": "e014e5bb61c117f0230a092439e4bbc98cd383f5",
+      "commit_url": null,
+      "created_at": null,
+      "updated_at": "2026-09-06T13:16:06Z",
+      "author_association": "CONTRIBUTOR",
+      "body": "ACK e014e5bb61c117f0230a092439e4bbc98cd383f5",
+      "user": {
+        "login": "sedited",
+        "id": 8421793,
+        "node_id": "MDQ6VXNlcjg0MjE3OTM=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8421793?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/sedited",
+        "html_url": "https://github.com/sedited",
+        "followers_url": "https://api.github.com/users/sedited/followers",
+        "following_url": "https://api.github.com/users/sedited/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/sedited/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/sedited/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/sedited/subscriptions",
+        "organizations_url": "https://api.github.com/users/sedited/orgs",
+        "repos_url": "https://api.github.com/users/sedited/repos",
+        "events_url": "https://api.github.com/users/sedited/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/sedited/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "html_url": "https://github.com/bitcoin/bitcoin/pull/35949#pullrequestreview-5125381374",
+      "submitted_at": "2026-09-06T13:16:06Z",
+      "state": "APPROVED",
+      "pull_request_url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/35949"
     }
   ],
   "comments": [
@@ -1423,6 +1462,60 @@
       "start_side": "RIGHT",
       "line": null,
       "original_line": 289,
+      "side": "RIGHT"
+    },
+    {
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments/3944011135",
+      "pull_request_review_id": 5125381374,
+      "id": 3944011135,
+      "node_id": "PRRC_kwDOABII587rFNV_",
+      "diff_hunk": "@@ -252,6 +253,41 @@ def test_timewarp(self):\n         bad_block.solve()\n         node.submitheader(hexdata=CBlockHeader(bad_block).serialize().hex())\n \n+    def test_murch_zawy_mintime(self):\n+        self.log.info(\"Test that GetMinimumTime accounts for the Murch-Zawy rule (BIP54)\")\n+        node = self.nodes[0]\n+\n+        self.log.info(\"Mine the first block of a retarget period two hours in the future\")\n+        blockchain_info = node.getblockchaininfo()\n+        n = DIFFICULTY_ADJUSTMENT_INTERVAL - blockchain_info['blocks'] % DIFFICULTY_ADJUSTMENT_INTERVAL - 1\n+        t = blockchain_info['time']\n+        for _ in range(n):\n+            t += 600\n+            node.setmocktime(t)\n+            self.generate(self.wallet, 1, sync_fun=self.no_op)\n+        node.setmocktime(t + MAX_FUTURE_BLOCK_TIME)\n+        self.generate(self.wallet, 1, sync_fun=self.no_op)\n+        first_block_time = node.getblock(node.getbestblockhash())['time']",
+      "path": "test/functional/mining_basic.py",
+      "position": 26,
+      "original_position": 26,
+      "commit_id": "e014e5bb61c117f0230a092439e4bbc98cd383f5",
+      "original_commit_id": "e014e5bb61c117f0230a092439e4bbc98cd383f5",
+      "in_reply_to_id": null,
+      "user": {
+        "login": "sedited",
+        "id": 8421793,
+        "node_id": "MDQ6VXNlcjg0MjE3OTM=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/8421793?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/sedited",
+        "html_url": "https://github.com/sedited",
+        "followers_url": "https://api.github.com/users/sedited/followers",
+        "following_url": "https://api.github.com/users/sedited/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/sedited/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/sedited/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/sedited/subscriptions",
+        "organizations_url": "https://api.github.com/users/sedited/orgs",
+        "repos_url": "https://api.github.com/users/sedited/repos",
+        "events_url": "https://api.github.com/users/sedited/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/sedited/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "body": "Nit: Maybe check that we are on the first block of the period:\n```py\nassert_equal(node.getblockchaininfo()['blocks'] % DIFFICULTY_ADJUSTMENT_INTERVAL, 0)\n```\n\nand similarly that we are on the last block template below:\n\n```py\nassert_equal(tmpl['height'] % DIFFICULTY_ADJUSTMENT_INTERVAL, DIFFICULTY_ADJUSTMENT_INTERVAL - 1)\n```",
+      "created_at": "2026-09-06T13:00:37Z",
+      "updated_at": "2026-09-06T13:16:06Z",
+      "html_url": "https://github.com/bitcoin/bitcoin/pull/35949#discussion_r3944011135",
+      "author_association": "CONTRIBUTOR",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments/3944011135"
+        },
+        "pull_request": {
+          "href": "https://api.github.com/repos/bitcoin/bitcoin/pulls/35949"
+        }
+      },
+      "start_line": null,
+      "original_start_line": null,
+      "start_side": null,
+      "line": 270,
+      "original_line": 270,
       "side": "RIGHT"
     }
   ]
