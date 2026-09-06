@@ -52,10 +52,11 @@
       }
     ],
     "created_at": "2026-06-20T06:15:23Z",
-    "updated_at": "2026-09-06T08:11:58Z",
-    "mergeable_state": "unknown",
+    "updated_at": "2026-09-06T09:52:18Z",
+    "mergeable": true,
+    "mergeable_state": "blocked",
     "merged": false,
-    "merge_commit_sha": "6ad8dbf84c03cc5e1781c5f0751f1ff5a7fff852",
+    "merge_commit_sha": "cfcbaa448bdd4ad227867d869464a4ef26f52036",
     "assignees": [],
     "requested_reviewers": [
       {
@@ -82,6 +83,7 @@
       }
     ],
     "requested_teams": [],
+    "rebaseable": true,
     "head": {
       "label": "optout21:2605-validation-state-return",
       "ref": "2605-validation-state-return",
@@ -320,9 +322,9 @@
         "homepage": "https://bitcoincore.org/en/download",
         "language": "C++",
         "forks_count": 39385,
-        "stargazers_count": 90118,
-        "watchers_count": 90118,
-        "size": 323824,
+        "stargazers_count": 90117,
+        "watchers_count": 90117,
+        "size": 323832,
         "default_branch": "master",
         "open_issues_count": 731,
         "is_template": false,
@@ -343,7 +345,7 @@
         "visibility": "public",
         "pushed_at": "2026-09-06T08:36:03Z",
         "created_at": "2010-12-19T15:16:43Z",
-        "updated_at": "2026-09-06T08:37:27Z",
+        "updated_at": "2026-09-06T09:08:55Z",
         "allow_forking": true,
         "license": {
           "key": "mit",
@@ -3383,9 +3385,9 @@
       "commit_id": "f65361acfae8d5d0d9f525fe7887334f03cedcc3",
       "commit_url": null,
       "created_at": null,
-      "updated_at": "2026-09-05T15:14:40Z",
+      "updated_at": "2026-09-06T09:52:17Z",
       "author_association": "NONE",
-      "body": "Ack f65361acfae8d5d0d9f525fe7887334f03cedcc3\n\nThis PR only changes signatures as the PR description says, no behavioral changes.\n\nWrote some small comments, none of them are blockers, just suggestions, but I would highly encourage at least fixing the comment/doc error I mentioned in my last review (`validation.h:1280`, \"On failure,` IsInvalid()` is false\" should read \"true\").\n\nAs I mentioned in the inline comments, I think adding both factories would help readers understand the code and make it cleaner.\n\nAlso wrote two small tests (arejula27/bitcoin@67a3be1) that guard how each case is reported (valid/invalid/error). Feel free to cherry-pick, copy, edit or omit.",
+      "body": "Ack f65361acfae8d5d0d9f525fe7887334f03cedcc3\r\n\r\nThis PR only changes signatures as the PR description says, no behavioral changes.\r\n\r\nWrote some small comments, none of them are blockers, just suggestions, but I would highly encourage at least fixing the comment/doc error I mentioned in my last review (`validation.h:1280`, \"On failure,` IsInvalid()` is false\" should read \"true\").\r\n\r\nAs I mentioned in the inline comments, I think adding both factories would help readers understand the code and make it cleaner.\r\n\r\nAlso wrote two small tests (arejula27/bitcoin@67a3be1) that guard how each case is reported (valid/invalid/error). Feel free to cherry-pick, copy, edit or omit.",
       "user": {
         "login": "arejula27",
         "id": 46299278,
