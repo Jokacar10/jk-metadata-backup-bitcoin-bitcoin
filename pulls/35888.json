@@ -12,7 +12,7 @@
     "review_comments_url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/35888/comments",
     "review_comment_url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/comments%7B/number%7D",
     "comments_url": "https://api.github.com/repos/bitcoin/bitcoin/issues/35888/comments",
-    "statuses_url": "https://api.github.com/repos/bitcoin/bitcoin/statuses/5270b3e35f1e485ed7de31aec6674d47e7b20ce8",
+    "statuses_url": "https://api.github.com/repos/bitcoin/bitcoin/statuses/f9188114c75d93cea911f24e6a913e74d2cda587",
     "number": 35888,
     "state": "open",
     "locked": false,
@@ -52,11 +52,11 @@
       }
     ],
     "created_at": "2026-08-04T22:36:58Z",
-    "updated_at": "2026-08-15T07:42:49Z",
+    "updated_at": "2026-09-06T21:05:01Z",
     "mergeable": true,
     "mergeable_state": "blocked",
     "merged": false,
-    "merge_commit_sha": "a9deda61d45832bb7cde07db786f95e5e0bc7fb7",
+    "merge_commit_sha": "20f9a876bcd598a60264b848597303f80917aaf4",
     "assignees": [],
     "requested_reviewers": [],
     "requested_teams": [],
@@ -64,7 +64,7 @@
     "head": {
       "label": "l0rinc:l0rinc/net-reject-oversized-message-types",
       "ref": "l0rinc/net-reject-oversized-message-types",
-      "sha": "5270b3e35f1e485ed7de31aec6674d47e7b20ce8",
+      "sha": "f9188114c75d93cea911f24e6a913e74d2cda587",
       "user": {
         "login": "l0rinc",
         "id": 1841944,
@@ -164,9 +164,9 @@
         "forks_count": 2,
         "stargazers_count": 6,
         "watchers_count": 6,
-        "size": 380133,
+        "size": 382094,
         "default_branch": "master",
-        "open_issues_count": 143,
+        "open_issues_count": 121,
         "is_template": false,
         "topics": [],
         "has_issues": false,
@@ -177,9 +177,9 @@
         "archived": false,
         "disabled": false,
         "visibility": "public",
-        "pushed_at": "2026-08-15T04:24:49Z",
+        "pushed_at": "2026-09-06T21:00:33Z",
         "created_at": "2023-08-03T09:49:12Z",
-        "updated_at": "2026-08-15T02:10:03Z",
+        "updated_at": "2026-09-06T20:11:39Z",
         "allow_forking": true,
         "license": {
           "key": "mit",
@@ -201,7 +201,7 @@
     "base": {
       "label": "bitcoin:master",
       "ref": "master",
-      "sha": "230185a5ee7412b404fca2fc8e51ba6568f2bd50",
+      "sha": "a174dd4017cf97f283b1848bb31998bfa28465e9",
       "user": {
         "login": "bitcoin",
         "id": 528860,
@@ -298,12 +298,12 @@
         "svn_url": "https://github.com/bitcoin/bitcoin",
         "homepage": "https://bitcoincore.org/en/download",
         "language": "C++",
-        "forks_count": 39285,
-        "stargazers_count": 89900,
-        "watchers_count": 89900,
-        "size": 322386,
+        "forks_count": 39388,
+        "stargazers_count": 90122,
+        "watchers_count": 90122,
+        "size": 323838,
         "default_branch": "master",
-        "open_issues_count": 697,
+        "open_issues_count": 729,
         "is_template": false,
         "topics": [
           "bitcoin",
@@ -320,9 +320,9 @@
         "archived": false,
         "disabled": false,
         "visibility": "public",
-        "pushed_at": "2026-08-15T01:11:47Z",
+        "pushed_at": "2026-09-06T13:24:53Z",
         "created_at": "2010-12-19T15:16:43Z",
-        "updated_at": "2026-08-15T07:55:41Z",
+        "updated_at": "2026-09-06T20:14:54Z",
         "allow_forking": true,
         "license": {
           "key": "mit",
@@ -348,12 +348,12 @@
     },
     "author_association": "CONTRIBUTOR",
     "draft": false,
-    "additions": 66,
+    "additions": 87,
     "deletions": 8,
     "changed_files": 5,
-    "commits": 3,
+    "commits": 4,
     "review_comments": 6,
-    "comments": 4
+    "comments": 5
   },
   "events": [
     {
@@ -1115,126 +1115,6 @@
       }
     },
     {
-      "event": "committed",
-      "id": null,
-      "node_id": "C_kwDOABII59oAKDEyODg2NjI1OTRkOTIyOTcwMzcyOTMxNDU1ODE3NDlhNDRkZjMwMjU",
-      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/1288662594d92297037293145581749a44df3025",
-      "actor": null,
-      "commit_id": null,
-      "commit_url": null,
-      "created_at": null,
-      "html_url": "https://github.com/bitcoin/bitcoin/commit/1288662594d92297037293145581749a44df3025",
-      "tree": {
-        "sha": "7aca2c371bf3d38a4628f45e8f3e89532087ab27",
-        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/7aca2c371bf3d38a4628f45e8f3e89532087ab27"
-      },
-      "verification": {
-        "verified": true,
-        "reason": "valid",
-        "payload": "tree 7aca2c371bf3d38a4628f45e8f3e89532087ab27\nparent 230185a5ee7412b404fca2fc8e51ba6568f2bd50\nauthor Lőrinc <pap.lorinc@gmail.com> 1785874727 -0700\ncommitter Lőrinc <pap.lorinc@gmail.com> 1786737244 -0700\n\ntest: characterize outbound message limits\n\nCover the accepted 12-byte type and 4 MB payload limits for both outbound transports.\n\nV2 accepts a 13-byte type when a non-empty payload keeps the type copy in bounds.\nBoth transports accept a 4,000,001-byte payload.\nThese cases record the old behavior before the send path treats invalid inputs as failed assumptions.\n\nThe existing two-node `sendmsgtopeer` test also confirms that the oversized payload is sent and makes the peer disconnect.\n",
-        "signature": "-----BEGIN PGP SIGNATURE-----\n\niJEEABYKADkWIQQiU97U54YbP0PlTVgnCd/LLYEwhwUCan9yXBsUgAAAAAAEAA5t\nYW51MiwyLjUrMS4xMiwwLDMACgkQJwnfyy2BMIeKwAEA89CL+GJoYv0uv7FGBLzb\nsOvpjaC2cJd1+PVu4F8ajXMA/3iItOG5iUT69EsJB6Ra/6VSyboh8n/nVeijZpRV\naaMC\n=5A3R\n-----END PGP SIGNATURE-----"
-      },
-      "parents": [
-        {
-          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/230185a5ee7412b404fca2fc8e51ba6568f2bd50",
-          "sha": "230185a5ee7412b404fca2fc8e51ba6568f2bd50",
-          "html_url": "https://github.com/bitcoin/bitcoin/commit/230185a5ee7412b404fca2fc8e51ba6568f2bd50"
-        }
-      ],
-      "message": "test: characterize outbound message limits\n\nCover the accepted 12-byte type and 4 MB payload limits for both outbound transports.\n\nV2 accepts a 13-byte type when a non-empty payload keeps the type copy in bounds.\nBoth transports accept a 4,000,001-byte payload.\nThese cases record the old behavior before the send path treats invalid inputs as failed assumptions.\n\nThe existing two-node `sendmsgtopeer` test also confirms that the oversized payload is sent and makes the peer disconnect.",
-      "committer": {
-        "name": "Lőrinc",
-        "email": "pap.lorinc@gmail.com",
-        "date": "2026-08-14T19:54:04Z"
-      },
-      "author": {
-        "name": "Lőrinc",
-        "email": "pap.lorinc@gmail.com",
-        "date": "2026-08-04T20:18:47Z"
-      },
-      "sha": "1288662594d92297037293145581749a44df3025"
-    },
-    {
-      "event": "committed",
-      "id": null,
-      "node_id": "C_kwDOABII59oAKDBkMmYxYjUyOTE4NjRmMzllNTUzMjkyNTI1Mjg4ZDM1ZTgwMjA5NDM",
-      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/0d2f1b5291864f39e553292525288d35e8020943",
-      "actor": null,
-      "commit_id": null,
-      "commit_url": null,
-      "created_at": null,
-      "html_url": "https://github.com/bitcoin/bitcoin/commit/0d2f1b5291864f39e553292525288d35e8020943",
-      "tree": {
-        "sha": "805b656838e01855a7490d1fd5d42bf3aa8c2201",
-        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/805b656838e01855a7490d1fd5d42bf3aa8c2201"
-      },
-      "verification": {
-        "verified": true,
-        "reason": "valid",
-        "payload": "tree 805b656838e01855a7490d1fd5d42bf3aa8c2201\nparent 1288662594d92297037293145581749a44df3025\nauthor Lőrinc <pap.lorinc@gmail.com> 1785874993 -0700\ncommitter Lőrinc <pap.lorinc@gmail.com> 1786737245 -0700\n\nnet: assume outbound message types fit\n\nOutbound transports encode message types in a fixed 12-byte wire field.\nV1 aborts on a longer type, while V2 can overwrite the first payload byte or write past its encoding buffer.\nNormal outbound types are internal constants, and `sendmsgtopeer` already rejects types longer than 12 bytes.\n\nTreat oversized types from internal callers as failed assumptions in `CConnman::PushMessage()` before they enter the send queue.\nDebug and fuzz builds expose invalid internal callers, while release builds drop the messages.\n\nCo-authored-by: Anthony Towns <aj@erisian.com.au>\nCo-authored-by: Martin Zumsande <mzumsande@gmail.com>\n",
-        "signature": "-----BEGIN PGP SIGNATURE-----\n\niJEEABYKADkWIQQiU97U54YbP0PlTVgnCd/LLYEwhwUCan9yXRsUgAAAAAAEAA5t\nYW51MiwyLjUrMS4xMiwwLDMACgkQJwnfyy2BMIc2/QEA819k64XdsbFLfok1hgeb\n2t4jwioo7ig4c1AB9Dc3Q+kBAOAPhWa+Z/g2UFJanNuw6f1C1R0PjgkJM9Ky2wdx\n1LoK\n=Trnv\n-----END PGP SIGNATURE-----"
-      },
-      "parents": [
-        {
-          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/1288662594d92297037293145581749a44df3025",
-          "sha": "1288662594d92297037293145581749a44df3025",
-          "html_url": "https://github.com/bitcoin/bitcoin/commit/1288662594d92297037293145581749a44df3025"
-        }
-      ],
-      "message": "net: assume outbound message types fit\n\nOutbound transports encode message types in a fixed 12-byte wire field.\nV1 aborts on a longer type, while V2 can overwrite the first payload byte or write past its encoding buffer.\nNormal outbound types are internal constants, and `sendmsgtopeer` already rejects types longer than 12 bytes.\n\nTreat oversized types from internal callers as failed assumptions in `CConnman::PushMessage()` before they enter the send queue.\nDebug and fuzz builds expose invalid internal callers, while release builds drop the messages.\n\nCo-authored-by: Anthony Towns <aj@erisian.com.au>\nCo-authored-by: Martin Zumsande <mzumsande@gmail.com>",
-      "committer": {
-        "name": "Lőrinc",
-        "email": "pap.lorinc@gmail.com",
-        "date": "2026-08-14T19:54:05Z"
-      },
-      "author": {
-        "name": "Lőrinc",
-        "email": "pap.lorinc@gmail.com",
-        "date": "2026-08-04T20:23:13Z"
-      },
-      "sha": "0d2f1b5291864f39e553292525288d35e8020943"
-    },
-    {
-      "event": "committed",
-      "id": null,
-      "node_id": "C_kwDOABII59oAKDUyNzBiM2UzNWYxZTQ4NWVkN2RlMzFhZWM2Njc0ZDQ3ZTdiMjBjZTg",
-      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/5270b3e35f1e485ed7de31aec6674d47e7b20ce8",
-      "actor": null,
-      "commit_id": null,
-      "commit_url": null,
-      "created_at": null,
-      "html_url": "https://github.com/bitcoin/bitcoin/commit/5270b3e35f1e485ed7de31aec6674d47e7b20ce8",
-      "tree": {
-        "sha": "21c07c2c07fb35368dd5136f016b73b45545969e",
-        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/21c07c2c07fb35368dd5136f016b73b45545969e"
-      },
-      "verification": {
-        "verified": true,
-        "reason": "valid",
-        "payload": "tree 21c07c2c07fb35368dd5136f016b73b45545969e\nparent 0d2f1b5291864f39e553292525288d35e8020943\nauthor Lőrinc <pap.lorinc@gmail.com> 1785875331 -0700\ncommitter Lőrinc <pap.lorinc@gmail.com> 1786737245 -0700\n\nnet: reject oversized outbound payloads\n\nNormal outbound messages stay within the 4 MB protocol limit.\nTreat an oversized payload from an internal caller as a failed assumption in `CConnman::PushMessage()` before it enters the send queue.\nDebug and fuzz builds expose invalid internal callers, while release builds log and drop the message.\n\nThis requires the testing-only `sendmsgtopeer` RPC to reject oversized payloads before calling `PushMessage()`.\nOversized inbound messages remain testable through raw P2P inputs, so this does not remove coverage of their receive-side handling.\nThe `p2p_private_broadcast` fuzz target separately filters synthetic oversized transactions before its loopback send path (#35880).\n\nCo-authored-by: Anthony Towns <aj@erisian.com.au>\nCo-authored-by: Martin Zumsande <mzumsande@gmail.com>\n",
-        "signature": "-----BEGIN PGP SIGNATURE-----\n\niJEEABYKADkWIQQiU97U54YbP0PlTVgnCd/LLYEwhwUCan9yXRsUgAAAAAAEAA5t\nYW51MiwyLjUrMS4xMiwwLDMACgkQJwnfyy2BMIeTywEA8eirKOGfQ2CJ24IjEwWx\nWUE20CAZZHvtNAFAu7vdOhUBAJsr9pOjCv8jkVF0dfsTuOUFCOsi3JRJ9umTaXn1\ndjEP\n=VOau\n-----END PGP SIGNATURE-----"
-      },
-      "parents": [
-        {
-          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/0d2f1b5291864f39e553292525288d35e8020943",
-          "sha": "0d2f1b5291864f39e553292525288d35e8020943",
-          "html_url": "https://github.com/bitcoin/bitcoin/commit/0d2f1b5291864f39e553292525288d35e8020943"
-        }
-      ],
-      "message": "net: reject oversized outbound payloads\n\nNormal outbound messages stay within the 4 MB protocol limit.\nTreat an oversized payload from an internal caller as a failed assumption in `CConnman::PushMessage()` before it enters the send queue.\nDebug and fuzz builds expose invalid internal callers, while release builds log and drop the message.\n\nThis requires the testing-only `sendmsgtopeer` RPC to reject oversized payloads before calling `PushMessage()`.\nOversized inbound messages remain testable through raw P2P inputs, so this does not remove coverage of their receive-side handling.\nThe `p2p_private_broadcast` fuzz target separately filters synthetic oversized transactions before its loopback send path (#35880).\n\nCo-authored-by: Anthony Towns <aj@erisian.com.au>\nCo-authored-by: Martin Zumsande <mzumsande@gmail.com>",
-      "committer": {
-        "name": "Lőrinc",
-        "email": "pap.lorinc@gmail.com",
-        "date": "2026-08-14T19:54:05Z"
-      },
-      "author": {
-        "name": "Lőrinc",
-        "email": "pap.lorinc@gmail.com",
-        "date": "2026-08-04T20:28:51Z"
-      },
-      "sha": "5270b3e35f1e485ed7de31aec6674d47e7b20ce8"
-    },
-    {
       "event": "head_ref_force_pushed",
       "id": 29478263163,
       "node_id": "HRFPE_lADOABII588AAAABLe043s8AAAAG3QqZew",
@@ -1338,6 +1218,255 @@
       "submitted_at": "2026-08-14T20:02:04Z",
       "state": "COMMENTED",
       "pull_request_url": "https://api.github.com/repos/bitcoin/bitcoin/pulls/35888"
+    },
+    {
+      "event": "committed",
+      "id": null,
+      "node_id": "C_kwDOABII59oAKGI0Y2RjYjJhZDhmOGE3ZGYyMGZmNjhlNjM4OTYwOTJlMjI0MDYzOTU",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/b4cdcb2ad8f8a7df20ff68e63896092e22406395",
+      "actor": null,
+      "commit_id": null,
+      "commit_url": null,
+      "created_at": null,
+      "html_url": "https://github.com/bitcoin/bitcoin/commit/b4cdcb2ad8f8a7df20ff68e63896092e22406395",
+      "tree": {
+        "sha": "549c75eef47b3795852121b0cbd900f79d478ada",
+        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/549c75eef47b3795852121b0cbd900f79d478ada"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "payload": "tree 549c75eef47b3795852121b0cbd900f79d478ada\nparent a174dd4017cf97f283b1848bb31998bfa28465e9\nauthor Lőrinc <pap.lorinc@gmail.com> 1785874727 -0700\ncommitter Lőrinc <pap.lorinc@gmail.com> 1788725625 -0700\n\ntest: characterize outbound message type limits\n\nCover the accepted 12-byte type limit for both outbound transports.\n\n`CConnman::PushMessage()` queues a 13-byte type.\nKeep a valid message pending in the transport to observe queueing without encoding this invalid input.\nThis records the old behavior before the send path treats an oversized type as a failed assumption.\n",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niJEEABYKADkWIQQiU97U54YbP0PlTVgnCd/LLYEwhwUCap3JeRsUgAAAAAAEAA5t\nYW51MiwyLjUrMS4xMiwwLDMACgkQJwnfyy2BMIdJ9AD/br5Z7ihyVrKo/Hq3cqCy\nEWtHdrG0acKL47JJ4a469pQBAI1WpvK8ECAH6l6RB+yq03VUfpHTRb2ofbHyqboX\ne6sI\n=YpkO\n-----END PGP SIGNATURE-----"
+      },
+      "parents": [
+        {
+          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/a174dd4017cf97f283b1848bb31998bfa28465e9",
+          "sha": "a174dd4017cf97f283b1848bb31998bfa28465e9",
+          "html_url": "https://github.com/bitcoin/bitcoin/commit/a174dd4017cf97f283b1848bb31998bfa28465e9"
+        }
+      ],
+      "message": "test: characterize outbound message type limits\n\nCover the accepted 12-byte type limit for both outbound transports.\n\n`CConnman::PushMessage()` queues a 13-byte type.\nKeep a valid message pending in the transport to observe queueing without encoding this invalid input.\nThis records the old behavior before the send path treats an oversized type as a failed assumption.",
+      "committer": {
+        "name": "Lőrinc",
+        "email": "pap.lorinc@gmail.com",
+        "date": "2026-09-06T20:13:45Z"
+      },
+      "author": {
+        "name": "Lőrinc",
+        "email": "pap.lorinc@gmail.com",
+        "date": "2026-08-04T20:18:47Z"
+      },
+      "sha": "b4cdcb2ad8f8a7df20ff68e63896092e22406395"
+    },
+    {
+      "event": "committed",
+      "id": null,
+      "node_id": "C_kwDOABII59oAKDRiMTAzMDVkZWU4NWY0MjhjMDIzODFkY2UxNTEzOTZkNzA3ZmNjZDY",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/4b10305dee85f428c02381dce151396d707fccd6",
+      "actor": null,
+      "commit_id": null,
+      "commit_url": null,
+      "created_at": null,
+      "html_url": "https://github.com/bitcoin/bitcoin/commit/4b10305dee85f428c02381dce151396d707fccd6",
+      "tree": {
+        "sha": "cbbfc2fd5696eb1353c1aec5dce11b10d766e485",
+        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/cbbfc2fd5696eb1353c1aec5dce11b10d766e485"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "payload": "tree cbbfc2fd5696eb1353c1aec5dce11b10d766e485\nparent b4cdcb2ad8f8a7df20ff68e63896092e22406395\nauthor Lőrinc <pap.lorinc@gmail.com> 1785874993 -0700\ncommitter Lőrinc <pap.lorinc@gmail.com> 1788725625 -0700\n\nnet: assume outbound message types fit\n\nOutbound transports encode message types in a fixed 12-byte wire field.\nV1 aborts on a longer type, while V2 can overwrite the first payload byte or write past its encoding buffer.\nNormal outbound types are internal constants, and `sendmsgtopeer` already rejects types longer than 12 bytes.\n\nTreat oversized types from internal callers as failed assumptions in `CConnman::PushMessage()` before they enter the send queue.\nDebug and fuzz builds expose invalid internal callers, while release builds drop the messages.\n\nCo-authored-by: Anthony Towns <aj@erisian.com.au>\nCo-authored-by: Martin Zumsande <mzumsande@gmail.com>\n",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niJEEABYKADkWIQQiU97U54YbP0PlTVgnCd/LLYEwhwUCap3JeRsUgAAAAAAEAA5t\nYW51MiwyLjUrMS4xMiwwLDMACgkQJwnfyy2BMIfTkQEAqQMDrmR5eY15eJ2iLUSc\nTwllLtJxWn++/32UiBbYOucA/j4KmVfQhG1ev/b5E3hjS4xmbTrpA9uC65DrbnH4\nQuoM\n=vE0x\n-----END PGP SIGNATURE-----"
+      },
+      "parents": [
+        {
+          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/b4cdcb2ad8f8a7df20ff68e63896092e22406395",
+          "sha": "b4cdcb2ad8f8a7df20ff68e63896092e22406395",
+          "html_url": "https://github.com/bitcoin/bitcoin/commit/b4cdcb2ad8f8a7df20ff68e63896092e22406395"
+        }
+      ],
+      "message": "net: assume outbound message types fit\n\nOutbound transports encode message types in a fixed 12-byte wire field.\nV1 aborts on a longer type, while V2 can overwrite the first payload byte or write past its encoding buffer.\nNormal outbound types are internal constants, and `sendmsgtopeer` already rejects types longer than 12 bytes.\n\nTreat oversized types from internal callers as failed assumptions in `CConnman::PushMessage()` before they enter the send queue.\nDebug and fuzz builds expose invalid internal callers, while release builds drop the messages.\n\nCo-authored-by: Anthony Towns <aj@erisian.com.au>\nCo-authored-by: Martin Zumsande <mzumsande@gmail.com>",
+      "committer": {
+        "name": "Lőrinc",
+        "email": "pap.lorinc@gmail.com",
+        "date": "2026-09-06T20:13:45Z"
+      },
+      "author": {
+        "name": "Lőrinc",
+        "email": "pap.lorinc@gmail.com",
+        "date": "2026-08-04T20:23:13Z"
+      },
+      "sha": "4b10305dee85f428c02381dce151396d707fccd6"
+    },
+    {
+      "event": "committed",
+      "id": null,
+      "node_id": "C_kwDOABII59oAKGMxMGZmNzhjODAxMGU4ZTZhOTExZDkyNmVkY2E4YjE2ZWYxYTdkZjI",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/c10ff78c8010e8e6a911d926edca8b16ef1a7df2",
+      "actor": null,
+      "commit_id": null,
+      "commit_url": null,
+      "created_at": null,
+      "html_url": "https://github.com/bitcoin/bitcoin/commit/c10ff78c8010e8e6a911d926edca8b16ef1a7df2",
+      "tree": {
+        "sha": "96c7a9c7c3a5b8e3b363def03b0eeccd4df138d6",
+        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/96c7a9c7c3a5b8e3b363def03b0eeccd4df138d6"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "payload": "tree 96c7a9c7c3a5b8e3b363def03b0eeccd4df138d6\nparent 4b10305dee85f428c02381dce151396d707fccd6\nauthor Lőrinc <pap.lorinc@gmail.com> 1788669696 -0700\ncommitter Lőrinc <pap.lorinc@gmail.com> 1788725625 -0700\n\ntest: characterize outbound payload limits\n\nCover the accepted 4 MB payload limit for both outbound transports.\n\n`CConnman::PushMessage()` queues a 4,000,001-byte payload.\nThis records the old behavior before the send path treats an oversized payload as a failed assumption.\n\nThe existing two-node `sendmsgtopeer` test also confirms that the oversized payload is sent and makes the peer disconnect.\n",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niJEEABYKADkWIQQiU97U54YbP0PlTVgnCd/LLYEwhwUCap3JeRsUgAAAAAAEAA5t\nYW51MiwyLjUrMS4xMiwwLDMACgkQJwnfyy2BMIdlrAEA5DDYXL7bdViYPAG++JBT\nY5uBVTPA79IqxW8FtfXq4FIA/ia5JrdEs0yfmT1tSywvSgiF8w7i21NmuvXZvFtH\ntcgH\n=00Lm\n-----END PGP SIGNATURE-----"
+      },
+      "parents": [
+        {
+          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/4b10305dee85f428c02381dce151396d707fccd6",
+          "sha": "4b10305dee85f428c02381dce151396d707fccd6",
+          "html_url": "https://github.com/bitcoin/bitcoin/commit/4b10305dee85f428c02381dce151396d707fccd6"
+        }
+      ],
+      "message": "test: characterize outbound payload limits\n\nCover the accepted 4 MB payload limit for both outbound transports.\n\n`CConnman::PushMessage()` queues a 4,000,001-byte payload.\nThis records the old behavior before the send path treats an oversized payload as a failed assumption.\n\nThe existing two-node `sendmsgtopeer` test also confirms that the oversized payload is sent and makes the peer disconnect.",
+      "committer": {
+        "name": "Lőrinc",
+        "email": "pap.lorinc@gmail.com",
+        "date": "2026-09-06T20:13:45Z"
+      },
+      "author": {
+        "name": "Lőrinc",
+        "email": "pap.lorinc@gmail.com",
+        "date": "2026-09-06T04:41:36Z"
+      },
+      "sha": "c10ff78c8010e8e6a911d926edca8b16ef1a7df2"
+    },
+    {
+      "event": "committed",
+      "id": null,
+      "node_id": "C_kwDOABII59oAKGY5MTg4MTE0Yzc1ZDkzY2VhOTExZjI0ZTZhOTEzZTc0ZDJjZGE1ODc",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/f9188114c75d93cea911f24e6a913e74d2cda587",
+      "actor": null,
+      "commit_id": null,
+      "commit_url": null,
+      "created_at": null,
+      "html_url": "https://github.com/bitcoin/bitcoin/commit/f9188114c75d93cea911f24e6a913e74d2cda587",
+      "tree": {
+        "sha": "8c26bbb66b0b4b859353f9de9aa72887464d2a7d",
+        "url": "https://api.github.com/repos/bitcoin/bitcoin/git/trees/8c26bbb66b0b4b859353f9de9aa72887464d2a7d"
+      },
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "payload": "tree 8c26bbb66b0b4b859353f9de9aa72887464d2a7d\nparent c10ff78c8010e8e6a911d926edca8b16ef1a7df2\nauthor Lőrinc <pap.lorinc@gmail.com> 1785875331 -0700\ncommitter Lőrinc <pap.lorinc@gmail.com> 1788725625 -0700\n\nnet: reject oversized outbound payloads\n\nNormal outbound messages stay within the 4 MB protocol limit.\nTreat an oversized payload from an internal caller as a failed assumption in `CConnman::PushMessage()` before it enters the send queue.\nDebug and fuzz builds expose invalid internal callers, while release builds log and drop the message.\n\nThis requires the testing-only `sendmsgtopeer` RPC to reject oversized payloads before calling `PushMessage()`.\nOversized inbound messages remain testable through raw P2P inputs, so this does not remove coverage of their receive-side handling.\nThe `p2p_private_broadcast` fuzz target separately filters synthetic oversized transactions before its loopback send path (#35880).\n\nCo-authored-by: Anthony Towns <aj@erisian.com.au>\nCo-authored-by: Martin Zumsande <mzumsande@gmail.com>\n",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niJEEABYKADkWIQQiU97U54YbP0PlTVgnCd/LLYEwhwUCap3JeRsUgAAAAAAEAA5t\nYW51MiwyLjUrMS4xMiwwLDMACgkQJwnfyy2BMIf7LwD+N66WMZBtsGccI/louhLC\n7qkGo3O68Qlj4RUJ1++k5yEBAOt09lZw9Yi3SBiS6udOEV2VeNoveDjWH/N1zTz4\nPeUB\n=x9WW\n-----END PGP SIGNATURE-----"
+      },
+      "parents": [
+        {
+          "url": "https://api.github.com/repos/bitcoin/bitcoin/git/commits/c10ff78c8010e8e6a911d926edca8b16ef1a7df2",
+          "sha": "c10ff78c8010e8e6a911d926edca8b16ef1a7df2",
+          "html_url": "https://github.com/bitcoin/bitcoin/commit/c10ff78c8010e8e6a911d926edca8b16ef1a7df2"
+        }
+      ],
+      "message": "net: reject oversized outbound payloads\n\nNormal outbound messages stay within the 4 MB protocol limit.\nTreat an oversized payload from an internal caller as a failed assumption in `CConnman::PushMessage()` before it enters the send queue.\nDebug and fuzz builds expose invalid internal callers, while release builds log and drop the message.\n\nThis requires the testing-only `sendmsgtopeer` RPC to reject oversized payloads before calling `PushMessage()`.\nOversized inbound messages remain testable through raw P2P inputs, so this does not remove coverage of their receive-side handling.\nThe `p2p_private_broadcast` fuzz target separately filters synthetic oversized transactions before its loopback send path (#35880).\n\nCo-authored-by: Anthony Towns <aj@erisian.com.au>\nCo-authored-by: Martin Zumsande <mzumsande@gmail.com>",
+      "committer": {
+        "name": "Lőrinc",
+        "email": "pap.lorinc@gmail.com",
+        "date": "2026-09-06T20:13:45Z"
+      },
+      "author": {
+        "name": "Lőrinc",
+        "email": "pap.lorinc@gmail.com",
+        "date": "2026-08-04T20:28:51Z"
+      },
+      "sha": "f9188114c75d93cea911f24e6a913e74d2cda587"
+    },
+    {
+      "event": "head_ref_force_pushed",
+      "id": 30653205170,
+      "node_id": "HRFPE_lADOABII588AAAABLe043s8AAAAHIxLKsg",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/issues/events/30653205170",
+      "actor": {
+        "login": "l0rinc",
+        "id": 1841944,
+        "node_id": "MDQ6VXNlcjE4NDE5NDQ=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1841944?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/l0rinc",
+        "html_url": "https://github.com/l0rinc",
+        "followers_url": "https://api.github.com/users/l0rinc/followers",
+        "following_url": "https://api.github.com/users/l0rinc/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/l0rinc/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/l0rinc/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/l0rinc/subscriptions",
+        "organizations_url": "https://api.github.com/users/l0rinc/orgs",
+        "repos_url": "https://api.github.com/users/l0rinc/repos",
+        "events_url": "https://api.github.com/users/l0rinc/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/l0rinc/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "commit_id": "f9188114c75d93cea911f24e6a913e74d2cda587",
+      "commit_url": "https://api.github.com/repos/l0rinc/bitcoin/commits/f9188114c75d93cea911f24e6a913e74d2cda587",
+      "created_at": "2026-09-06T21:00:34Z"
+    },
+    {
+      "event": "commented",
+      "id": 5562165582,
+      "node_id": "IC_kwDOABII588AAAABS4fpTg",
+      "url": "https://api.github.com/repos/bitcoin/bitcoin/issues/comments/5562165582",
+      "actor": {
+        "login": "l0rinc",
+        "id": 1841944,
+        "node_id": "MDQ6VXNlcjE4NDE5NDQ=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1841944?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/l0rinc",
+        "html_url": "https://github.com/l0rinc",
+        "followers_url": "https://api.github.com/users/l0rinc/followers",
+        "following_url": "https://api.github.com/users/l0rinc/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/l0rinc/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/l0rinc/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/l0rinc/subscriptions",
+        "organizations_url": "https://api.github.com/users/l0rinc/orgs",
+        "repos_url": "https://api.github.com/users/l0rinc/repos",
+        "events_url": "https://api.github.com/users/l0rinc/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/l0rinc/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "commit_id": null,
+      "commit_url": null,
+      "created_at": "2026-09-06T21:05:01Z",
+      "updated_at": "2026-09-06T21:05:01Z",
+      "author_association": "CONTRIBUTOR",
+      "body": "AI review flagged that I was missing coverage so added `PushMessage()` tests because the transport tests bypassed the guard and didn’t verify rejection before queueing. Also rebased and split the type and payload characterization/fix pairs so each fix updates its own expectations (otherwise it's not obvious why multiple fixes are needed).",
+      "user": {
+        "login": "l0rinc",
+        "id": 1841944,
+        "node_id": "MDQ6VXNlcjE4NDE5NDQ=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1841944?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/l0rinc",
+        "html_url": "https://github.com/l0rinc",
+        "followers_url": "https://api.github.com/users/l0rinc/followers",
+        "following_url": "https://api.github.com/users/l0rinc/following%7B/other_user%7D",
+        "gists_url": "https://api.github.com/users/l0rinc/gists%7B/gist_id%7D",
+        "starred_url": "https://api.github.com/users/l0rinc/starred%7B/owner%7D%7B/repo%7D",
+        "subscriptions_url": "https://api.github.com/users/l0rinc/subscriptions",
+        "organizations_url": "https://api.github.com/users/l0rinc/orgs",
+        "repos_url": "https://api.github.com/users/l0rinc/repos",
+        "events_url": "https://api.github.com/users/l0rinc/events%7B/privacy%7D",
+        "received_events_url": "https://api.github.com/users/l0rinc/received_events",
+        "type": "User",
+        "site_admin": false,
+        "name": null,
+        "patch_url": null
+      },
+      "html_url": "https://github.com/bitcoin/bitcoin/pull/35888#issuecomment-5562165582",
+      "issue_url": "https://api.github.com/repos/bitcoin/bitcoin/issues/35888"
     }
   ],
   "comments": [
@@ -1458,7 +1587,7 @@
       "path": "src/rpc/net.cpp",
       "position": 14,
       "original_position": 14,
-      "commit_id": "5270b3e35f1e485ed7de31aec6674d47e7b20ce8",
+      "commit_id": "f9188114c75d93cea911f24e6a913e74d2cda587",
       "original_commit_id": "84eddd6802f48a6fe426a5ff97d807356a97ee70",
       "in_reply_to_id": null,
       "user": {
@@ -1620,7 +1749,7 @@
       "path": "src/rpc/net.cpp",
       "position": 14,
       "original_position": 14,
-      "commit_id": "5270b3e35f1e485ed7de31aec6674d47e7b20ce8",
+      "commit_id": "f9188114c75d93cea911f24e6a913e74d2cda587",
       "original_commit_id": "84eddd6802f48a6fe426a5ff97d807356a97ee70",
       "in_reply_to_id": 3751283699,
       "user": {
